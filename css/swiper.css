@@ -1,0 +1,81 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.swiper-pagination{width: auto; left: 50%; transform: translateX(-50%); padding: 4px 16px; background: rgba(0, 0, 0, 0.5); border-radius: 40px; font-weight: 400; font-size: 18px; color: #9e9e9e; line-height: 24px;}
+.swiper-pagination-current{color: #fff;}
+.swiper-pagination-fraction{bottom: var(---swiper-pagination-bottom,40px);}
+body {
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: var(--swiper-scrollbar-sides-offset,1%);
+  bottom: var(--swiper-scrollbar-bottom,4px);
+  top: var(--swiper-scrollbar-top,auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size,2px);
+  width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%));}
+
+  .brandSwiper .swiper-button-next {
+    background: url(../img/arrow_icon/ic-next-btn.png) no-repeat;
+    background-position: center;
+    width: calc(var(--swiper-navigation-size)/ 60 * 60);
+    right: var(--swiper-navigation-sides-offset,0px);
+  }
+  
+  .brandSwiper .swiper-button-prev {
+    background: url(../img/arrow_icon/ic-prev-btn.png) no-repeat;
+    background-position: center;
+    width: calc(var(--swiper-navigation-size)/ 60 * 60);
+    left: var(--swiper-navigation-sides-offset,0px);
+  }
+  
+  .brandSwiper .swiper-button-next::after,
+  .brandSwiper .swiper-button-prev::after {
+    display: none;
+  }
+  
+  .brandSecondSwiper .swiper-button-next {
+    background: url(../img/arrow_icon/ic-next-btn-grey.png) no-repeat;
+    background-position: center;
+    width: calc(var(--swiper-navigation-size)/ 60 * 60);
+    right: var(--swiper-navigation-sides-offset,0px);
+  }
+  
+  .brandSecondSwiper .swiper-button-prev {
+    background: url(../img/arrow_icon/ic-prev-btn-grey.png) no-repeat;
+    background-position: center;
+    width: calc(var(--swiper-navigation-size)/ 60 * 60);
+    left: var(--swiper-navigation-sides-offset,0px);
+  }
+  
+  .brandSecondSwiper .swiper-button-next::after,
+  .brandSecondSwiper .swiper-button-prev::after {
+    display: none;
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin: 0;}
+  .swiper-pagination-bullet{background: none; width: auto; height: auto; opacity: 1;}
+  
+  :root{--swiper-navigation-size:60px}

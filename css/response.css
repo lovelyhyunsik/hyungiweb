@@ -1,0 +1,12 @@
+@media (max-width: 1700px) {
+    .footer_top{padding-right: 200px;}
+  }
+@media (max-width: 1600px) {
+  .footer_top{padding-right: 100px;}
+  .footer_top>.footer_top_right{gap: 72px;}
+}
+
+@media (max-width: 1400px) {
+    .footer_top{padding-right: 72px;}
+    .footer_top>.footer_top_right{gap: 36px;}
+  }
