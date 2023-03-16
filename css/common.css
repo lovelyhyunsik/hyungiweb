@@ -162,7 +162,7 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 .slide_box{position: relative;}
 .slide_box > a{display: block;}
 .slide_box > a > .black_box{box-sizing: border-box; position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.5); padding: 36px 80px 40px 80px;}
-.slide_box > a > .black_box > .brand_name{font-weight: 700; font-size: 32px; line-height: 40px; color: #fff; margin-bottom: 16px;}
+.slide_box > a > .black_box > .brand_name{font-weight: 700; font-size: 24px; line-height: 32px; color: #fff; margin-bottom: 16px;}
 .slide_box > a > .black_box > .brand_ex{font-weight: 400; font-size: 18px; line-height: 24px; color: #fff; margin-bottom: 38px;}
 .slide_box > a > .black_box > .shop_now{display: flex; gap: 8px; align-items: center;}
 .slide_box > a > .black_box > .shop_now > p{font-weight: 400; font-size: 16px; line-height: 24px; text-decoration-line: underline; color: #fff;}
