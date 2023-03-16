@@ -27,4 +27,10 @@ $(function(){
         $(this).addClass('on')
     })
 
+    
+    $('.top_icon').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 400);
+        return false;
+    });//스크롤 탑 버튼 기능
+
 })
