@@ -138,10 +138,10 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 .ex_slide_wrap{width: 100%; padding: 80px 0 161px 0;}
 .ex_slide_wrap > h1{font-weight: 500; font-size: 24px; line-height: 32px; color: #222; margin-bottom: 40px; padding: 0 50px;}
 .ex_slide{margin: 0 50px;}
-
+.ex_slide a {margin-bottom: 64px;}
 .ex_slide .img_box{position: relative; margin-bottom: 20px;}
 .ex_slide .img_box>p{position: absolute; bottom: 40px; left: 32px; color: #fff; font-size: 20px; line-height: 28px;}
-.brand_name_box{padding: 24px 0 64px 0; display: flex; gap: 12px; align-items: center; border-top: 1px solid #e2e2e2;}
+.brand_name_box{padding-top: 24px; display: flex; gap: 12px; align-items: center; border-top: 1px solid #e2e2e2;}
 .brand_name_box > .brand_logo{position: relative; width: 56px; height: 56px; background: #f5f5f5; border-radius: 50%; overflow: hidden;}
 .brand_name_box > .brand_logo>img{width: 73%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 .brand_name_box > .brand_name{font-size: 14px; line-height: 20px;}
@@ -183,7 +183,7 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 
 /* 라떼센스 */
 .la_slide_wrap{padding: 0 50px 143px 50px;}
-.la_slide_wrap  a{display: block; padding-bottom: 72px;}
+.la_slide_wrap  a{display: block; margin-bottom: 72px;}
 .la_slide_wrap > h1 {font-weight: 500; font-size: 24px; line-height: 32px; color: #222; margin-bottom: 48px; margin-top: 80px;}
 .la_slide_wrap  .img_box {position: relative;}
 .la_slide_wrap  .img_box > .white_tag{position: absolute; left: 28px; bottom: 28px; color: #fff; font-weight: 500; font-size: 14px; line-height: 20px; padding: 7px 12px; border: 1px solid #fff;}
