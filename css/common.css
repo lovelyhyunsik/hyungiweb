@@ -59,7 +59,7 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 .main_wrp{position: relative; padding-bottom: 240px;}
 
 /* sideicon */
-.side_icon{position: fixed; z-index: 997; top: 857px; right: 40px;}
+.side_icon{position: fixed; z-index: 997; bottom: 30px; right: 40px;}
 .side_icon>div{position: relative; width: 48px; height: 48px; border-radius: 50%; background: #fff; filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.16));}
 .side_icon>div:first-child{margin-bottom: 12px;}
 .side_icon>div:nth-child(2){margin-bottom: 24px;}
@@ -88,7 +88,7 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 /* header > GNB */
 .header_wrp #gnb {position: relative; width: 100%; height:100%; box-sizing: border-box;}
 #gnb .gnb_menu{position: relative; height:100%;font-size:0; display:flex; gap: 40px; padding: 0 50px;}
-#gnb .gnb_menu > li { height:100%;font-size:20px;text-align:center; line-height: 28px;}
+#gnb .gnb_menu > li { height:100%;font-size:18px;text-align:center; line-height: 28px;}
 #gnb .gnb_menu > li.brand_gnb > button{display: flex; align-items: center; gap: 7px; font-weight: 400; color: #969696;}
 #gnb .gnb_menu > li.brand_gnb > button > img {display: inline-block; width: 20px; height: 20px;}
 #gnb .gnb_menu > li.brand_gnb > button > span{position: relative;}
@@ -122,7 +122,7 @@ html,body {width:100%;height:100%;color:#111;font-family: 'Pretendard'; font-wei
 #gnb .pro_menu{position: relative; display: flex; gap: 40px; padding-left: 40px;}
 #gnb .pro_menu::before{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 1px; height: 24px; background: #e2e2e2;}
 #gnb .pro_menu > li{}
-#gnb .pro_menu > li > a{font-weight: 400; font-size: 20px; color: #969696;}
+#gnb .pro_menu > li > a{font-weight: 400; font-size: 18px; color: #969696;}
 
 /* content */
 
