@@ -19,6 +19,151 @@
 <body>
     <!-- wrap -->
     <div id="wrap">
+        <!-- 검색창 -->
+        <div class="search_wrap">
+            <div class="search_content_wrap">
+                <button class="search_wrap_close"><img src="./img/icon/ic-close-large.png" alt=""></button>
+                <div class="search_content">
+                    <div class="search_input">
+                        <label>
+                            <input type="text" placeholder="검색어를 입력하세요." class="text_input">
+                            <button class="input_text_delete">
+                                <img src="./img/icon/ic-close-fill-24px.png" alt="" >
+                            </button>
+                            <button class="search_btn">
+                                <img src="./img/icon/ic-search-24.png" alt="">
+                            </button>
+                        </label>
+                    </div>
+                    <div class="search_text">
+                        <div class="recent_search">
+                            <button class="all_delete">전체삭제</button>
+                            <h2>최근 검색어</h2>
+                            <ul class="no_result"><!-- display:none 시켜놨습니다. -->
+                                <li>최근 검색어가 없습니다.</li>
+                            </ul>
+                            <ul class="result">
+                                <li><a href="#">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li><!-- li 10개까지만 노출 최신순으로 10개 이전꺼는 삭제요청 -->
+                                <li><a href="#">꽈배기 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                                <li><a href="#">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                            </ul>
+                        </div>
+                        <div class="hot_search">
+                            <a href="#">
+                                <span>전체보기</span>
+                                <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                            </a>
+                            <div class="h2_flex">
+                                <h2>인기 검색어</h2>
+                                <p>01/17 5:00 기준</p>
+                            </div>
+                            <ul>
+                                <li class="up"><!-- up,same,down 클래스명에 따라 아이콘이 달라집니다. -->
+                                    <a href="#">
+                                        <span class="num red">1.</span>
+                                        <span class="search_name">샤트렌</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="#">
+                                        <span class="num red">2.</span>
+                                        <span class="search_name">올리비아허슬러</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="#">
+                                        <span class="num red">3.</span>
+                                        <span class="search_name">크로커다일 레이디</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="#">
+                                        <span class="num">4.</span>
+                                        <span class="search_name">패딩</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="#">
+                                        <span class="num">5.</span>
+                                        <span class="search_name">코트</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="#">
+                                        <span class="num">6.</span>
+                                        <span class="search_name">니트</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="#">
+                                        <span class="num">7.</span>
+                                        <span class="search_name">바지</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="#">
+                                        <span class="num">8.</span>
+                                        <span class="search_name">니트</span>
+                                    </a>
+                                </li>
+                                <li class="down">
+                                    <a href="#">
+                                        <span class="num">9.</span>
+                                        <span class="search_name">바지</span>
+                                    </a>
+                                </li>
+                                <li class="down">
+                                    <a href="#">
+                                        <span class="num">10.</span>
+                                        <span class="search_name">어그부츠</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search_relaton_wrap">
+                        <div class="search_relation_container">
+                            <ul class="search_reletion_brand">
+                                <li>
+                                    <a href="">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                            </ul>
+                             <ul class="search_reletion_text">
+                                <li><a href="">니트</a></li>
+                                <li><a href="">라운드 니트</a></li>
+                                <li><a href="">여성니트</a></li>
+                                <li><a href="">남성니트</a></li>
+                                <li><a href="">니트 베스트</a></li>
+                                <li><a href="">니트조끼</a></li>
+                                <li><a href="">니트조끼</a></li>
+                                <li><a href="">니트조끼</a></li>
+                                <li><a href="">니트조끼</a></li>
+                                <li><a href="">니트조끼</a></li>
+                                <li><a href="">니트조끼</a></li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- header -->
         <header id="header">
             <div class="header_wrp">
@@ -854,7 +999,7 @@
                             <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
-                </div>b
+                </div>
                 <!-- 기획전/혜택 -->
                 <!-- 브랜드 -->
                 <div class="brand_slide_wrap">
@@ -1401,15 +1546,14 @@
                         <div class="link_wrap_btn_wrap">
                             <div class="link_wrap_btn">
                                 <p>FAMILY SITE</p>
-                                <img src="img/arrow_icon/ic-arrow-down-20.png" alt="전체링크버튼이미지">
+                                <img src="img/arrow_icon/ic-arrow-down-20.png" alt="전체링크버튼이미지" class="arrow_change">
                             </div>
                             <ul>
-                                <li><a href="">(주)형지 I&C</a></li>
-                                <li><a href="">(주)형지 엘리트</a></li>
-                                <li><a href="">(주)형지 에스콰이아</a></li>
-                                <li><a href="">(주)형지 에스콰이아</a></li>
-                                <li><a href="">(주)까스텔바작</a></li>
-                                <li><a href="">(주)아트몰링</a></li>
+                                <li><a href="">형지 I&C</a></li>
+                                <li><a href="">형지 엘리트</a></li>
+                                <li><a href="">형지 에스콰이아</a></li>
+                                <li><a href="">까스텔바작</a></li>
+                                <li><a href="">아트몰링</a></li>
                             </ul>
                         </div>
                     </div> 

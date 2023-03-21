@@ -33,4 +33,65 @@ $(function(){
         return false;
     });//스크롤 탑 버튼 기능
 
+
+    var arrowChange = 0;
+    $('.footer_top > .footer_top_right > .link_wrap > .link_wrap_btn_wrap').click(function(){
+        $(this).children('ul').toggleClass('on')
+        if(arrowChange === 0){
+            $(this).find('.arrow_change').attr("src", "./img/arrow_icon/ic-arrow-up-20.png")
+            arrowChange = 1;
+        }else{
+            $(this).find('.arrow_change').attr("src", "./img/arrow_icon/ic-arrow-down-20.png")
+            arrowChange = 0;
+        }
+    })/* footer에 링크 모음집 */
+
+    //input 안에 삭제버튼 나타내기
+  $('.text_input').on('input', function () {
+    if ($(this).val() == '') {
+      $(this).siblings('.input_text_delete').css("display", "none");
+      $('.search_text').css("display","flex")
+      $('.search_relaton_wrap').css("display","none")
+    } else {
+      $(this).siblings('.input_text_delete').css("display", "block");
+      $('.search_text').css("display","none")
+      $('.search_relaton_wrap').css("display","block")
+    }
+  });
+
+  //input 안에 삭제버튼 누르면 input텍스트 제거
+  $('.input_text_delete').click(function () {
+    $(this).siblings('input').val('');
+    $(this).css("display", "none");
+    $('.search_text').css("display","flex")
+    $('.search_relaton_wrap').css("display","none")
+  })
+
+  $('.recent_search>.all_delete').click(function(){
+    $('.no_result').css("display","block")
+    $('.result').remove();
+  })// 검색창 전체삭제 버튼
+
+  $('.result>li>button').click(function(){
+    $(this).parents('li').remove();
+    no_result_show();
+  })//최근검색어 li들 개별 삭제
+
+  function no_result_show(){
+    if($('.result>li').length === 0){
+        $('.no_result').css("display","block")
+      }else{
+        $('.no_result').css("display","none")
+      }
+  }//최근검색어 li들 length에 따른 "최근 검색어가 없습니다"노출/비노출
+
+  $('.btn_sch_open').click(function(){
+    $(".search_wrap").css("display","block")
+    $('body').addClass('fix')
+  })//검색 아이콘 클릭
+
+  $('.search_wrap_close').click(function(){
+    $(".search_wrap").css("display","none")
+    $('body').removeClass('fix')
+  })//검색클로스 아이콘 클릭
 })
