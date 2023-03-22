@@ -110,7 +110,7 @@ body { -webkit-font-smoothing: antialiased;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name.new > p{position: relative;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name.new > p::after{content: ""; position: absolute; top: -5px; right: -3px; width: 5px; height: 5px; border-radius: 50%; background: #e31616;}
 #gnb .gnb_menu > li.brand_gnb.on > button > span::after{position: absolute; content: ""; top: -5px; right: -3px; width: 5px; height: 5px; background: #e31616; border-radius: 50%;}
-#gnb .gnb_menu > li.big_gnb > .sub_wrapper{width: 100%;  z-index: 999; top: 48px; left: 0;  position: absolute; background: #fff; transition:0.3s 0.2s;  box-sizing: border-box; display: none;}
+#gnb .gnb_menu > li.big_gnb > .sub_wrapper{width: 100%;  z-index: 998; top: 48px; left: 0;  position: absolute; background: #fff; transition:0.3s 0.2s;  box-sizing: border-box; display: none;}
 #gnb .gnb_menu > li.big_gnb > .sub_wrapper.show{display: block;}
 #gnb .gnb_menu > li.big_gnb > .sub_wrapper > .sub_nav{width: 100%; margin: 0 auto;}
 #gnb .gnb_menu > li.big_gnb > .sub_wrapper > .sub_nav > ul{display: flex;  flex-wrap: wrap;  min-height: 560px;}
