@@ -97,16 +97,16 @@ body { -webkit-font-smoothing: antialiased;}
 #gnb .gnb_menu > li.brand_gnb > button{display: flex; align-items: center; gap: 7px; font-weight: 400; color: #969696;}
 #gnb .gnb_menu > li.brand_gnb > button > img {display: inline-block; width: 20px; height: 20px;}
 #gnb .gnb_menu > li.brand_gnb > button > span{position: relative;}
-#gnb .gnb_menu > li.brand_gnb > .sub_wrapper{width: 100%;  z-index: 999; top: 48px; left: 0;  position: absolute; background: #fff; transition:0.3s 0.2s; padding: 50px 52px 50px 51px; box-sizing: border-box; display: none;}
+#gnb .gnb_menu > li.brand_gnb > .sub_wrapper{width: 100%;  z-index: 998; top: 48px; left: 0;  position: absolute; background: #fff; transition:0.3s 0.2s; padding: 40px 53px 50px 50px; box-sizing: border-box; display: none;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper.show{display: block;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav{width: 100%; margin: 0 auto;}
-#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul{display: flex;  flex-wrap: wrap; gap: 40px;}
-#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li{}
+#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul{display: flex;  flex-wrap: wrap; gap: 42px;}
+#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li{width: calc(100% / 13);}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a{display: block; padding: 0 12px 21px 12px;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_logo{width: 120px; height: 120px; background: #f5f5f5; border-radius: 200px; position: relative;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_logo > img{max-width: 67.5%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name{margin-top: 17px; height: 24px;}
-#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name > p{display: inline-block; font-size: 16px; line-height: 24px; text-align: center; color: #222;}
+#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name{margin-top: 17px; height: 20px;}
+#gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name > p{display: inline-block; font-weight: 500; font-size: 14px; line-height: 20px; text-align: center; color: #222;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name.new > p{position: relative;}
 #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li > a > .brand_name.new > p::after{content: ""; position: absolute; top: -5px; right: -3px; width: 5px; height: 5px; border-radius: 50%; background: #e31616;}
 #gnb .gnb_menu > li.brand_gnb.on > button > span::after{position: absolute; content: ""; top: -5px; right: -3px; width: 5px; height: 5px; background: #e31616; border-radius: 50%;}

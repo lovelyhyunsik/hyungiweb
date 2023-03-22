@@ -1,3 +1,6 @@
+@media (max-width: 1759px) {
+  #gnb .gnb_menu > li.brand_gnb > .sub_wrapper > .sub_nav > ul > li{width: calc(100% / 13);}
+}
 @media (max-width: 1700px) {
     .footer_top{padding-right: 200px;}
   }
