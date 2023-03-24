@@ -94,4 +94,62 @@ $(function(){
     $(".search_wrap").css("display","none")
     $('body').removeClass('fix')
   })//검색클로스 아이콘 클릭
+
+  $('.three_depth_btn>button').click(function(){
+    $('.three_depth_btn>button').removeClass('on')
+    $(this).addClass('on')
+  })//상품리스트 소분류 뎁스 선택 기능
+
+  $('.brand>ul>li').click(function(){
+    $(this).toggleClass('on')
+  })//브랜드 토글
+
+  $('.color_check>li').click(function(){
+    $(this).toggleClass('on')
+  })//색상코드
+
+  $('.input_wrap>div>label>input').focus(function(){
+    $(this).siblings('span').css("color","#222")
+    $('.price_range > ul > li:last-child > label > input').prop("checked", true)
+  })//인풋안에 텍스트 포커스시 색상변화
+
+  $('.input_wrap>div>label>input').blur(function(){
+    $(this).siblings('span').css("color","#969696")
+    /* $('.input_wrap>div>label>input').val("") */
+    /* $('.apply_btn').removeClass('on') */
+  })//인풋안에 텍스트 블러시 색상변화
+
+  $('.reset>button').click(function(){
+    $('.color_check>li').removeClass('on')
+    $('.size_check > li > label > input').prop("checked", false)
+    $('.price_range > ul > li > label > input').prop("checked", false)
+    $('.price_range > ul > li:first-child > label > input').prop("checked", true)
+    $('.item_info_check > li > label > input').prop("checked" , false)
+    $('.input_wrap>div>label>input').val("")
+    $('.apply_btn').removeClass('on')
+  })//필터 초기화 버튼
+  
+  var inputValue1 = "";
+  var inputValue2 = "";
+
+  $(".input_wrap>div>label>.input1").on("input", function () {
+    const targetValue = $(this).val();
+    inputValue1 = targetValue;
+
+    if (inputValue1 && inputValue2) $(".apply_btn").addClass("on");
+    else $(".apply_btn").removeClass("on");
+  });
+
+  $(".input_wrap>div>label>.input2").on("input", function () {
+    const targetValue = $(this).val();
+    inputValue2 = targetValue;
+
+    if (inputValue1 && inputValue2) $(".apply_btn").addClass("on");
+    else $(".apply_btn").removeClass("on");
+  });//필터 적용하기 버튼 on
+
+  $('.sort_wrap>li').click(function(){
+    $('.sort_wrap>li').removeClass('on')
+    $(this).addClass('on')
+  })
 })
