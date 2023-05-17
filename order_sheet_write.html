@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/response.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/zoom.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- 검색창 -->
+        <div class="search_wrap">
+            <div class="search_content_wrap">
+                <button class="search_wrap_close"><img src="./img/icon/ic-close-large.png" alt=""></button>
+                <div class="search_content">
+                    <div class="search_input">
+                        <label>
+                            <input type="text" placeholder="검색어를 입력하세요." class="text_input">
+                            <button class="input_text_delete">
+                                <img src="./img/icon/ic-close-fill-24px.png" alt="">
+                            </button>
+                            <button class="search_btn">
+                                <img src="./img/icon/ic-search-24.png" alt="">
+                            </button>
+                        </label>
+                    </div>
+                    <div class="search_text">
+                        <div class="recent_search">
+                            <button class="all_delete">전체삭제</button>
+                            <h2>최근 검색어</h2>
+                            <ul class="no_result"><!-- display:none 시켜놨습니다. -->
+                                <li>최근 검색어가 없습니다.</li>
+                            </ul>
+                            <ul class="result">
+                                <li><a href="./item_detail.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li><!-- li 10개까지만 노출 최신순으로 10개 이전꺼는 삭제요청 -->
+                                <li><a href="./item_detail.html">꽈배기 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                                <li><a href="./item_detail.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                            </ul>
+                        </div>
+                        <div class="hot_search">
+                            <a href="#">
+                                <span>전체보기</span>
+                                <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                            </a>
+                            <div class="h2_flex">
+                                <h2>인기 검색어</h2>
+                                <p>01/17 5:00 기준</p>
+                            </div>
+                            <ul>
+                                <li class="up"><!-- up,same,down 클래스명에 따라 아이콘이 달라집니다. -->
+                                    <a href="./brand_item_list.html">
+                                        <span class="num red">1.</span>
+                                        <span class="search_name">샤트렌</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num red">2.</span>
+                                        <span class="search_name">올리비아허슬러</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num red">3.</span>
+                                        <span class="search_name">크로커다일 레이디</span>
+                                    </a>
+                                </li>
+                                <li class="up">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">4.</span>
+                                        <span class="search_name">패딩</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">5.</span>
+                                        <span class="search_name">코트</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">6.</span>
+                                        <span class="search_name">니트</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">7.</span>
+                                        <span class="search_name">바지</span>
+                                    </a>
+                                </li>
+                                <li class="same">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">8.</span>
+                                        <span class="search_name">니트</span>
+                                    </a>
+                                </li>
+                                <li class="down">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">9.</span>
+                                        <span class="search_name">바지</span>
+                                    </a>
+                                </li>
+                                <li class="down">
+                                    <a href="./brand_item_list.html">
+                                        <span class="num">10.</span>
+                                        <span class="search_name">어그부츠</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search_relaton_wrap">
+                        <div class="search_relation_container">
+                            <ul class="search_reletion_brand">
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo"><img src="./img/brand/brand03.png" alt=""></div>
+                                        <div class="brand_name">올리비아 허슬러</div>
+                                        <div class="brand_text">브랜드</div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="search_reletion_text">
+                                <li><a href="./item_detail.html">니트</a></li>
+                                <li><a href="./item_detail.html">라운드 니트</a></li>
+                                <li><a href="./item_detail.html">여성니트</a></li>
+                                <li><a href="./item_detail.html">남성니트</a></li>
+                                <li><a href="./item_detail.html">니트 베스트</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                                <li><a href="./item_detail.html">니트조끼</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <header id="header">
+            <div class="header_wrp">
+                <div class="header_wrp_top">
+                    <h1 class="logo"><a href="./index.html"><img src="./img/common/h1_logo.png" alt="BAUHAUS"></a></h1>
+                    <div class="utill_menu">
+                        <ul class="utill_menu_ico">
+                            <li><button class="btn_sch_open"><img src="./img/icon/ic-search-24.png" alt="검색아이콘"></button></li>
+                            <li><a href="./bag.html" class="btn_bag_open"><img src="./img/icon/ic-shoppingbag-24.png" alt="쇼핑백아이콘"><span class="num_tag">1</span></a></li>
+                        </ul>
+                        <ul class="utill_menu_text">
+                            <li><a href="./login.html">로그인</a></li>
+                            <li><a href="./join_banner.html">회원가입</a></li>
+                            <li><a href="./mypage_main.html">마이페이지</a></li>
+                            <li><a href="./service_center.html">고객센터</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- GNB -->
+        <nav id="gnb">
+            <ul class="gnb_menu">
+                <li class="brand_gnb">
+                    <button><span>BRAND</span><img src="./img/arrow_icon/ic-arrow-down-20.png" class="arrow_change" alt=""></button>
+                    <div class="sub_wrapper">
+                        <nav class="sub_nav">
+                            <ul class="brand_gnb_drop">
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand01.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name new"><!-- 신상브랜드 new태그 삽입 -->
+                                            <p>까스렐바작</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand02.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name new">
+                                            <p>샤트렌</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand03.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name new">
+                                            <p>올리비아 하슬러</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand04.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name new">
+                                            <p>크로커다일 레이디</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand05.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>에스콰이어</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand06.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>캐리스노트</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand07.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>더 그레이스</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand08.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>예작</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand09.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>본</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand09.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>본</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand01.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>까스렐바작</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand02.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>샤트렌</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand03.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>올리비아 하슬러</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand04.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>크로커다일 레이디</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand05.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>에스콰이어</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand06.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>캐리스노트</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand07.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>더 그레이스</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand08.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>예작</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand09.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>본</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./brand_item_list.html">
+                                        <div class="brand_logo">
+                                            <div class="brand_logo_circle">
+                                                <img src="./img/brand/brand09.png" alt="브랜드이미지">
+                                            </div>
+                                        </div>
+                                        <div class="brand_name">
+                                            <p>본</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li class="big_gnb">
+                    <button>여성</button>
+                    <div class="sub_wrapper">
+                        <nav class="sub_nav">
+                            <ul class="big_gnb_drop">
+                                <li>BRAND
+                                    <ul>
+                                        <li>
+                                            <a href="./brand_item_list.html">크로커다일레이디</a>
+                                            <a href="./brand_item_list.html">사트렌</a>
+                                            <a href="./brand_item_list.html">올리비아 하슬러</a>
+                                            <a href="./brand_item_list.html">더 그레이스</a>
+                                            <a href="./brand_item_list.html">카스텔바작</a>
+                                            <a href="./brand_item_list.html">에스콰이어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>OUTER
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">코트</a>
+                                            <a href="./item_list.html">점퍼</a>
+                                            <a href="./item_list.html">자켓</a>
+                                            <a href="./item_list.html">베스트</a>
+                                            <a href="./item_list.html">다운/패딩</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>TOPS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">티셔츠</a>
+                                            <a href="./item_list.html">블라우스/셔츠</a>
+                                            <a href="./item_list.html">니트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>PANTS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">팬츠</a>
+                                            <a href="./item_list.html">데님</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>DRESS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니원피스</a>
+                                            <a href="./item_list.html">롱원피스</a>
+                                            <a href="./item_list.html">투피스</a>
+                                            <a href="./item_list.html">점프수트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SKIRT
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니스커트</a>
+                                            <a href="./item_list.html">미디/롱스커트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SHOES
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">샌들/뮬</a>
+                                            <a href="./item_list.html">펌프스/힐</a>
+                                            <a href="./item_list.html">플랫/로퍼</a>
+                                            <a href="./item_list.html">운동화/스니커즈</a>
+                                            <a href="./item_list.html">워커/부츠</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>GOLF WEAR
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">여성 골프의류</a>
+                                            <a href="./item_list.html">골프 백</a>
+                                            <a href="./item_list.html">골프 ACC</a>
+                                            <a href="./item_list.html">골프화</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li class="big_gnb">
+                    <button>남성</button>
+                    <div class="sub_wrapper">
+                        <nav class="sub_nav">
+                            <ul class="big_gnb_drop">
+                                <li>BRAND
+                                    <ul>
+                                        <li>
+                                            <a href="./brand_item_list.html">예작</a>
+                                            <a href="./brand_item_list.html">본</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>OUTER
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">코트</a>
+                                            <a href="./item_list.html">점퍼</a>
+                                            <a href="./item_list.html">자켓</a>
+                                            <a href="./item_list.html">베스트</a>
+                                            <a href="./item_list.html">다운/패딩</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>TOPS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">티셔츠</a>
+                                            <a href="./item_list.html">블라우스/셔츠</a>
+                                            <a href="./item_list.html">니트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>PANTS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">팬츠</a>
+                                            <a href="./item_list.html">데님</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SHIRTS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">긴팔 셔츠</a>
+                                            <a href="./item_list.html">반팔 셔츠</a>
+                                            <a href="./item_list.html">캐주얼 셔츠</a>
+                                            <a href="./item_list.html">드레스 셔츠</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>KNIT
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">가디건</a>
+                                            <a href="./item_list.html">스웨터</a>
+                                            <a href="./item_list.html">베스트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SUIT
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">수트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SHOES
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">운동화/스니커즈</a>
+                                            <a href="./item_list.html">샌들/슬리퍼</a>
+                                            <a href="./item_list.html">워커/부츠</a>
+                                            <a href="./item_list.html">구두</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>GOLF WEAR
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">여성 골프의류</a>
+                                            <a href="./item_list.html">골프 백</a>
+                                            <a href="./item_list.html">골프 ACC</a>
+                                            <a href="./item_list.html">골프화</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li class="big_gnb">
+                    <button>잡화</button>
+                    <div class="sub_wrapper">
+                        <nav class="sub_nav">
+                            <ul class="big_gnb_drop">
+                                <li>BRAND
+                                    <ul>
+                                        <li>
+                                            <a href="./brand_item_list.html">크로커다일레이디</a>
+                                            <a href="./brand_item_list.html">사트렌</a>
+                                            <a href="./brand_item_list.html">올리비아 하슬러</a>
+                                            <a href="./brand_item_list.html">더 그레이스</a>
+                                            <a href="./brand_item_list.html">카스텔바작</a>
+                                            <a href="./brand_item_list.html">에스콰이어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>OUTER
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">코트</a>
+                                            <a href="./item_list.html">점퍼</a>
+                                            <a href="./item_list.html">자켓</a>
+                                            <a href="./item_list.html">베스트</a>
+                                            <a href="./item_list.html">다운/패딩</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>TOPS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">티셔츠</a>
+                                            <a href="./item_list.html">블라우스/셔츠</a>
+                                            <a href="./item_list.html">니트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>PANTS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">팬츠</a>
+                                            <a href="./item_list.html">데님</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>DRESS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니원피스</a>
+                                            <a href="./item_list.html">롱원피스</a>
+                                            <a href="./item_list.html">투피스</a>
+                                            <a href="./item_list.html">점프수트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SKIRT
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니스커트</a>
+                                            <a href="./item_list.html">미디/롱스커트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SHOES
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">샌들/뮬</a>
+                                            <a href="./item_list.html">펌프스/힐</a>
+                                            <a href="./item_list.html">플랫/로퍼</a>
+                                            <a href="./item_list.html">운동화/스니커즈</a>
+                                            <a href="./item_list.html">워커/부츠</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>GOLF WEAR
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">여성 골프의류</a>
+                                            <a href="./item_list.html">골프 백</a>
+                                            <a href="./item_list.html">골프 ACC</a>
+                                            <a href="./item_list.html">골프화</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li class="big_gnb">
+                    <button>뷰티</button>
+                    <div class="sub_wrapper">
+                        <nav class="sub_nav">
+                            <ul class="big_gnb_drop">
+                                <li>BRAND
+                                    <ul>
+                                        <li>
+                                            <a href="./brand_item_list.html">크로커다일레이디</a>
+                                            <a href="./brand_item_list.html">사트렌</a>
+                                            <a href="./brand_item_list.html">올리비아 하슬러</a>
+                                            <a href="./brand_item_list.html">더 그레이스</a>
+                                            <a href="./brand_item_list.html">카스텔바작</a>
+                                            <a href="./brand_item_list.html">에스콰이어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>OUTER
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">코트</a>
+                                            <a href="./item_list.html">점퍼</a>
+                                            <a href="./item_list.html">자켓</a>
+                                            <a href="./item_list.html">베스트</a>
+                                            <a href="./item_list.html">다운/패딩</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>TOPS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">티셔츠</a>
+                                            <a href="./item_list.html">블라우스/셔츠</a>
+                                            <a href="./item_list.html">니트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>PANTS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">팬츠</a>
+                                            <a href="./item_list.html">데님</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>DRESS
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니원피스</a>
+                                            <a href="./item_list.html">롱원피스</a>
+                                            <a href="./item_list.html">투피스</a>
+                                            <a href="./item_list.html">점프수트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SKIRT
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">미니스커트</a>
+                                            <a href="./item_list.html">미디/롱스커트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>SHOES
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">샌들/뮬</a>
+                                            <a href="./item_list.html">펌프스/힐</a>
+                                            <a href="./item_list.html">플랫/로퍼</a>
+                                            <a href="./item_list.html">운동화/스니커즈</a>
+                                            <a href="./item_list.html">워커/부츠</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>GOLF WEAR
+                                    <ul>
+                                        <li>
+                                            <a href="./item_list.html">전체</a>
+                                            <a href="./item_list.html">여성 골프의류</a>
+                                            <a href="./item_list.html">골프 백</a>
+                                            <a href="./item_list.html">골프 ACC</a>
+                                            <a href="./item_list.html">골프화</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <ul class="pro_menu">
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="./exhibition.html">기획전/혜택</a></li>
+                    <li><a href="./magazine.html">매거진</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <!-- //GNB -->
+        <!-- content -->
+        <div id="content">
+            <!-- main -->
+            <main class="main_wrp">
+                <div class="side_icon">
+                    <div class="recent_icon">
+                        <a href="./item_detail.html">
+                            <img src="./img/icon/ic_recent-32.png" alt="">
+                        </a>
+                    </div>
+                    <div class="chat_icon">
+                        <a href="./service_center.html">
+                            <img src="./img/icon/ic-chat-32.png" alt="">
+                        </a>
+                    </div>
+                    <div class="top_icon">
+                        <button>
+                            <img src="./img/icon/ic-top-32.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="order_sheet_write_wrap">
+                    <div class="order_sheet_write_top">
+                        <span>주문서 작성</span>
+                        <div class="step">
+                            <div class="first">
+                                <span>장바구니</span>
+                            </div>
+                            <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                            <div class="second">
+                                <span>주문서 작성</span>
+                            </div>
+                            <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                            <div class="third">
+                                <span>주문완료</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_sheet_write_content">
+                        <div class="order_item_wrap">
+                            <p>주문상품 (2)</p>
+                            <div class="order_item_nav">
+                                <span>상품정보</span>
+                                <div class="order_item_nav_r">
+                                    <span>판매금액</span>
+                                    <span>수량</span>
+                                    <span>배송방법</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    <div class="item_left">
+                                        <div class="item_container">
+                                            <div class="item_img">
+                                                <img src="./img/item/item_img08.png" alt="">
+                                            </div>
+                                            <div class="item_info">
+                                                <p class="item_brand">BRAND NAME</p>
+                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                <div class="item_option">
+                                                    <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item_right">
+                                        <div class="item_price">
+                                            <span class="item_price_gr">59,000 원</span>
+                                            <span class="item_price_bk">19,100 원</span>
+                                            <span class="item_price_percent">50%</span>
+                                        </div>
+                                        <div class="item_count">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="shipping_method">
+                                            <span>일반택배</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="item_left">
+                                        <div class="item_container">
+                                            <div class="item_img">
+                                                <img src="./img/item/item_img08.png" alt="">
+                                            </div>
+                                            <div class="item_info">
+                                                <p class="item_brand">BRAND NAME</p>
+                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                <div class="item_option">
+                                                    <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item_right">
+                                        <div class="item_price">
+                                            <span class="item_price_gr">59,000 원</span>
+                                            <span class="item_price_bk">19,100 원</span>
+                                            <span class="item_price_percent">50%</span>
+                                        </div>
+                                        <div class="item_count">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="shipping_method">
+                                            <span>일반택배</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="grey_price_box">
+                                <div class="grey_price_box_left">
+                                    <span class="item_wrap_price">상품금액<span class="price_num">345,000원</span></span>
+                                    <span class="plus">+</span>
+                                    <span class="shipping_price">배송비<span class="price_num">0원</span></span>
+                                    <span class="minus">-</span>
+                                    <span class="discount_price">할인금액<span class="price_num">123,000원</span></span>
+                                </div>
+                                <div class="grey_price_box_right">
+                                    <span class="total_price">
+                                        <span>123,000</span>원
+                                    </span>
+                                    <span class="saving_point">
+                                        적립예정<span>1,234</span>원
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex_layout">
+                            <div class="flex_layout_left">
+                                <div class="order_user_info_wrap">
+                                    <p>주문고객 / 배송지 정보</p>
+                                    <div class="order_user">
+                                        <p>주문고객</p>
+                                        <span class="user_name">홍길동</span>
+                                        <span class="user_phone">01012345678</span>
+                                        <span class="user_mail">gd123@gmail.com</span>
+                                    </div>
+                                    <div class="receive_user_wrap">
+                                        <p>받는분</p>
+                                        <input type="text">
+                                    </div>
+                                    <div class="address_wrap">
+                                        <p>주소</p>
+                                        <div class="flex_box">
+                                            <div class="address_box"></div>
+                                            <button class="address_search">주소검색</button>
+                                        </div>
+                                        <div class="address_box"></div>
+                                        <input type="text" placeholder="상세주소를 입력해주세요.">
+                                    </div>
+                                    <div class="phone_wrap">
+                                        <p>휴대폰</p>
+                                        <div class="flex_box">
+                                            <div class="phone_num_box">010</div>
+                                            <input type="number">
+                                        </div>
+                                    </div>
+                                    <div class="shipping_memo">
+                                        <p>배송 메모</p>
+                                        <div class="drop_box">
+                                            <div class="select_box_wrap">
+                                                <div class="selectBox_type">
+                                                    <button class="label">배송시 요청사항을 선택해주세요</button>
+                                                    <ul class="optionItem_wrap" id="crops1">
+                                                        <li class="optionItem">문앞에 놔둬주세요.</li>
+                                                        <li class="optionItem">경비실에 맡겨주세요.</li>
+                                                        <li class="optionItem">도착 전에 전화주세요.</li>
+                                                        <li class="optionItem">직접입력</li>
+                                                    </ul>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <input type="text" placeholder="기타 내용을 직접 입력해주세요. (한글 20자 이내)" maxlength="20">
+                                    </div>
+        
+                                </div>
+                                <div class="sale_benefit">
+                                    <p>할인혜택</p>
+                                    <div class="item_wrap_price">
+                                        <span>상품금액</span>
+                                        <span class="price_num">123,000원</span>
+                                    </div>
+                                    <div class="discount_price">
+                                        <span>상품 할인</span>
+                                        <span class="price_num">- 5,000 원</span>
+                                    </div>
+                                    <div class="coupon_discount">
+                                        <span>쿠폰 할인</span>
+                                        <div class="coupon_discount_box_wrap">
+                                           <div class="coupon_discount_box"></div>
+                                           <span>원</span>
+                                        </div>
+                                        <button class="coupon_check">조회</button>
+                                        <div class="coupon_text_wrap">
+                                            <span class="coupon_possible">사용가능 1장</span>
+                                            <span class="coupon_present">보유쿠폰 4장</span>
+                                        </div>
+                                    </div>
+                                    <div class="saving_point_use">
+                                        <span>적립금 사용</span>
+                                        <div class="saving_point_use_box_wrap">
+                                            <div class="saving_point_use_discount_box"></div>
+                                            <span>원</span>
+                                         </div>
+                                        <label>
+                                            <input type="checkbox" id="check_btn" class="normal">
+                                            <span>모두 사용</span>
+                                        </label>
+                                        <p>잔액<span class="total_point">1,000</span>원</p>
+                                    </div>
+                                    <div class="shipping_price">
+                                        <span>배송비 할인</span>
+                                        <span class="price_num">- 1,000 원</span>
+                                        <span class="gr_text">30,000원 이상 구매 배송비 할인</span>
+                                    </div>
+                                </div>
+                                <div class="pay_method">
+                                    <p>결제수단</p>
+                                    <div class="pay_method_tabnav">
+                                        <button class="card_btn on">신용 / 체크카드</button>
+                                        <button class="kakaopay_btn">카카오페이</button>
+                                        <button class="naverpay_btn">네이버페이</button>
+                                        <button class="samsungpay_btn">삼성페이</button>
+                                        <button class="deposit_btn">무통장입금</button>
+                                    </div>
+                                    <div class="pay_method_tabcontent">
+                                        <div class="card">
+                                            <div class="gr_box">
+                                                 <h3>신용카드 이용안내</h3>
+                                                 <p><span></span>체크카드, 법인카드의 경우 무이자 할부행사에서 제외됩니다.</p>
+                                                 <p><span></span>신용카드로 결제하시는 최종 결제 금액이 기준금액 미만이거나, 그 외 무이자 할부가 되지 않는 기타 신용카드를 <br> 사용하시는 경우는 유이자 할부로 결제되오니 반드시 참고하시기 바랍니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="kakaopay">
+                                            <div class="gr_box">
+                                                <h3>카카오페이 이용안내</h3>
+                                                <p><span></span>본인 명의의 스마트폰에서 본인 명의의 카드 등록 후 사용 가능합니다.</p>
+                                                <p><span></span>카카오톡 안에서 개인카드(신용/체크)를 등록하여 다양한 곳에서 결제 시 간단하게 비밀번호 만으로 결제할 수 있는 모바일 결제 서비스입니다.</p>
+                                                <p><span></span>안드로이드의 경우 구글플레이, 아이폰의 경우 앱 스토어에서 카카오톡 앱을 설치한 후, 최초 1회 카트 및 계좌 정보를 등록하셔야 사용 가능합니다.</p>
+                                                <p><span></span>인터넷 익스플로러의 경우 8 이상에서만 결제 가능합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="naverpay">
+                                            <div class="gr_box">
+                                                <h3>네이버페이 이용안내</h3>
+                                                <p><span></span>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</p>
+                                                <p><span></span>결제 가능한 신용카드:신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티, 카카오뱅크</p>
+                                                <p><span></span>결제 가능한 은행:NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국, 미래에셋대우, 광주, 대구, 전북 새마을금고, 제주은행 <br>신협, 하나은행, 케이뱅크, 카카오뱅크, 삼성증권</p>
+                                                <p><span></span>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="samsungpay">
+                                            <div class="gr_box">
+                                                <h3>삼성페이 이용안내</h3>
+                                                <p><span></span>카드 명의자와 스마트폰 명의자가 동일한 경우에만 삼성 페이에 카드 등록이 가능합니다.</p>
+                                                <p><span></span>본인 명의의 스마트폰을 여러개 보유한 경우에도, 마지막으로 등록된 기기로 삼성페이를 이용할 수 있습니다.</p>
+                                                <p><span></span>삼성페이 지원 가능한 단말기는 삼성페이 홈페이지 (https://www.samsung.com/sec/samsung-pay)에서 확인하실 수 있습니다.</p>
+                                                <p><span></span>삼성페이에 등록한 카드를 지문 또는 비밀번호로 인증하여, 안전하고 간편하게 결제할 수 있습니다.</p>
+                                                <p><span></span>결제가능한 카드 : 삼성, 신한, 국민, 현대, 롯데, 농협, 비씨, 하나, 우리, 시티</p>
+                                            </div>
+                                        </div>
+                                        <div class="deposit">
+                                            <div class="white_box">
+                                                <div class="white_box_l">
+                                                    <span>환불계좌</span>
+                                                </div>
+                                                <div class="white_box_r">
+                                                    <div class="refund_account">
+                                                        <div class="no_account"><!-- 회원 계좌등록안되어있을 상황 display:none 시켜놨습니다 -->
+                                                            <span>환불계좌를 등록해주세요</span>
+                                                            <a href="./refund_account_write.html">계좌등록</a>
+                                                        </div>
+                                                        <div class="yes_account"><!-- 회원 계좌등록되어있을 상황 display:none 시켜놨습니다 -->
+                                                            <div class="yse_account_container">
+                                                                <span class="name">홍길동</span>
+                                                                <span class="bank">국민은행</span>
+                                                                <span class="account_num">123456*****</span>
+                                                            </div>
+                                                            <a href="./refund_account_change.html">계좌변경</a>
+                                                        </div>
+                                                        <div class="non_member_no_account"><!-- 비회원 계좌등록되어있을 상황 -->
+                                                            <div class="bank">
+                                                                <span>은행명</span>
+                                                                <div class="drop_box">
+                                                                    <div class="select_box_wrap">
+                                                                        <div class="selectBox_type">
+                                                                            <button class="label">선택해주세요</button>
+                                                                            <ul class="optionItem_wrap" id="crops1">
+                                                                                <li class="optionItem">국민은행</li>
+                                                                                <li class="optionItem">신한은행</li>
+                                                                                <li class="optionItem">신협</li>
+                                                                                <li class="optionItem">농협</li>
+                                                                            </ul>
+                                                                        </div> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="account_num">
+                                                                <span>계좌번호</span>
+                                                                <input type="number">
+                                                            </div>
+                                                            <div class="deposit_user">
+                                                                <span>예금주</span>
+                                                                <input type="text">
+                                                            </div>
+                                                            <button>계좌 인증</button>
+                                                        </div>
+                                                    </div>
+                                                    <p><span></span>계좌 입금 시 입금자명은 회원명과 동일하게 입력해 주시기 바랍니다.</p>
+                                                    <p><span></span>계좌 입금 시 입금자명은 회원명과 동일하게 입력해 주시기 바랍니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label>
+                                        <input type="checkbox" id="check_btn" class="normal">
+                                        <span>지금 선택한 결제수단을 다음에도 사용</span>
+                                    </label>
+                                    <div class="banner">
+                                        <img src="./img/banner/test.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="notice">
+                                    <h3>주문 전 확인 사항</h3>
+                                    <p><span></span>결제 완료 이휴 품절/결품이 발생한 경우, 고객님께 문자 서비스를 통해 품절/결품 안내를 드리고 있으며, '마이페이지 > 주문배송조회'에서도 품절/결품 여부를 확인하실 수 있습니다.</p>
+                                    <p><span></span>품절/결품된 주문상품은 품절/결품 문자 서비스 안내 후 자동취소해 드리며, 재결제가 필요한 경우 추가 안내 드립니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex_layout_right">
+                                <div class="white_box">
+                                    <h2>결제정보</h2>
+                                    <div class="total_price">
+                                        <span>총 주문금액</span>
+                                        <span class="price_num">123,000<span>원</span></span>
+                                    </div>
+                                    <div class="coupon_discount">
+                                        <span>쿠폰할인</span>
+                                        <span class="price_num">- 0<span>원</span></span>
+                                    </div>
+                                    <div class="saving_point_use">
+                                        <span>적립금 사용</span>
+                                        <span class="price_num">- 0<span>원</span></span>
+                                    </div>
+                                    <div class="pro_discount">
+                                        <span>프로모션 할인</span>
+                                        <span class="price_num">- 0<span>원</span></span>
+                                    </div>
+                                    <div class="shipping_price">
+                                        <span>배송비</span>
+                                        <span class="price_num">3,000<span>원</span></span>
+                                    </div>
+                                    <div class="shipping_discount">
+                                        <span>배송비 할인</span>
+                                        <span class="price_num">- 3,000<span>원</span></span>
+                                    </div>
+                                    <div class="total_price_wrap">
+                                        <div class="total_price">
+                                            <span>총 결제예정금액</span>
+                                            <span class="price_num">123,000<span>원</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="saving_point">
+                                        <span>예정 적립금</span>
+                                        <span class="price_num">1,000<span>원</span></span>
+                                    </div>
+                                </div>
+                                <div class="gr_box">
+                                    <h2>주문동의</h2>
+                                    <p>주문할 상품의 상품명, 상품가격, 배송정보를 확인했으며, 구매에 동의하시겠습니까? (전자상거래법 제8조 제2항)</p>
+                                    <label>
+                                        <input type="checkbox" id="check_btn" class="normal">
+                                        <span>동의합니다.</span>
+                                    </label>
+                                </div>
+                                <div class="btn_wrap">
+                                    <button>결제하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- //main -->
+        </div>
+        <!-- //content -->
+        <footer id="footer">
+            <div class="footer_top">
+                <div class="footer_top_left">
+                    <div class="service_center">
+                        <p>고객서비스센터</p>
+                        <p class="tel">1661-7222</p>
+                    </div>
+                    <div class="time">
+                        <div class="work_time">
+                            <p>운영시간 AM 09:00 ~ PM 18:00</p>
+                        </div>
+                        <div class="lunch_time">
+                            <p>점심시간 PM 12:00 - PM 13:00</p>
+                        </div>
+                        <div class="holiday">
+                            <p>( 주말,공휴일 휴무 )</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_top_right">
+                    <div class="link_wrap">
+                        <div class="link_wrap_btn_wrap">
+                            <div class="link_wrap_btn">
+                                <p>FAMILY SITE</p>
+                                <img src="img/arrow_icon/ic-arrow-down-20.png" alt="전체링크버튼이미지" class="arrow_change">
+                            </div>
+                            <ul>
+                                <li><a href="#">형지 I&C</a></li>
+                                <li><a href="#">형지 엘리트</a></li>
+                                <li><a href="#">형지 에스콰이아</a></li>
+                                <li><a href="#">까스텔바작</a></li>
+                                <li><a href="#">아트몰링</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sns_logo_wrap">
+                        <p>SOCIAL</p>
+                        <div class="sns_logo">
+                            <a href="#"><img src="./img/icon/ic-facebook-32.png" alt="페이스북이미지"></a>
+                            <a href="#"><img src="./img/icon/ic-youtube-32.png" alt="유튜브이미지"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_bottom_top">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">사업자정보확인</a>
+                </div>
+                <div class="footer_bottom_middle">
+                    <p>패션그룹형지(주) | 대표 : 최병오 | 대표 전화 : 02-3498-7200 | 이메일 : crocodile@hyungji.com</p>
+                    <p>주소 : 06228 서울특별시 강남구 논현로 322 (역삼동) 형지빌딩 | 사업자 등록번호 : 204-81-41179 | 통신판매업신고번호 : 2021-서울강남-00594
+                    </p>
+                </div>
+                <div class="footer_bottom_bottom">
+                    <p>FASHION GROUP HYUNGJI. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 $(function () {
-  var swiper = new Swiper(".mySwiper", {
+  var swiper1 = new Swiper(".visualSwiper", {
     loop: true,
     autoplay: {
       delay: 5000
@@ -60,6 +60,26 @@ $(function () {
     freeMode: true,
     scrollbar: {
       el: ".swiper-scrollbar"
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 8,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper7 = new Swiper(".mySwiper2", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
     },
   });
 })

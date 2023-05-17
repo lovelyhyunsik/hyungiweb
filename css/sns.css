@@ -1,0 +1,38 @@
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  [type="checkbox"] {
+    appearance: none;
+    position: relative;
+    background: #e2e2e2;
+    border-radius: 30px;
+    width: 48px;
+    height: 24px;
+  }
+  
+  [type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 30px;
+    /* transform: scale(0.8); */
+    background-color: #fff;
+    transition: left 250ms linear;
+  }
+  
+  [type="checkbox"]:checked {
+    background-color: #222;
+  }
+  
+  [type="checkbox"]:checked::before {
+    background-color: white;
+    left: 27px;
+  }

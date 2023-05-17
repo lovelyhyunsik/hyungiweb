@@ -5,9 +5,30 @@
 @media (max-width: 1700px) {
     .footer_top{padding-right: 200px;}
   }
+
+@media (max-width: 1650px) {
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_nav > span:nth-child(2){margin-left: 4%;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_nav > span:nth-child(3){margin-left: 4%;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_nav > span:nth-child(4){margin-left: 2.5%;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_content > .yes_list > li > .white_box > .delete{margin-left: 40px;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_content > .yes_list > li > .white_box > .request_type{margin-left: 4%;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_content > .yes_list > li > .white_box > .date{margin-left: 4%;}
+  .mypage_item_request_list_wrap > .flex_layout > .flex_layout_r > .list_wrap > .list_content > .yes_list > li > .white_box > .answer_type{margin-left: 2.5%;}
+}
+
+@media (max-width: 1620px) {
+  .mypage_order_check_wrap > .flex_layout > .flex_layout_r > .recent_order_list_wrap > .order_check_content > .recent_order_list_container > .recent_order_list_content > .yes_list > li > .item_left > .item_container{}
+  .mypage_order_check_wrap > .flex_layout > .flex_layout_r > .recent_order_list_wrap > .order_check_content > .recent_order_list_container > .recent_order_list_content > .yes_list > li > .item_left > .item_container{gap: 12px;}
+}
+
 @media (max-width: 1600px) {
   .footer_top{padding-right: 100px;}
   .footer_top>.footer_top_right{gap: 72px;}
+}
+
+@media (max-width: 1500px) {
+  .mypage_order_check_wrap > .flex_layout > .flex_layout_r > .gr_box{padding: 52px 6rem 52px 3rem;}
+  .mypage_order_check_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r{display: flex; gap: 65px;}
 }
 
 @media (max-width: 1400px) {
