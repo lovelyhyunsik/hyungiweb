@@ -380,9 +380,27 @@ $(function () {
   $('.popup').click(function () {
     $('.popup_wrap').addClass('show')
     $('body').addClass('fix')
+    $('.photo_all_popup').css("display","none")
+  })//개인리뷰 사진 클릭시 팝업
+
+  $('.all_popup').click(function () {
+    $('.popup_wrap').addClass('show')
+    $('body').addClass('fix')
+    $('.photo_all_popup').css("display","block")
+  })//포토리뷰 사진 클릭시 팝업
+
+  $('.photo_all_popup').click(function(){
+    $('.all_photo_popup_wrap').addClass('show')
+    $('.popup_wrap').removeClass('show')
+    $('body').addClass('fix')
   })
 
-  $('.ic-close').click(function () {
+  $('.all_photo_popup_wrap .ic-close').click(function(){
+    $('.all_photo_popup_wrap').removeClass('show')
+    $('body').removeClass('fix')
+  })
+
+  $('.popup_wrap .ic-close').click(function () {
     $('.popup_wrap').removeClass('show')
     $('body').removeClass('fix')
   })

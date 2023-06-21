@@ -16,7 +16,7 @@
     <script src="./js/swiper.js"></script>
 </head>
 
-<body>
+<body class="fix">
     <!-- wrap -->
     <div id="wrap">
         <!-- 검색창 -->
@@ -43,9 +43,9 @@
                                 <li>최근 검색어가 없습니다.</li>
                             </ul>
                             <ul class="result">
-                                <li><a href="./item_detail.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li><!-- li 10개까지만 노출 최신순으로 10개 이전꺼는 삭제요청 -->
-                                <li><a href="./item_detail.html">꽈배기 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
-                                <li><a href="./item_detail.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                                <li><a href="./search_result.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li><!-- li 10개까지만 노출 최신순으로 10개 이전꺼는 삭제요청 -->
+                                <li><a href="./search_result.html">꽈배기 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
+                                <li><a href="./search_result.html">라운드 니트</a><button><img src="./img/icon/ic-close-small.png" alt=""></button></li>
                             </ul>
                         </div>
                         <div class="hot_search">
@@ -161,6 +161,33 @@
                              </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="pw_change_confirm_wrap"><!-- 비밀번호 변경 confirm 노출시 body에 class:fix 추가 -->
+            <div class="pw_change_confirm">
+                <p>비밀번호 사용기간이 완료되었습니다.<br>변경하시겠습니까?</p>
+                <div class="confirm_btn_wrap">
+                    <button class="no">아니요</button>
+                    <button class="yes">예</button>
+                </div>
+            </div>
+        </div>
+        <div class="pw_change_popup_wrap">
+            <div class="pw_change_popup">
+                <h2>비밀번호 변경</h2>
+                <div class="now_pw">
+                    <input type="password" placeholder="현재 비밀번호" class="now_pw_input">
+                </div>
+                <div class="new_pw">
+                    <input type="password" placeholder="새 비밀번호" class="new_pw_input">
+                </div>
+                <div class="new_pw_check">
+                    <input type="password" placeholder="새 비밀번호 확인" class="new_pw_check_input">
+                </div>
+                <div class="popup_btn_wrap">
+                    <button class="cancel">취소</button>
+                    <button class="change">변경</button><!-- 변경버튼 클릭시 로그아웃 처리 후 로그인 화면으로 이동 -->
                 </div>
             </div>
         </div>
@@ -839,7 +866,7 @@
             <main class="main_wrp">
                 <div class="side_icon">
                     <div class="recent_icon">
-                        <a href="./item_detail.html">
+                        <a href="./mypage_recent_item.html">
                             <img src="./img/icon/ic_recent-32.png" alt="">
                         </a>
                     </div>
@@ -1606,7 +1633,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_bottom">
+            <div class="footer_bottom"> 
                 <div class="footer_bottom_top">
                     <a href="#">개인정보처리방침</a>
                     <a href="#">이용약관</a>
@@ -1623,4 +1650,39 @@
             </div>
         </footer>
 </body>
+<script>
+    $('.confirm_btn_wrap > .no').click(function(){
+        $('.pw_change_confirm_wrap').remove()
+        $('body').removeClass('fix')
+    })/* 비밀번호 변경 confirm 아니요 클릭 */
+
+    $('.confirm_btn_wrap > .yes').click(function(){
+        $('.pw_change_confirm_wrap').remove()
+        $('.pw_change_popup_wrap').css("display","block")
+    })/* 비밀번호 변경 confirm 예 클릭 */
+
+    $('.popup_btn_wrap > .cancel').click(function(){
+        $('.pw_change_popup_wrap').remove()
+        $('body').removeClass('fix')
+    })/* 비밀번호 변경 팝업 취소 클릭 */
+
+    $('.now_pw_input').on('input', checkInput);
+    $('.new_pw_input').on('input', checkInput);
+    $('.new_pw_check_input').on('input', checkInput);
+
+    function checkInput() {
+    var nowPw = $('.now_pw_input').val(); 
+    var newPw = $('.new_pw_input').val();
+    var newPwCheck = $('.new_pw_check_input').val();
+    var changeBtn = $('.change');
+
+    if (nowPw === '' || newPw === '' || newPwCheck === '') {
+      // 기본 로그인 버튼 색상
+      changeBtn.removeClass('on');
+    } else {
+      // 모든 input 입력 시에 로그인 버튼 배경색 변경
+      changeBtn.addClass('on');
+    }
+    }
+</script>
 </html>
