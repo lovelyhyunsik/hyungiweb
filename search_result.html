@@ -862,6 +862,7 @@
                                 <div class="selectBox_type">
                                     <button class="label">전체</button>
                                     <ul class="optionItem_wrap">
+                                        <li class="optionItem">전체</li>
                                         <li class="optionItem">여성</li>
                                         <li class="optionItem">남성</li>
                                     </ul>
@@ -871,11 +872,10 @@
                         <div class="second_drop drop_box">
                             <div class="select_box_wrap">
                                 <div class="selectBox_type">
-                                    <button class="label">OUTER</button>
+                                    <button class="label">전체</button>
                                     <ul class="optionItem_wrap">
-                                        <li class="optionItem">코트</li>
-                                        <li class="optionItem">다운/패딩</li>
-                                        <li class="optionItem">자켓</li>
+                                        <li class="optionItem">전체</li>
+                                        <li class="optionItem">OUTER</li>
                                     </ul>
                                 </div>
                             </div>
@@ -883,10 +883,12 @@
                         <div class="third_drop drop_box">
                             <div class="select_box_wrap">
                                 <div class="selectBox_type">
-                                    <button class="label"></button>
+                                    <button class="label">전체</button>
                                     <ul class="optionItem_wrap">
-                                        <li class="optionItem">여성</li>
-                                        <li class="optionItem">남성</li>
+                                        <li class="optionItem">전체</li>
+                                        <li class="optionItem">코트</li>
+                                        <li class="optionItem">다운/패딩</li>
+                                        <li class="optionItem">자켓</li>
                                     </ul>
                                 </div>
                             </div>
@@ -2677,8 +2679,17 @@
         $('.second_drop').css("display","block")
     })//첫번째 드롭다운 선택시 두번째 드롭다운 노출
 
+    $('.first_drop .optionItem').eq(0).click(function(){
+        $('.second_drop').css("display","none")
+        $('.third_drop').css("display","none")
+    })//첫번째 드롭다운 전체선택시 두번째 드롭다운, 세번째 드롭다운 숨김
+
     $('.second_drop .optionItem').click(function(){
         $('.third_drop').css("display","block")
     })//두번째 드롭다운 선택시 세번째 드롭다운 노출
+
+    $('.second_drop .optionItem').eq(0).click(function(){
+        $('.third_drop').css("display","none")
+    })//두번째 드롭다운 전체선택시 세번째 드롭다운 숨김
 </script>
 </html>

@@ -177,17 +177,34 @@
             <div class="pw_change_popup">
                 <h2>비밀번호 변경</h2>
                 <div class="now_pw">
-                    <input type="password" placeholder="현재 비밀번호" class="now_pw_input">
+                    <input type="password" placeholder="현재 비밀번호" class="now_pw_input"><!-- 현재 비밀번호가 맞지 않으면 addClass:error -->
+                    <p class="errorText">현재 비밀번호가 맞는지 다시 확인해주세요.</p>
                 </div>
                 <div class="new_pw">
                     <input type="password" placeholder="새 비밀번호" class="new_pw_input">
+                    <div class="inputText">
+                        <div class="inputText_t">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>10자~16자 입력</p>
+                        </div>
+                        <div class="inputText_b">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>영어 대소문자/숫자/특수문자 중 2가지 이상 조합</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="new_pw_check">
                     <input type="password" placeholder="새 비밀번호 확인" class="new_pw_check_input">
+                    <div class="inputText">
+                        <div class="inputText_t">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>동일한 비밀번호를 입력해 주세요.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="popup_btn_wrap">
                     <button class="cancel">취소</button>
-                    <button class="change">변경</button><!-- 변경버튼 클릭시 로그아웃 처리 후 로그인 화면으로 이동 -->
+                    <a href="./login.html" class="change">변경</a><!-- 변경버튼 클릭시 로그아웃 처리 후 로그인 화면으로 이동 -->
                 </div>
             </div>
         </div>
@@ -1420,7 +1437,7 @@
                         </div>
                     </div>
                     <div class="brand_second_slide">
-                        <div class="swiper brandSecondSwiper">
+                        <!-- <div class="swiper brandSecondSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a href="./brand_item_list.html">
@@ -1455,7 +1472,69 @@
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
-                        </div>
+                            <div class="swiper-pagination"></div>
+                        </div> -->
+                        <div class="swiper brandSecondSwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                    <img src="./img/slide/brand_second_slide_img01.png" alt="브랜드두번쨰슬라이드이미지">
+                                    <p>SHOES<br>UP TO 20%</p>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img02.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img03.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img01.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img02.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img03.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img01.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img02.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="./brand_item_list.html">
+                                        <img src="./img/slide/brand_second_slide_img03.png" alt="브랜드두번쨰슬라이드이미지">
+                                        <p>SHOES<br>UP TO 20%</p>
+                                    </a>
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                          </div>
                     </div>
                 </div>
                 <!-- 브랜드 -->
@@ -1635,9 +1714,9 @@
             </div>
             <div class="footer_bottom"> 
                 <div class="footer_bottom_top">
-                    <a href="#">개인정보처리방침</a>
-                    <a href="#">이용약관</a>
-                    <a href="#">사업자정보확인</a>
+                    <a href="./service_terms.html">개인정보처리방침</a>
+                    <a href="./service_terms.html">이용약관</a>
+                    <a href="./service_terms.html">사업자정보확인</a>
                 </div>
                 <div class="footer_bottom_middle">
                     <p>패션그룹형지(주) | 대표 : 최병오 | 대표 전화 : 02-3498-7200 | 이메일 : crocodile@hyungji.com</p>
@@ -1684,5 +1763,39 @@
       changeBtn.addClass('on');
     }
     }
+
+    if($('.now_pw > input').hasClass('error')){
+       $('.errorText').css("display","block")
+    }else{
+        $('.errorText').css("display","none")
+    };//input에 error떠서 border-color가 빨간색이 되면 input하단 텍스트 생성
+
+    $('.new_pw > input').click(function(){
+        $('.new_pw > .inputText').css("display","block")
+    })//새 비밀번호 input클릭하면 하단 글씨 뜨게
+
+    $('.new_pw > input').on('input', function () {
+        if ($('.new_pw > input').val().length >= 10) {
+            $('.new_pw > .inputText > .inputText_t>p').css("color", "#34A854")
+            $('.new_pw > .inputText > .inputText_t>img').attr("src" , "./img/icon/ic-check-s-green.png")
+        } else {
+            $('.new_pw>.inputText>.inputText_t>p').css("color", "#969696")
+            $('.new_pw>.inputText>.inputText_t>img').attr("src" , "./img/icon/ic-check-s-grey.png")
+        }
+    });//새 비밀번호 첫번째거 10자이상이면 색깔 바뀌게 능력부족으로 영어 대소문자/숫자/특수문자 그부분은 처리하지 못함
+
+    $('.new_pw_check > input').click(function(){
+        $('.new_pw_check>.inputText').css("display","block")
+    })//새 비밀번호 확인 input클릭하면 하단 글씨 뜨게
+
+    $('.new_pw_check > input').on('input', function () {
+        if ($('.new_pw_check > input').val() == $('.newPw>label>input').val()) {
+            $('.new_pw_check > .inputText > .inputText_t > img').attr("src" , "./img/icon/ic-check-s-green.png")
+            $('.new_pw_check > .inputText > .inputText_t > p').css("color", "#34A854")
+        } else {
+            $('.new_pw_check>.inputText>.inputText_t>img').attr("src" , "./img/icon/ic-check-s-grey.png")
+            $('.new_pw_check>.inputText>.inputText_t>p').css("color", "#969696")
+        }
+    });//새 비밀번호와 새 비밀번호 확인 텍스트 같으면 색깔 바뀌게
 </script>
 </html>

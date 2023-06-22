@@ -45,13 +45,18 @@ $(function () {
   
 
   var swiper4 = new Swiper(".brandSecondSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 16,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
+      slidesPerView: 3,
+      spaceBetween: 16,
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+        /* clickable: true, */
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
   });
 
   var swiper5 = new Swiper(".scrollSwiper2", {

@@ -149,10 +149,21 @@ body { -webkit-font-smoothing: antialiased;}
 .pw_change_popup > h2{font-size: 24px; color: #222; text-align: center; padding-bottom: 20px; border-bottom: 1px solid #e2e2e2;}
 .pw_change_popup > .now_pw{margin-top: 30px;}
 .pw_change_popup > .now_pw > input{width: 100%; height: 100%; box-sizing: border-box; border: 1px solid #e2e2e2; border-radius: 4px; height: 44px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; padding: 0 16px;}
+.pw_change_popup > .now_pw > input.error{width: 100%; height: 100%; box-sizing: border-box; border: 1px solid #E31616; border-radius: 4px; height: 44px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; padding: 0 16px;}
+.pw_change_popup > .now_pw > p.errorText{display: none; font-family: 'Pretendard'; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; color: #e31616; margin-top: 4px;}
 .pw_change_popup > .new_pw{margin-top: 15px;}
 .pw_change_popup > .new_pw > input{width: 100%; height: 100%; box-sizing: border-box; border: 1px solid #e2e2e2; border-radius: 4px; height: 44px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; padding: 0 16px;}
+.pw_change_popup > .new_pw > .inputText{margin-top: 4px; display: none;}
+.pw_change_popup > .new_pw > .inputText > .inputText_t{display: flex;}
+.pw_change_popup > .new_pw > .inputText > .inputText_t > img{}
+.pw_change_popup > .new_pw > .inputText > .inputText_t > p{margin-left: 4px; font-family: 'Pretendard'; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; color: #969696;}
+.pw_change_popup > .new_pw > .inputText > .inputText_b{display: flex; margin-top: 4px; }
+.pw_change_popup > .new_pw > .inputText > .inputText_b > p{margin-left: 4px; font-family: 'Pretendard'; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; color: #969696;}
 .pw_change_popup > .new_pw_check{margin-top: 15px;}
 .pw_change_popup > .new_pw_check > input{width: 100%; height: 100%; box-sizing: border-box; border: 1px solid #e2e2e2; border-radius: 4px; height: 44px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; padding: 0 16px;}
+.pw_change_popup > .new_pw_check > .inputText{margin-top: 4px; display: none;}
+.pw_change_popup > .new_pw_check > .inputText > .inputText_t{display: flex;}
+.pw_change_popup > .new_pw_check > .inputText > .inputText_t > p{margin-left: 4px; font-family: 'Pretendard'; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; color: #969696;}
 .pw_change_popup > .popup_btn_wrap{width: 100%; display: flex; gap: 15px; justify-content: center; margin-top: 25px;}
 .pw_change_popup > .popup_btn_wrap > .cancel{width: 50%; height: 44px; line-height: 44px; border: 1px solid #e2e2e2; border-radius: 4px; text-align: center; font-size: 14px; color: #222;}
 .pw_change_popup > .popup_btn_wrap > .change{width: 50%; height: 44px; line-height: 44px; background: #f5f5f5; border-radius: 4px; text-align: center; font-size: 14px; color: #969696;}
@@ -3310,27 +3321,27 @@ body { -webkit-font-smoothing: antialiased;}
 
 .first_drop{position: relative;}
 .first_drop .selectBox_type{display: inline-block;}
-.first_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
-.first_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.first_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.first_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
 .first_drop .selectBox_type > .optionItem_wrap{height: 100px; overflow-y: scroll; padding: 8px 0; background: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 4px; display: none; margin-top: 4px; position: absolute; z-index: 2;}
 .first_drop .selectBox_type > .optionItem_wrap.on{display: block; width: 100%;}
-.first_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap;}
+.first_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap; padding: 1.4rem 0.8rem;}
 
 .second_drop{display: none; position: relative;}
 .second_drop .selectBox_type{display: inline-block;}
-.second_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
-.second_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.second_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.second_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
 .second_drop .selectBox_type > .optionItem_wrap{height: 100px; overflow-y: scroll; padding: 8px 0; background: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 4px; display: none; margin-top: 4px; position: absolute; z-index: 2;}
 .second_drop .selectBox_type > .optionItem_wrap.on{display: block; width: 100%;}
-.second_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap;}
+.second_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap; padding: 1.4rem 0.8rem;}
 
 .third_drop{display: none; position: relative;}
 .third_drop .selectBox_type{display: inline-block;}
-.third_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
-.third_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 30px 0 10px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.third_drop .selectBox_type > button{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
+.third_drop .selectBox_type > button.on{display: inline-flex; height: 30px; align-items: center; width: auto; font-size: 14px; color: #222; padding: 0 35px 0 15px; border-radius: 20px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center 24px; line-height: 24px; white-space: nowrap;}
 .third_drop .selectBox_type > .optionItem_wrap{height: 100px; overflow-y: scroll; padding: 8px 0; background: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 4px; display: none; margin-top: 4px; position: absolute; z-index: 2;}
 .third_drop .selectBox_type > .optionItem_wrap.on{display: block; width: 100%;}
-.third_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap;}
+.third_drop .selectBox_type > .optionItem_wrap > .optionItem{cursor: pointer; font-family: "Pretendard"; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; white-space: nowrap; padding: 1.4rem 0.8rem;}
 
 .sns_confirm_pop_wrap{display: none; position: fixed; width: 100%; height: 100vh; box-sizing: border-box; background: rgba(0, 0, 0, 0.5); z-index: 999;}
 .sns_confirm_pop{width: 440px; padding: 24px; box-sizing: border-box; background: #fff; border-radius: 8px; position: absolute; top: 15%; left: 50%; transform: translate(-50%,-50%); z-index: 5; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);}

@@ -103,6 +103,8 @@ body {
     display: none;
   }
 
+/*   .brandSecondSwiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 var(---swiper-pagination-bullet-horizontal-gap,4px) !important; width: auto !important;} */
+
   .popup_container_bottom_l .swiper-button-next {
     background: url(../img/arrow_icon/ic-next-btn.png) no-repeat;
     background-position: center;
