@@ -812,7 +812,7 @@ body { -webkit-font-smoothing: antialiased;}
 .popup_wrap >.popup_container > .popup_container_bottom > .popup_container_bottom_r > .review_bottom > .user_info > .user_id::after{content: ""; position: absolute; top: 50%; right: -16px; transform: translateY(-50%); width: 1px; height: 14px; background: #e2e2e2;}
 .popup_wrap >.popup_container > .popup_container_bottom > .popup_container_bottom_r > .review_bottom > .user_info > .date{margin-left: 33px;}
 
-.all_photo_popup_wrap{display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.3); z-index: 999;}
+.all_photo_popup_wrap{display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.3); z-index: 998;}
 .all_photo_popup_wrap.show{display: block;}
 .all_photo_popup_wrap >.all_photo_popup_container{width: 902px; padding: 0 28px; background: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 8px; padding-bottom: 76px;}
 .all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_top{padding: 28px 0 24px 0; display: flex; justify-content: space-between; align-items: center;}
@@ -824,7 +824,7 @@ body { -webkit-font-smoothing: antialiased;}
 .all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_bottom::-webkit-scrollbar{width: 4px;}
 .all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_bottom::-webkit-scrollbar-track{}
 .all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_bottom::-webkit-scrollbar-thumb{background: #bdbdbd; border-radius: 40px;}
-.all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_bottom > img{width: calc(20% - 40px / 5);}
+.all_photo_popup_wrap >.all_photo_popup_container > .all_photo_popup_container_bottom > img{width: calc(20% - 40px / 5); cursor: pointer;}
 
 .card_popup_wrap{display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.3); z-index: 999;}
 .card_popup_wrap.show{display: block;}
