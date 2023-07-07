@@ -45,8 +45,8 @@ $(function () {
   
 
   var swiper4 = new Swiper(".brandSecondSwiper", {
-      slidesPerView: 3,
-      spaceBetween: 16,
+      slidesPerView: 1,
+      /* spaceBetween: 16, */
       loop:true,
       pagination: {
         el: ".swiper-pagination",
