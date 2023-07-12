@@ -507,7 +507,7 @@ $(function () {
     $('.selectBox_type>.optionItem_wrap>.optionItem').removeClass('on')
     $(this).addClass('on')
     $(this).parents('.optionItem_wrap').siblings('.label').text(text_change).css("color", "#222")
-    $('.selectBox_type>.optionItem_wrap>.optionItem').css("background", "none")
+    /* $('.selectBox_type>.optionItem_wrap>.optionItem').css("background", "none") */
     $(this).css("background", "#f5f5f5")
     $('.selectBox_type>.optionItem_wrap').removeClass('on')
     $('.selectBox_type>.label').removeClass('on')
@@ -518,6 +518,11 @@ $(function () {
     $(`.optionList.${optionType}`).css('display', 'block');
 
     $('.selectBox_type>.optionItem_wrap').removeClass('on');
+  })
+
+  $('.selectBox_type>.optionItem_wrap>.optionItem').hover(function(){
+    $('.selectBox_type>.optionItem_wrap>.optionItem').css("background","none")
+    $(this).css("background","rgb(245,245,245)")
   })
 
   $('.itemList>ul>li').click(function () {
