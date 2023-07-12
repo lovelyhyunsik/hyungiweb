@@ -879,11 +879,9 @@
                                                 <div class="selectBox_type">
                                                     <button class="label">제목 + 내용</button>
                                                     <ul class="optionItem_wrap" id="crops1">
+                                                        <li class="optionItem">제목 + 내용</li>
                                                         <li class="optionItem">제목</li>
                                                         <li class="optionItem">내용</li>
-                                                        <li class="optionItem">등록일</li>
-                                                        <li class="optionItem">이벤트</li>
-                                                        <li class="optionItem">공지</li>
                                                     </ul>
                                                 </div> 
                                             </div>
@@ -1070,4 +1068,12 @@
             </div>
         </footer>
 </body>
+<script>
+    $('html').click(function(e) {   
+	if(!$(e.target).hasClass("label")) {
+		$('.selectBox_type>.label').removeClass('on')
+        $('.selectBox_type>.optionItem_wrap').removeClass('on')
+	}
+});    
+</script>
 </html>

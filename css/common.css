@@ -3203,6 +3203,7 @@ body { -webkit-font-smoothing: antialiased;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .pagination > ul > li{}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .pagination > ul > li > button{font-weight: 400; font-size: 16px; line-height: 24px; padding: 0 2px; color: #bdbdbd;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .pagination > ul > li.on > button{font-weight: 400; font-size: 16px; line-height: 24px; padding: 0 2px; color: #222;}
+.announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content .selectBox_type>.optionItem_wrap{height: 144px;}
 
 .announcement_detail_wrap > .flex_layout > .flex_layout_r{width: 80.75%;}
 .announcement_detail_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_top{display: flex; justify-content: space-between; align-items: center; padding-bottom: 17px;}
