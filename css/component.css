@@ -1,0 +1,362 @@
+/* 공통요소 */
+
+/* 페이지네이션 */
+.pagination{margin-top: 60px; display: flex; gap: 16px; align-items: center; justify-content: center;}
+.pagination > .prev_btn{font-size: 0;}
+.pagination > .prev_btn > button{font-size: 0;}
+.pagination > .prev_btn > button > img{width: 24px;}
+.pagination > .next_btn{font-size: 0;}
+.pagination > .next_btn > button{font-size: 0;}
+.pagination > .next_btn > button > img{width: 24px;}
+.pagination > ul{display: flex; gap: 16px;}
+.pagination > ul > li{}
+.pagination > ul > li > button{font-weight: 400; font-size: 16px; line-height: 24px; padding: 0 2px; color: #bdbdbd;}
+.pagination > ul > li.on > button{font-weight: 400; font-size: 16px; line-height: 24px; padding: 0 2px; color: #222;}
+
+/* 셀렉트박스 */
+.selectBoxWrap{display: none; padding: 0.4rem 2rem 1.2rem 2rem;}
+.selectBox_type{ box-sizing: border-box;width: 100%;}
+.selectBox_type.on{} 
+.selectBox_type>button{display: flex; height: 44px; align-items: center;  width: 100%; background: #fff; font-size: 14px; color: #bdbdbd; padding: 0 1.6rem; border-radius: 4px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 95% center / 24px; line-height: 2.4rem; white-space: nowrap;}
+.selectBox_type>button.on{display: flex; height: 44px; align-items: center;  width: 100%; background: #fff; font-size: 14px; color: #bdbdbd; padding: 0 1.6rem; border-radius: 4px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 95% center / 24px; white-space: nowrap;}
+.selectBox_type>.optionItem_wrap{ height: 200px; overflow-y: scroll; padding: 8px 0; background: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 4px; display: none; margin-top: 4px; position: absolute; z-index: 2;}
+.selectBox_type>.optionItem_wrap::-webkit-scrollbar{width: 4px;}
+.selectBox_type>.optionItem_wrap::-webkit-scrollbar-track{}
+.selectBox_type>.optionItem_wrap::-webkit-scrollbar-thumb{background: #bdbdbd; border-radius: 40px;}
+.selectBox_type>.optionItem_wrap.on{display: block; width: 100%;}
+.selectBox_type>.optionItem_wrap>li{cursor: pointer; font-family: 'Pretendard'; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; padding: 1.4rem 1.6rem;}
+
+/* 데이터피커 */
+.ui-datepicker{ z-index: 9999 !important;}
+
+.ui-widget.ui-widget-content{
+    /* 전체 박스 */
+    margin-top: 8px;
+    border:1px solid #e2e2e2;
+    border-radius: 4px;
+    background: #fff;
+    padding:22px 25px 20px 25px;
+    box-sizing: border-box;
+    width: 246px;
+  }
+
+  .ui-datepicker th {
+    padding: 0 !important;
+    background: none !important;
+  }
+
+  .ui-datepicker > thead > tr > th{
+    width: 16px !important;
+  }
+
+  .ui-datepicker th span{
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 32px;
+    color: #6d7683 !important;
+    display: inline-block;
+    width: 16px;
+    height: 32px;
+    text-align: center;
+  }
+
+  .ui-widget-header{
+    /* 헤더 (화살표/날짜표시 영역) */
+    background: none;
+    border: 0px;
+    border-radius: 0px;
+  }
+  .ui-widget-header .ui-icon{
+    /* 이전,다음 화살표 */
+    background: none;
+  }
+  .ui-datepicker-prev{
+    /* 이전 화살표 */
+    text-align:center;
+    line-height: 2em;
+    width: 24px !important;
+    top: -2px !important;
+  }
+
+  .ui-datepicker-prev:hover{
+    /* 이전 화살표 */
+    background: none !important;
+    border: 0 !important;
+    font-weight: normal !important;
+    left: 2px;
+    top: -2px;
+  }
+
+  .ui-datepicker-prev::before{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/arrow_icon/ic-arrow-date24-left.png) no-repeat center ;
+    content:'';
+    color:#fff;
+    cursor: pointer;
+  }
+  .ui-datepicker-next{
+    /* 다음 화살표 */
+    text-align:center;
+    line-height: 2em;
+    width: 24px !important;
+    top: -2px !important;
+  }
+
+  .ui-datepicker-next:hover{
+    /* 이전 화살표 */
+    background: none !important;
+    border: 0 !important;
+    font-weight: normal !important;
+    right: 2px;
+    top: -2px;
+  }
+
+  .ui-datepicker-next::before{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/arrow_icon/ic-arrow-date24-right.png) no-repeat center ;
+    content:'';
+    color:#fff;
+    cursor: pointer;
+  }
+  .ui-datepicker .ui-datepicker-title{
+    /* 년월 텍스트 묶음 */
+    color: #121212;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 500 !important;
+    margin-bottom: 12px;
+  }
+  .ui-datepicker .ui-datepicker-title .ui-datepicker-year{
+    /* 년도 숫자만 */
+    color: #121212;
+  }
+  .ui-datepicker .ui-datepicker-title .ui-datepicker-month{
+    /* *월 */
+    color: #121212;
+  }
+  .ui-datepicker th{
+    /* 요일 영역 */
+    background : grey;
+  }
+
+  .ui-datepicker td{
+    padding: 0 !important;
+  }
+  .ui-datepicker th span{
+    /* 요일 텍스트 */
+    font-size:18px;
+    color: #fff;
+  }
+  
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    /* 일자 기본영역 */
+    border:0px;
+    background: none;
+    text-align: center;
+    /* width: 28px;
+    height: 28px; */
+    line-height: 28px;
+    border-radius: 2px;
+    padding:0;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 12px;
+    color: #222;
+  }
+  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    /* 오늘일자 */
+    border:0px;
+    background:#f5f5f5;
+  }
+  .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    /* 선택 일자 */
+    background: gold;
+  } 
+
+::placeholder{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;}
+
+/* 체크박스 */
+  input#check_btn{
+    display:none;
+  }
+  
+  input#check_btn  > span{
+    vertical-align: middle;
+  }
+  
+  /* label:before에 체크하기 전 상태 CSS */
+  input#check_btn + span:before{
+    content:"";
+    display:inline-block;
+    width:18px;
+    height:18px;
+    border:1px solid #e2e2e2;
+    border-radius: 2px;
+    vertical-align:middle;
+    margin-right: 16px;
+    background: #fff;
+	/* cursor: pointer; */
+  }
+
+  input.gender_btn + span:before{
+    content:"";
+    display:inline-block;
+    width:18px;
+    height:18px;
+    border:1px solid #e2e2e2;
+    border-radius: 2px;
+    vertical-align:middle;
+    margin-right: 11px;
+    /* cursor: pointer; */
+  }  
+
+  /* label:before에 체크 된 상태 CSS */  
+  input#check_btn:checked + span:before{
+    content:"";
+    background-color:#222;
+    border-color:#222;
+    background-image: url(../img/icon/check_btn.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+	  border-radius: 2px;
+  }
+
+  input#check_btn:checked + span{
+	  font-weight: 500;
+	  color: #222;
+  }
+
+  input#check_btn2{
+    display:none;
+  }
+  
+  input#check_btn2  > span{
+    vertical-align: middle;
+  }
+
+  /* label:before에 체크하기 전 상태 CSS */
+  input#check_btn2 + span:before{
+    content:"";
+    display:inline-block;
+    width:18px;
+    height:18px;
+    border:1px solid #e2e2e2;
+    border-radius: 2px;
+    vertical-align:middle;
+    margin-right: 11px;
+    background-image: url(../img/icon/check_btn_28px.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+	  border-radius: 2px;
+    /* cursor: pointer; */
+  }
+  
+  /* label:before에 체크 된 상태 CSS */  
+  input#check_btn2:checked + span:before{
+    content:"";
+    background-color:#222;
+    border-color:#222;
+    background-image: url(../img/icon/check_btn_on_28px.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+	  border-radius: 2px;
+  }
+
+  input#check_btn3{
+    display:none;
+  }
+  
+  input#check_btn3  > span{
+    vertical-align: middle;
+  }
+
+  /* label:before에 체크하기 전 상태 CSS */
+  input#check_btn3 + span:before{
+    content:"";
+    display:inline-block;
+    width:18px;
+    height:18px;
+    border-radius: 2px;
+    vertical-align:middle;
+    margin-right: 11px;
+    background-image: url(../img/icon/check_box_check_28px.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+	  border-radius: 2px;
+    /* cursor: pointer; */
+  }
+  
+  /* label:before에 체크 된 상태 CSS */  
+  input#check_btn3:checked + span:before{
+    content:"";
+    background-image: url(../img/icon/check_box_check_on_28px.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+	  border-radius: 2px;
+  }
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+  }
+  [type="radio"]:checked + span,
+  [type="radio"]:not(:checked) + span
+  {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-size: 16px;
+	position: relative;
+	padding-left: 32px; 
+	cursor: pointer;
+	line-height: 24px;
+	display: inline-block;
+	color: #696969;
+  }
+  [type="radio"]:checked + span{
+	font-weight: 500 ;
+	color: #222 ;
+  }
+  [type="radio"]:checked + span:before,
+  [type="radio"]:not(:checked) + span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 22px;
+	height: 22px;
+	border:1px solid #ddd;
+	border-radius: 100%;
+	background: #fff;
+  }
+  [type="radio"]:checked + span:before {
+	  border:1px solid #222;
+	  border-radius: 100%;
+  }
+  [type="radio"]:checked + span:after,
+  [type="radio"]:not(:checked) + span:after {
+	content: '';
+	width:14px;
+	height:14px;
+	background: #222;
+	position: absolute;
+	top:5px;
+	left:5px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + span:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+  }
+  [type="radio"]:checked + span:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+  }
