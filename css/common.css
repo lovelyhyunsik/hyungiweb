@@ -208,6 +208,7 @@ body { -webkit-font-smoothing: antialiased;}
 .slide_box > a > .black_box{box-sizing: border-box; position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.5); padding: 36px 80px 40px 80px;}
 .slide_box > a > .black_box > .brand_name{font-weight: 700; font-size: 24px; line-height: 32px; color: #fff; margin-bottom: 16px;}
 .slide_box > a > .black_box > .brand_ex{font-weight: 400; font-size: 16px; line-height: 24px; color: #fff; margin-bottom: 38px;}
+.slide_box > a > .black_box > .brand_ex > p{}
 .slide_box > a > .black_box > .shop_now{display: flex; gap: 8px; align-items: center;}
 .slide_box > a > .black_box > .shop_now > p{font-weight: 400; font-size: 16px; line-height: 24px; text-decoration-line: underline; color: #fff;}
 .slide_box > a > .black_box > .shop_now > img{width: 32px;}
