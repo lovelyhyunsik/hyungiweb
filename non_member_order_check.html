@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/component.css">
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/response.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -854,536 +852,165 @@
                         </button>
                     </div>
                 </div>
-                <div class="mypage_main_wrap mypage_flex_box">
-                    <div class="flex_layout">
-                        <div class="flex_layout_l">
-                            <h2>마이페이지</h2>
-                            <div class="order_list_check_wrap">
-                                <p>주문 내역 조회</p>
-                                <a href="./mypage_main.html" class="order_check_btn">주문 배송 조회</a>
-                                <a href="./mypage_cancel_check.html" class="cancel_check_btn">취소/교환/반품 조회</a>
+                <div class="non_member_order_check_wrap">
+                    <div class="non_member_order_check_top">
+                        <span>비회원 주문 조회</span>
+                    </div>
+                    <div class="non_member_order_check_content">
+                        <div class="order_info">
+                            <div class="flex_box">
+                                <span class="gr_text">주문번호</span>
+                                <span class="order_num">12345678912345</span>
                             </div>
-                            <div class="shopping_benefit_wrap">
-                                <p>쇼핑혜택</p>
-                                <a href="./mypage_class_info.html">회원등급 안내</a>
-                                <a href="./mypage_saving_point.html">적립금</a>
-                                <a href="./mypage_coupon.html">쿠폰</a>
-                            </div>
-                            <div class="my_active_wrap">
-                                <p>나의 활동</p>
-                                <a href="./mypage_one_on_one_list.html">1:1 문의 내역</a>
-                                <a href="./mypage_item_request_list.html">상품 문의 내역</a>
-                                <a href="./mypage_review_list.html">구매후기</a>
-                                <a href="./mypage_recent_item.html">최근 본 상품</a>
-                                <a href="./mypage_like_item.html">찜</a>
-                            </div>
-                            <div class="member_info_wrap">
-                                <p>회원정보</p>
-                                <a href="./mypage_info_change.html">회원정보 수정</a>
-                                <a href="./mypage_pay_card.html">결제 카드 관리</a>
-                                <a href="./mypage_shipping_address.html">배송지 관리</a>
-                                <a href="./mypage_refund.html">환불정보 관리</a>
-                                <a href="./mypage_sns.html">SNS 계정 관리</a>
-                                <a href="./mypage_member_leave.html">회원 탈퇴</a>
+                            <div class="flex_box">
+                                <span class="gr_text">주문일자</span>
+                                <span class="order_date">2022.10.18</span>
                             </div>
                         </div>
-                        <div class="flex_layout_r">
-                            <div class="gr_box vip"><!-- 멤버쉽등급 class: new , bronze, silver, gold, vip, family -->
-                                <div class="gr_box_l">
-                                    <div class="class_img">
-                                        <img src="./img/icon/membership-new.png" alt="">
-                                    </div>
-                                    <div class="class_text_wrap">
-                                        <p><span class="user_name">홍길동</span>님의 등급은 <span class="class_text">NEW</span>
-                                            입니다.</p>
-                                        <a>등급혜택 보기</a>
-                                    </div>
-                                </div>
-                                <div class="gr_box_r">
-                                    <div class="saving_point">
-                                        <span>적립금</span>
-                                        <p><span class="num">123456</span>원</p>
-                                    </div>
-                                    <div class="discount_coupon">
-                                        <span>할인쿠폰</span>
-                                        <p><span class="num">22</span></p>
-                                    </div>
-                                    <div class="review">
-                                        <span>구매후기</span>
-                                        <p><span class="num">9999</span></p>
-                                    </div>
+                        <div class="order_item_wrap">
+                            <div class="order_item_nav">
+                                <span>상품정보</span>
+                                <div class="order_item_nav_r">
+                                    <span>상품금액</span>
+                                    <span>배송비</span>
+                                    <span>주문상태</span>
                                 </div>
                             </div>
-                            <div class="recent_order_list_wrap">
-                                <div class="recent_order_list_title">
-                                    <h3>최근 주문 내역 <span>최근 3개월간 주문 내역입니다.</span></h3>
-                                    <a href="#">전체보기</a>
-                                </div>
-                                <div class="tab_btn_wrap">
-                                    <button class="order_check on">주문/배송 조회</button>
-                                    <button class="cancel_check ">취소/교환/반품 조회</button>
-                                </div>
-                                <div class="order_check_content">
-                                    <div class="order_status_nav">
-                                        <div class="pay_complete">
-                                            <span class="num num_color_change">0</span>
-                                            <span>결제완료</span>
-                                        </div>
-                                        <img src="./img/arrow_icon/ic-arrow-gr-28.png" alt="">
-                                        <div class="ready">
-                                            <span class="num num_color_change">0</span>
-                                            <span>상품준비중</span>
-                                        </div>
-                                        <img src="./img/arrow_icon/ic-arrow-gr-28.png" alt="">
-                                        <div class="shipping">
-                                            <span class="num num_color_change">0</span>
-                                            <span>배송중</span>
-                                        </div>
-                                        <img src="./img/arrow_icon/ic-arrow-gr-28.png" alt="">
-                                        <div class="shipping_complete">
-                                            <span class="num num_color_change">0</span>
-                                            <span>배송완료</span>
-                                        </div>
-                                    </div>
-                                    <div class="recent_order_list_container">
-                                        <div class="recent_order_list_nav">
-                                            <span>상품정보</span>
-                                            <div class="recent_order_list_nav_r">
-                                                <span>주문일</span>
-                                                <span>주문번호</span>
-                                                <span>상품금액</span>
-                                                <span>주문상태</span>
-                                            </div>
-                                        </div>
-                                        <div class="recent_order_list_content">
-                                            <div class="no_list"><!-- 주문내역없을때 화면 display:none처리 해놨습니다. -->
-                                                <p>최근 주문 내역이 없습니다.</p>
-                                            </div>
-                                            <ul class="yes_list"><!-- 아이템 리스트 3개까지만 노출 -->
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status">배송중</span>
-                                                        <div class="btn_wrap">
-                                                            <button class="shipping_check">배송조회</button>
-                                                            <button class="cancel">취소요청</button>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status">배송완료<button>구매확정</button></span>
-                                                        <div class="btn_wrap">
-                                                            <button class="shipping_check">배송조회</button>
-                                                            <button class="cancel">교환/반품</button>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status review_write_btn">구매확정<button>후기작성</button></span><!-- 후기작성 버튼만 review_write_btn -->
-                                                        <div class="btn_wrap">
-                                                            <button class="shipping_check">배송조회</button>
-                                                            <button class="cancel">교환/반품</button>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cancel_check_content">
-                                    <div class="cancel_status_nav">
-                                        <div class="cancel">
-                                            <span class="num num_color_change">1</span>
-                                            <span>취소</span>
-                                        </div>
-                                        <span>/</span>
-                                        <div class="change">
-                                            <span class="num num_color_change">1</span>
-                                            <span>교환</span>
-                                        </div>
-                                        <span>/</span>
-                                        <div class="return">
-                                            <span class="num num_color_change">0</span>
-                                            <span>반품</span>
-                                        </div>
-                                    </div>
-                                    <div class="cancel_list_container">
-                                        <div class="cancel_list_nav">
-                                            <span>상품정보</span>
-                                            <div class="cancel_list_nav_r">
-                                                <span>주문일</span>
-                                                <span>주문번호</span>
-                                                <span>상품금액</span>
-                                                <span>주문상태</span>
-                                            </div>
-                                        </div>
-                                        <div class="cancel_list_content">
-                                            <div class="no_list"><!-- 주문내역없을때 화면 display:none처리 해놨습니다. -->
-                                                <p>취소/교환/반품 신청하신 내역이 없습니다.</p>
-                                            </div>
-                                            <ul class="yes_list"><!-- 아이템 리스트 3개까지만 노출 -->
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status">취소완료</span>
-                                                    </div>
-                                                </li>
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status">반품완료</span>
-                                                        <div class="btn_wrap">
-                                                            <button class="shipping_check">배송조회</button>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="item">
-                                                    <div class="item_left">
-                                                        <div class="item_container">
-                                                            <div class="item_img">
-                                                                <img src="./img/item/item_img08.png" alt="">
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <p class="item_brand">BRAND NAME</p>
-                                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
-                                                                <div class="item_option">
-                                                                    <span class="item_color">차콜</span>/<span
-                                                                        class="item_size">95</span>/<span
-                                                                        class="item_count">1</span>개
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="item_right">
-                                                        <span class="date">2022.10.18</span>
-                                                        <span class="order_num">123456789812345678910</span>
-                                                        <span class="item_price">57,200 원</span>
-                                                        <span class="order_status">교환완료</span>
-                                                        <div class="btn_wrap">
-                                                            <button class="shipping_check">배송조회</button>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="like_item_wrap">
-                                <div class="like_item_top">
-                                    <h3>찜한상품</h3>
-                                    <a href="./mypage_like_item.html">전체보기</a>
-                                </div>
-                                <ul class="like_item_list">
-                                    <li class="item">
-                                        <div class="item_img_wrap">
-                                            <div class="item_img">
-                                                <img src="./img/item/item_img05.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item_img_wrap">
-                                            <div class="item_img">
-                                                <img src="./img/item/item_img06.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item_img_wrap">
-                                            <div class="item_img">
-                                                <img src="./img/item/item_img07.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item_img_wrap">
+                            <ul>
+                                <li class="item">
+                                    <div class="item_left">
+                                        <div class="item_container">
                                             <div class="item_img">
                                                 <img src="./img/item/item_img08.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
                                             </div>
-                                            <a href="./item_detail.html"></a>
+                                            <div class="item_info">
+                                                <p class="item_brand">BRAND NAME</p>
+                                                <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                <div class="item_option">
+                                                    <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
+                                    </div>
+                                    <div class="item_right">
+                                        <div class="item_price">
+                                            <span class="item_price_bk">19,100 원</span>
                                         </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item_img_wrap">
-                                            <div class="item_img">
-                                                <img src="./img/item/item_img04.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./item_detail.html"></a>
+                                        <div class="shipping_price">
+                                            <span>4,000 원</span>
                                         </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
+                                        <div class="order_state">
+                                            <span>결제완료</span>
                                         </div>
-                                    </li>
-                                    <li class="item">
-                                        <div class="item_img_wrap">
-                                            <div class="item_img">
-                                                <img src="./img/item/item_img05.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./item_detail.html"></a>
+                                        <div class="btn_wrap">
+                                            <button class="shipping_check">배송조회</button>
                                         </div>
-                                        <div class="item_info">
-                                            <p class="item_brand">CHATELAINE</p>
-                                            <p class="item_name">[22SPRING] standerd jacket</p>
-                                            <div class="item_price">
-                                                <span class="item_price_bk">193,500</span>
-                                                <span class="item_price_gr">215,000</span>
-                                                <span class="item_price_percent">10%</span>
-                                            </div>
-                                            <div class="item_color">
-                                                <ul>
-                                                    <li style="background: #000;"></li>
-                                                    <li style="background: #676767;"></li>
-                                                    <li style="background: #d2ab86;"></li>
-                                                </ul>
-                                            </div>
-                                            <p class="item_coupon">쿠폰</p>
-                                            <a href="./item_detail.html"></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="like_brand_wrap">
-                                <div class="like_brand_top">
-                                    <h3>찜한브랜드</h3>
-                                    <a href="./mypage_like_item.html">전체보기</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex_layout">
+                            <div class="flex_layout_l">
+                                <div class="order_user_info">
+                                    <h3>구매자 정보</h3>
+                                    <div class="order_user_name">
+                                        <span class="gr_text">주문자</span>
+                                        <span class="bk_text">홍길동</span>
+                                    </div>
+                                    <div class="phone_num">
+                                        <span class="gr_text">핸드폰 번호</span>
+                                        <span class="bk_text">010-0000-0000</span>
+                                    </div>
+                                    <div class="e-mail">
+                                        <span class="gr_text">이메일 주소</span>
+                                        <span class="bk_text">gd123@gmail.com</span>
+                                    </div>
                                 </div>
-                                <ul class="like_brand_list">
-                                    <li class="brand">
-                                        <div class="brand_img_wrap">
-                                            <div class="brand_img">
-                                                <img src="./img/brand/brand_img01.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./brand_item_list.html"></a>
+                                <div class="pay_method_wrap">
+                                    <h3>결제수단</h3>
+                                    <p>가상계좌</p>
+                                    <div class="deposit_info">
+                                        <p>입금 정보 안내</p>
+                                        <div class="bank">
+                                            <span class="gr_text">은행명</span>
+                                            <span class="bk_text">국민은행</span>
                                         </div>
-                                        <div class="brand_info">
-                                            <p class="brand_en">CROCODILE LADIE</p>
-                                            <p class="brand_ko">크로커다일 레이디</p>
-                                            <a href="./brand_item_list.html"></a>
+                                        <div class="deposit_user">
+                                            <span class="gr_text">보내는 이</span>
+                                            <span class="bk_text">홍길동</span>
                                         </div>
-                                    </li>
-                                    <li class="brand">
-                                        <div class="brand_img_wrap">
-                                            <div class="brand_img">
-                                                <img src="./img/brand/brand_img02.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./brand_item_list.html"></a>
+                                        <div class="receiver">
+                                            <span class="gr_text">받는 이</span>
+                                            <span class="bk_text">바우하우스 김철수 가상계좌</span>
                                         </div>
-                                        <div class="brand_info">
-                                            <p class="brand_en">CHATELAINE</p>
-                                            <p class="brand_ko">샤트렌</p>
-                                            <a href="./brand_item_list.html"></a>
+                                        <div class="account">
+                                            <span class="gr_text">입금 계좌</span>
+                                            <span class="bk_text">110-123-4567</span>
                                         </div>
-                                    </li>
-                                    <li class="brand">
-                                        <div class="brand_img_wrap">
-                                            <div class="brand_img">
-                                                <img src="./img/brand/brand_img03.png" alt="">
-                                                <img src="./img/icon/ic-like-on.png" alt="" class="like_change fill">
-                                            </div>
-                                            <a href="./brand_item_list.html"></a>
-                                        </div>
-                                        <div class="brand_info">
-                                            <p class="brand_en">Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor
-                                                sit amet consectetur.</p>
-                                            <p class="brand_ko">크로커다일 레이디</p>
-                                            <a href="./brand_item_list.html"></a>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="flex_layout_r">
+                                <div class="shipping_spot_info">
+                                    <h3>배송지 정보</h3>
+                                    <div class="receiver">
+                                        <span class="gr_text">받는 사람</span>
+                                        <span class="bk_text">홍길동</span>
+                                    </div>
+                                    <div class="phone_num">
+                                        <span class="gr_text">핸드폰 번호</span>
+                                        <span class="bk_text">010-0000-0000</span>
+                                    </div>
+                                    <div class="address">
+                                        <span class="gr_text">주소</span>
+                                        <span class="bk_text">(06429) 서울 강남구 역삼로 156 (태광빌딩)</span>
+                                    </div>
+                                    <div class="message">
+                                        <span class="gr_text">배송메세지</span>
+                                        <span class="bk_text">가나다라마바사아자차카타파하아야어여오요</span>
+                                    </div>
+                                </div>
+                                <div class="pay_info">
+                                    <h3>결제정보</h3>
+                                    <div class="pay_info_top">
+                                        <div class="total_price">
+                                            <span>총 결제 금액</span>
+                                            <span class="price_num">123,000 <span>원</span></span>
+                                        </div>
+                                        <div class="btn_wrap">
+                                            <button class="receipt">영수증 보기</button>
+                                            <button class="trade_memo">거래 명세서</button>
+                                        </div>
+                                    </div>
+                                    <div class="item_wrap_price">
+                                        <span class="gr_text">총 상품 금액</span>
+                                        <span class="bk_text">120,000 원</span>
+                                    </div>
+                                    <div class="pro_discount">
+                                        <span class="gr_text">프로모션 할인</span>
+                                        <span class="bk_text">0 원</span>
+                                    </div>
+                                    <div class="coupon_discount">
+                                        <span class="gr_text">쿠폰 할인</span>
+                                        <span class="bk_text">0 원</span>
+                                    </div>
+                                    <div class="shipping_price">
+                                        <span class="gr_text">배송비</span>
+                                        <span class="bk_text">3,000 원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notice_wrap">
+                        <h3><img src="./img/icon/ic-notice.png" alt="">꼭 알아두세요!</h3>
+                        <div class="p_wrap">
+                            <p><span>-</span><span>배송조회는 주문상태가 발송완료인 시점부터 가능하며, 배송추적 버튼을 클릭하시면 배송조회(추적)가 가능합니다.<br>(단 당일퀵배송 주문은 배송조회가 불가합니다.)</span></p>
+                            <p><span>-</span><span>주문하신 상품은 (결제완료) 상태에서 전체 취소만 가능합니다. 복수 상품을 결제 후 일부 상품만 부분매입취소(환불)가 불가하오니<br>자세한 문의사항은 (고객센터>1:1문의)를 이용해주시기 바랍니다.</span></p>
+                            <p><span>-</span><span>교환/반품은 상품수령일로부터 7일 이내에 반품이 가능합니다.</span></p>
+                            <p><span>-</span><span>교환/반품신청 교환/반품 철회는 교환/반품 접수 단계에서 가능합니다.</span></p>
+                            <p><span>-</span><span>교환은 동일 상품의 색상, 사이즈 교환만 가능합니다. (다른 상품 교환 시 반품 처리 후 신규 주문)</span></p>
+                            <p><span>-</span><span>비회원 고객은 취소/교환/반품 서비스가 필요할 경우 고객서비스 센터로 연락주시기 바랍니다.</span></p>
                         </div>
                     </div>
                 </div>
@@ -1452,15 +1079,5 @@
             </div>
         </footer>
 </body>
-<script>
-    var numCount = $('.num_color_change').text();
-
-    if (numCount === "0") {
-        $(".num_color_change").removeClass("on")
-    } else {
-        $(".num_color_change").addClass("on")
-    }/* 해결못함 */
-
-</script>
 
 </html>
