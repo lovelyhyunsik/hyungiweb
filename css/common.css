@@ -3074,6 +3074,8 @@ body { -webkit-font-smoothing: antialiased;}
 .service_center_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > .gr_box > .answer_content{display: flex; gap: 16px;}
 .service_center_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > .gr_box > .answer_content > span{font-weight: 600; font-size: 14px; line-height: 20px; color: #969696;}
 .service_center_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > .gr_box > .answer_content > .nswer_content_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.service_center_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .no_result_comment{display: none;}
+.service_center_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .no_result_comment > p{font-size: 20px; color: #696969; text-align: center; padding-top: 5%;}
 
 .announcement_wrap > .flex_layout > .flex_layout_r{width: 80.75%;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_top{display: flex; justify-content: space-between; align-items: center; padding-bottom: 17px;}
@@ -3105,6 +3107,8 @@ body { -webkit-font-smoothing: antialiased;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > a > .announ_type{width: 120px; text-align: center; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; display: inline-block;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > a > .announ_title{margin-left: 80px; width: calc(100% - 285px); font-weight: 400; font-size: 14px; line-height: 20px; color: #222; display: inline-block;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .tab_content > li > a > .announ_date{display: inline-block; width: 85px;  font-weight: 400; font-size: 14px; line-height: 20px; color: #969696; text-align: center;}
+.announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .no_result_comment{display: none;}
+.announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .tab_wrap > .tab_content_wrap > .no_result_comment > p{font-size: 20px; color: #696969; text-align: center; padding: 5%;}
 .announcement_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content .selectBox_type>.optionItem_wrap{height: 144px;}
 
 .announcement_detail_wrap > .flex_layout > .flex_layout_r{width: 80.75%;}
@@ -3190,6 +3194,8 @@ body { -webkit-font-smoothing: antialiased;}
 .offline_info_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .spot_list_wrap > .spot_list_content > li > .spot_address{width: 29.379%; margin-left: 72px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
 .offline_info_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .spot_list_wrap > .spot_list_content > li > .spot_num{width: 10.489%; margin-left: 72px; white-space: nowrap;}
 .offline_info_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .spot_list_wrap > .spot_list_content > li > .map_pop_btn{margin-left: 40px; width: 5.595%; height: 36px; border: 1px solid #e2e2e2; border-radius: 4px; text-align: center; line-height: 36px; font-weight: 500; font-size: 14px; color: #222; white-space: nowrap;}
+.offline_info_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .spot_list_wrap > .no_result_comment{display: none;}
+.offline_info_wrap > .flex_layout > .flex_layout_r > .flex_layout_r_content > .spot_list_wrap > .no_result_comment > p{font-size: 20px; color: #696969; text-align: center; padding-top: 5%;}
 
 .service_terms_wrap{margin-top: 80px; margin-bottom: 238px; padding: 0 10.57%; width: 100%; box-sizing: border-box;}
 .service_terms_wrap > .service_terms_top{box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #222;}
