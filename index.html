@@ -1737,12 +1737,17 @@
     })//새 비밀번호 확인 input클릭하면 하단 글씨 뜨게
 
     $('.new_pw_check > input').on('input', function () {
-        if ($('.new_pw_check > input').val() == $('.newPw>label>input').val()) {
+        if ($('.new_pw_check > input').val() == $('.new_pw > input').val()) {
+            $('.new_pw_check>input').css("border","1px solid #34A854")
+            $('.new_pw_check>.inputText>.inputText_t>img').css("display","block")
             $('.new_pw_check > .inputText > .inputText_t > img').attr("src" , "./img/icon/ic-check-s-green.png")
             $('.new_pw_check > .inputText > .inputText_t > p').css("color", "#34A854")
+            $('.new_pw_check>.inputText>.inputText_t>p').text("동일한 비밀번호를 입력해 주세요.")
         } else {
-            $('.new_pw_check>.inputText>.inputText_t>img').attr("src" , "./img/icon/ic-check-s-grey.png")
-            $('.new_pw_check>.inputText>.inputText_t>p').css("color", "#969696")
+            $('.new_pw_check>input').css("border","1px solid red")
+            $('.new_pw_check>.inputText>.inputText_t>img').css("display","none")
+            $('.new_pw_check>.inputText>.inputText_t>p').css("color", "red")
+            $('.new_pw_check>.inputText>.inputText_t>p').text("현재 비밀번호가 맞는지 다시 확인해주세요.")
         }
     });//새 비밀번호와 새 비밀번호 확인 텍스트 같으면 색깔 바뀌게
 </script>
