@@ -333,10 +333,12 @@ $(function () {
     $('.num_review').text("5")
   }//상품상세 별점리뷰 5
 
-  $('.item_color > ul > li').click(function () {
+  $('.item_color > ul > li').on("click", function () {
     $('.item_color > ul > li').removeClass('on')
     $(this).addClass('on')
   })//아이템 상세 컬러 선택
+
+  $('.item_color > ul > li.sold_out').off("click");//품절색상 클릭 off
 
   $('.item_box > .close_icon > button').click(function () {
     $(this).parents('li').remove();
