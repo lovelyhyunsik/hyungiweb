@@ -167,6 +167,56 @@
                 </div>
             </div>
         </div>
+        <div class="option_popup_wrap">
+            <div class="option_popup">
+                <h3>옵션변경</h3>
+                <div class="option_popup_container">
+                    <div class="color_option">
+                        <span>색상</span>
+                        <ul>
+                            <li><button style="background: #6e5a51;"></button></li>
+                            <li class="sold_out"><button style="background: #e1d1b1;"></button></li>
+                            <li class="sold_out"><button style="background: #F3F0E4;"></button></li>
+                            <li class="sold_out"><button style="background: #8CB889;"></button></li>
+                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
+                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
+                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
+                            <li class="white"><button></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                            <li><button style="background: #6F7F6B;"></button></li>
+                        </ul>
+                    </div>
+                    <div class="size_option">
+                        <span>사이즈</span>
+                        <ul>
+                            <li><button>67</button></li>
+                            <li class="sold_out"><button>70</button></li><!-- 품절: addClass="sold_out" -->
+                            <li><button>73</button></li>
+                            <li><button>76</button></li>
+                            <li><button>79</button></li>
+                            <li><button>82</button></li>
+                            <li><button>85</button></li>
+                            <li><button>88</button></li>
+                            <li><button>90</button></li>
+                            <li><button>95</button></li>
+                            <li><button>100</button></li>
+                            <li><button>105</button></li>
+                            <li><button>110</button></li>
+                            <li><button>FREE</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <button class="cancel">취소</button>
+                    <button class="change">변경</button>
+                </div>
+            </div>
+        </div>
         <!-- header -->
         <header id="header">
             <div class="header_wrp">
@@ -926,7 +976,7 @@
                                                     </div>
                                                 </div>
                                                 <ul>
-                                                    <li class="item sold_out">
+                                                    <li class="item sold_out"><!-- 품절상품 addClass:"sold_out" -->
                                                         <div class="item_left">
                                                             <label>
                                                                 <input type="checkbox" id="check_btn" class="normal">
@@ -964,8 +1014,7 @@
                                                                 <span>무료</span>
                                                             </div>
                                                             <div class="select_btn">
-                                                                <button class="buy_now">바로 구매</button>
-                                                                <button class="like">찜</button>
+                                                                <button class="re_alarm">재입고알림</button>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -1440,5 +1489,37 @@
             </div>
         </footer>
 </body>
+<script>
+    $('.color_option ul li').click(function(){
+        $('.color_option ul li').removeClass('on');
+        $(this).addClass('on');
+        $('.size_option ul li').click(function(){
+            $('.btn_wrap .change').addClass('on');
+        })
+    });
 
+    $('.color_option ul li.sold_out').off("click")
+
+    $('.size_option ul li').click(function(){
+        $('.size_option ul li').removeClass('on');
+        $(this).addClass('on');
+        $('.color_option ul li').click(function(){
+            $('.btn_wrap .change').addClass('on');
+        })
+    });
+
+    $('.size_option ul li.sold_out').off("click")
+
+    $('.option_change_btn').click(function(){
+        $('.option_popup_wrap').css("display","block");
+        $('body').addClass('fix');
+    })
+
+    $('.option_popup .cancel').click(function(){
+        $('.option_popup_wrap').css("display","none");
+        $('body').removeClass('fix');
+        $('.color_option ul li').removeClass('on');
+        $('.size_option ul li').removeClass('on');
+    })
+</script>
 </html>

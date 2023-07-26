@@ -516,8 +516,8 @@ $(function () {
     $('.selectBox_type_detail').css("display", "block")
 
     var optionType = e.target.dataset.id;
-    $('.optionList').css("display", "none")
-    $(`.optionList.${optionType}`).css('display', 'block');
+    //$('.optionList').css("display", "none")
+    $(`.optionList.${optionType}`).addClass('on');
 
     $('.selectBox_type>.optionItem_wrap').removeClass('on');
   })
