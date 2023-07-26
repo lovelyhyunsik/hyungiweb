@@ -1,15 +1,19 @@
 $(function () {
-  $('.gnb_menu>li').click(function () {
+  $('.gnb_menu>li').click(function (e) {
+    e.stopPropagation();
     $(this).toggleClass('on');
     $(this).siblings().removeClass('on');
+    
   })//gnb 클릭 on 스크립트
-   
-  /* $('html').click(function(e) {   
-    if(!$(e.target).hasClass('.gnb_menu')) {
+  
+  $('html').click(function(e) {   
+    if(!$(e.target).hasClass("gnb_menu")) {
       $('.sub_wrapper').removeClass('show')
           console.log("나머지 영역입니다")
+          $('.gnb_menu>li').removeClass('on')
+          $('.brand_gnb').find('.arrow_change').attr("src","./img/arrow_icon/ic-arrow-down-20.png")
     }
-  });  */
+  });
 
 
   var arrowChange = 0;
