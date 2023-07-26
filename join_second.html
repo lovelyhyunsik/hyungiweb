@@ -928,9 +928,12 @@
                                                         <li class="optionItem">daum.net</li>
                                                         <li class="optionItem">kakao.com</li>
                                                         <li class="optionItem">gmail.com</li>
-                                                        <li class="optionItem">직접입력</li>
+                                                        <li class="optionItem direct">직접입력</li>
                                                     </ul>
                                                 </div> 
+                                            </div>
+                                            <div class="direct_input_wrap">
+                                                <input type="text" class="direct_input">
                                             </div>
                                         </div>
                                     </div>
@@ -1190,4 +1193,12 @@
             </div>
         </footer>
 </body>
+<script>
+    $('.optionItem').click(function(){
+        $('.direct_input_wrap').css("display","none");
+        $('.direct').click(function(){
+            $('.direct_input_wrap').css("display","block"); 
+        })
+    })
+</script>
 </html>
