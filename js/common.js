@@ -3,6 +3,14 @@ $(function () {
     $(this).toggleClass('on');
     $(this).siblings().removeClass('on');
   })//gnb 클릭 on 스크립트
+   
+  /* $('html').click(function(e) {   
+    if(!$(e.target).hasClass('.gnb_menu')) {
+      $('.sub_wrapper').removeClass('show')
+          console.log("나머지 영역입니다")
+    }
+  });  */
+
 
   var arrowChange = 0;
   $('.brand_gnb').click(function () {
@@ -16,12 +24,13 @@ $(function () {
       arrowChange = 0;
     }
   })/* gnb BRAND 클릭 show toggleClass */
-
+  
   $('.big_gnb').click(function () {
     $(this).children('.sub_wrapper').toggleClass('show')
     $(this).siblings('li').children('.sub_wrapper').removeClass('show')
   })
 
+  
   $('.brand_slide_gnb > ul > li').click(function () {
     $('.brand_slide_gnb > ul > li').removeClass('on')
     $(this).addClass('on')
@@ -1032,6 +1041,8 @@ $(".coupon_down_popup_top .popup_close").click(function(){
   $('.coupon_down_popup_wrap').css("display","none")
   $('body').removeClass('fix')
 })//배송지 추가 팝업
+
+
 
 $(document).ready(function() {
   $("#datepicker1, #datepicker2").datepicker({
