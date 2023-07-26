@@ -359,7 +359,8 @@ body { -webkit-font-smoothing: antialiased;}
 .main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul{ margin: 10px 16px 0 16px; display: none; flex-direction: column; gap: 5px;}
 .main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul > li{}
 .main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul > li > button{font-weight: 400; font-size: 14px; line-height: 24px; color: #696969;}
-.main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul > li > button.on{font-weight: 400; font-size: 14px; line-height: 24px; color: #222;}
+.main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul > li > button.on{position: relative; font-weight: 500; font-size: 14px; line-height: 24px; color: #222;}
+.main_content > .item_list_wrap > .item_list_side > .category_wrap > div > ul > li > ul > li > button.on::after{content: ""; position: absolute; top: 0; right: -5px; width: 5px; height: 5px; background: #e31616; border-radius: 50%;}
 
 .main_content > .item_list_wrap > .item_list_side > .brand{width: 290px;}
 .main_content > .item_list_wrap > .item_list_side > .brand > h2{padding: 8px 0 20px 12px; font-weight: 600; font-size: 20px; line-height: 28px; color: #222;}

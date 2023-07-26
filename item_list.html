@@ -868,55 +868,6 @@
                     </div>
                     <div class="item_list_wrap">
                         <div class="item_list_side">
-                            <div class="category_wrap">
-                                <h2>카테고리</h2>
-                                <div class="depth_btn_wrap">
-                                    <ul>
-                                        <li>
-                                            <div class="one_depth_btn_wrap"><button class="one_depth_btn">전체</button></div>
-                                        </li>
-                                        <li>
-                                            <div class="one_depth_btn_wrap"><button class="one_depth_btn">아우터</button><img src="./img/arrow_icon/ic-arrow-down-20.png" alt=""></div>
-                                            <ul>
-                                                <li><button>전체</button></li>
-                                                <li><button>코트</button></li>
-                                                <li><button>점퍼</button></li>
-                                                <li><button>자켓</button></li>
-                                                <li><button>베스트</button></li>
-                                                <li><button>다운/패딩</button></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="one_depth_btn_wrap"><button class="one_depth_btn">상의</button><img src="./img/arrow_icon/ic-arrow-down-20.png" alt=""></div>
-                                            <ul>
-                                                <li><button>전체</button></li>
-                                                <li><button>티셔츠</button></li>
-                                                <li><button>블라우스/셔츠</button></li>
-                                                <li><button>니트</button></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="one_depth_btn_wrap"><button class="one_depth_btn">하의</button><img src="./img/arrow_icon/ic-arrow-down-20.png" alt=""></div>
-                                            <ul>
-                                                <li><button>전체</button></li>
-                                                <li><button>팬츠</button></li>
-                                                <li><button>데님</button></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="one_depth_btn_wrap"><button class="one_depth_btn">신발</button><img src="./img/arrow_icon/ic-arrow-down-20.png" alt=""></div>
-                                            <ul>
-                                                <li><button>전체</button></li>
-                                                <li><button>샌들/뮬</button></li>
-                                                <li><button>펌프스/힐</button></li>
-                                                <li><button>플랫/로퍼</button></li>
-                                                <li><button>운동화/스니커즈</button></li>
-                                                <li><button>워커/부츠</button></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="brand">
                                 <h2>브랜드</h2>
                                 <ul>
@@ -2698,19 +2649,4 @@
             </div>
         </footer>
 </body>
-<script>
-    $('.depth_btn_wrap > ul > li').click(function(){
-        $('.depth_btn_wrap > ul > li .one_depth_btn').removeClass('on');
-        $('.depth_btn_wrap > ul > li').find('ul').css("display","none")
-        $('.depth_btn_wrap > ul > li').find('img').attr("src","./img/arrow_icon/ic-arrow-down-20.png")
-        $(this).find('.one_depth_btn').addClass('on')
-        $(this).find('ul').css("display","flex")
-        $(this).find('img').attr("src","./img/arrow_icon/ic-arrow-up-20.png")
-    });
-
-    $('.depth_btn_wrap > ul > li > ul > li > button').click(function(){
-        $('.depth_btn_wrap > ul > li > ul > li > button').removeClass('on');
-        $(this).addClass('on')
-    })
-</script>
 </html>
