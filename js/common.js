@@ -13,6 +13,8 @@ $(function () {
           $('.gnb_menu>li').removeClass('on')
           $('.brand_gnb').find('.arrow_change').attr("src","./img/arrow_icon/ic-arrow-down-20.png")
     }
+
+    $('.pro_menu > li.off').attr('class', 'on');
   });
 
 
