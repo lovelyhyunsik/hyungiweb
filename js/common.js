@@ -27,11 +27,25 @@ $(function () {
       $(this).find('.arrow_change').attr("src", "./img/arrow_icon/ic-arrow-down-20.png")
       arrowChange = 0;
     }
+
+    if($(this).hasClass('on')){
+      $('.pro_menu > li.on').attr('class', 'off');
+    }else{
+      $('.pro_menu > li.off').attr('class', 'on');
+    }
+
   })/* gnb BRAND 클릭 show toggleClass */
   
   $('.big_gnb').click(function () {
-    $(this).children('.sub_wrapper').toggleClass('show')
-    $(this).siblings('li').children('.sub_wrapper').removeClass('show')
+    $(this).children('.sub_wrapper').toggleClass('show');
+    $(this).siblings('li').children('.sub_wrapper').removeClass('show');
+
+    if($(this).hasClass('on')){
+      $('.pro_menu > li.on').attr('class', 'off');
+    }else{
+      $('.pro_menu > li.off').attr('class', 'on');
+    }
+
   })
 
   
