@@ -544,9 +544,12 @@ $(function () {
     $('.selectBox_type>.optionItem_wrap').removeClass('on')
     $('.selectBox_type>.label').removeClass('on')
     $('.selectBox_type_detail').css("display", "block")
+    $('.optionList').removeClass('on');
+    $('.selectBox_type_detail > .label').text("상세 유형을 선택해주세요")
+    $('.selectBox_type_detail > .label').css("color","#bdbdbd")
 
     var optionType = e.target.dataset.id;
-    //$('.optionList').css("display", "none")
+    $(`.optionList`).removeClass('on')
     $(`.optionList.${optionType}`).addClass('on');
 
     $('.selectBox_type>.optionItem_wrap').removeClass('on');
