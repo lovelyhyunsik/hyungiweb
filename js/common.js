@@ -531,6 +531,7 @@ $(function () {
   $('.selectBox_type>.label').click(function () {
     $(this).toggleClass('on');
     $(this).siblings('.optionItem_wrap').toggleClass('on')
+    $('.optionItem').removeClass('select')
   })
 
   $('.selectBox_type>.optionItem_wrap>.optionItem').click(function (e) {

@@ -1152,16 +1152,19 @@
 <script>
     $('.selectBox_type_detail>.label').click(function(e){
         $(this).toggleClass('on');
-    })
+        $('.select').parents('ul').toggleClass("on");
 
+    })
 
     $('.optionList>.optionItem').click(function(){
         var text_change2 = $(this).text()
         $('.selectBox_type_detail>.label').text(text_change2).css("color","#222")
         $('.selectBox_type_detail>.optionList>.optionItem').css("background","none")
         $(this).css("background","#f5f5f5")
+        $(this).addClass('select')
+        //$('.select').parents('ul').css("display","none")
         $('.selectBox_type_detail>.optionList').removeClass('on');
-        $('.selectBox_type_detail>.label').removeClass('on')
+        $('.selectBox_type_detail>.label').toggleClass('on')
     })
 
      $(document).ready(function(){
