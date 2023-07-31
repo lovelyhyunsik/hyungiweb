@@ -2813,6 +2813,7 @@ body { -webkit-font-smoothing: antialiased;}
 .selectBox_type_detail>button.on{display: flex; align-items: center;  width: 100%; background: #fff; font-family: 'Pretendard'; font-size: 1.4rem; color: #bdbdbd; padding: 0 1.6rem; height: 44px; border-radius: 4px; border: 1px solid #e2e2e2  ; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 98% center / 24px;}
 .selectBox_type_detail>.optionList{display: none; width: 100%; padding: 8px 0; background: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius: 4px;}
 .selectBox_type_detail>.optionList.on{display: block;}
+.selectBox_type_detail>.optionList.on2{display: block;}
 .selectBox_type_detail>.optionList>li{font-family: 'Pretendard'; font-weight: 400; font-size: 1.4rem; line-height: 2rem; color: #222; padding: 1.4rem 1.6rem;}
 .mypage_one_on_one_write_wrap > .flex_layout > .flex_layout_r > .request_item{display: block; margin-top: 44px;}
 .mypage_one_on_one_write_wrap > .flex_layout > .flex_layout_r > .request_item > span{font-weight: 500; font-size: 14px; line-height: 20px; color: #696969; display:block;}

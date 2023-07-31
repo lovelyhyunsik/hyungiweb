@@ -532,6 +532,7 @@ $(function () {
     $(this).toggleClass('on');
     $(this).siblings('.optionItem_wrap').toggleClass('on')
     $('.optionItem').removeClass('select')
+    $('.optionList').removeClass("active")
   })
 
   $('.selectBox_type>.optionItem_wrap>.optionItem').click(function (e) {
@@ -548,7 +549,7 @@ $(function () {
     $('.selectBox_type_detail > .label').css("color","#bdbdbd")
 
     var optionType = e.target.dataset.id;
-    $(`.optionList.${optionType}`).addClass('on');
+    $(`.optionList.${optionType}`).addClass('on').addClass('active');
 
     $('.selectBox_type>.optionItem_wrap').removeClass('on');
 

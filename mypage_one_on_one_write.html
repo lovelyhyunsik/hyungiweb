@@ -1150,11 +1150,9 @@
         </footer>
 </body>
 <script>
-    $('.selectBox_type_detail>.label').click(function(e){
-        $(this).toggleClass("on")
-        $('.select').parents('ul').toggleClass("on");
-
-        
+    $('.selectBox_type_detail>.label').click(function(){
+        $(this).toggleClass("on");
+        $('.optionList.active').toggleClass('on');
     })
 
     $('.optionList>.optionItem').click(function(){
@@ -1163,7 +1161,7 @@
         $('.selectBox_type_detail>.optionList>.optionItem').css("background","none")
         $(this).css("background","#f5f5f5")
         $(this).addClass('select')
-        $('.selectBox_type_detail>.optionList.on').removeClass('on').addClass('off');
+        $('.selectBox_type_detail>.optionList.on').removeClass('on');
         $('.selectBox_type_detail>.label').toggleClass('on')
     })
 
