@@ -539,7 +539,6 @@ $(function () {
     $('.selectBox_type>.optionItem_wrap>.optionItem').removeClass('on')
     $(this).addClass('on')
     $(this).parents('.optionItem_wrap').siblings('.label').text(text_change).css("color", "#222")
-    /* $('.selectBox_type>.optionItem_wrap>.optionItem').css("background", "none") */
     $(this).css("background", "#f5f5f5")
     $('.selectBox_type>.optionItem_wrap').removeClass('on')
     $('.selectBox_type>.label').removeClass('on')
@@ -549,10 +548,11 @@ $(function () {
     $('.selectBox_type_detail > .label').css("color","#bdbdbd")
 
     var optionType = e.target.dataset.id;
-    $(`.optionList`).removeClass('on')
     $(`.optionList.${optionType}`).addClass('on');
 
     $('.selectBox_type>.optionItem_wrap').removeClass('on');
+
+    
   })
 
   $('.selectBox_type>.optionItem_wrap>.optionItem').hover(function(){
@@ -1066,7 +1066,24 @@ $(".coupon_down_popup_top .popup_close").click(function(){
   $('body').removeClass('fix')
 })//배송지 추가 팝업
 
+$('.coupon_check').click(function(){
+  $(".item_coupon_popup_wrap").css("display","block");
+  $('body').addClass('fix')
+})
 
+$('.item_coupon_popup_wrap .popup_close').click(function(){
+  $(".item_coupon_popup_wrap").css("display","none");
+  $('body').removeClass('fix')
+})
+
+$('.item_choice.on').click(function(){
+  $('.choice_coupon_list_popup_wrap').css("display","block")
+})
+
+$('.choice_coupon_list_popup > h3 > button').click(function(){
+  $('.choice_coupon_list_popup_wrap').css("display","none")
+  
+})
 
 $(document).ready(function() {
   $("#datepicker1, #datepicker2").datepicker({

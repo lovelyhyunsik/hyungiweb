@@ -230,6 +230,8 @@
 	  color: #222;
   }
 
+
+
   input#check_btn2{
     display:none;
   }
@@ -333,6 +335,53 @@
 	border-radius: 100%;
 	background: #fff;
   }
+
+  [type="radio"]:checked + .coupon_radio,
+  [type="radio"]:not(:checked) + .coupon_radio
+  {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-size: 16px;
+	position: relative;
+	padding-left: 32px; 
+	padding-right: 50px; 
+	cursor: pointer;
+	line-height: 24px;
+	display: inline-block;
+	color: #696969;
+  width: 100%;
+  box-sizing: border-box;
+  }
+
+  [type="radio"]:checked + .coupon_radio:before,
+  [type="radio"]:not(:checked) + .coupon_radio:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border:1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+    }/* 주문서 작성 팝업 라벨 따로 구분 */
+
+    [type="radio"]:checked + .coupon_radio:after,
+    [type="radio"]:not(:checked) + .coupon_radio:after {
+    content: '';
+    width:14px;
+    height:14px;
+    background: #222;
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    }/* 주문서 작성 팝업 라벨 따로 구분 */
+
   [type="radio"]:checked + span:before {
 	  border:1px solid #222;
 	  border-radius: 100%;
