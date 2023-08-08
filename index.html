@@ -1718,7 +1718,7 @@
         $('.errorText').css("display","none")
     };//input에 error떠서 border-color가 빨간색이 되면 input하단 텍스트 생성
 
-    $('.new_pw > input').click(function(){
+    $('.new_pw > input').focus(function(){
         $('.new_pw > .inputText').css("display","block")
     })//새 비밀번호 input클릭하면 하단 글씨 뜨게
 
@@ -1732,7 +1732,7 @@
         }
     });//새 비밀번호 첫번째거 10자이상이면 색깔 바뀌게 능력부족으로 영어 대소문자/숫자/특수문자 그부분은 처리하지 못함
 
-    $('.new_pw_check > input').click(function(){
+    $('.new_pw_check > input').focus(function(){
         $('.new_pw_check>.inputText').css("display","block")
     })//새 비밀번호 확인 input클릭하면 하단 글씨 뜨게
 
