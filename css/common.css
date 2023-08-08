@@ -2469,15 +2469,15 @@ body { -webkit-font-smoothing: antialiased;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_l > .class_text_wrap > a{display: inline-block; margin-top: 16px; background: #fff; padding: 8px 16px; border: 1px solid #e2e2e2; border-radius: 4px; font-weight: 500; font-size: 14px; line-height: 20px; color: #222;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r{display: flex; gap: 104px;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .saving_point{display: flex; flex-direction: column; gap: 14px;}
-.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .saving_point > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center;}
+.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .saving_point > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; white-space: nowrap;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .saving_point > p{font-weight: 400; font-size: 18px; line-height: 24px; color: #222; display: flex; justify-content: space-between; align-items: baseline;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .saving_point > p > .num{font-weight: 500; font-size: 24px; line-height: 32px; color: #222;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .discount_coupon{display: flex; flex-direction: column; gap: 14px;}
-.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .discount_coupon > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center;}
+.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .discount_coupon > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center;  white-space: nowrap;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .discount_coupon > p{text-align: center;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .discount_coupon > p > .num{font-weight: 500; font-size: 24px; line-height: 32px; color: #222;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .review{display: flex; flex-direction: column; gap: 14px;}
-.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .review > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center;}
+.mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .review > span{font-weight: 400; font-size: 14px; line-height: 20px; text-align: center;  white-space: nowrap;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .review > p{text-align: center;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .gr_box > .gr_box_r > .review > p > .num{font-weight: 500; font-size: 24px; line-height: 32px; color: #222;}
 .mypage_main_wrap > .flex_layout > .flex_layout_r > .recent_order_list_wrap{margin-top: 88px;}
