@@ -3859,6 +3859,19 @@ body { -webkit-font-smoothing: antialiased;}
 .choice_coupon_list_popup_wrap > .choice_coupon_list_popup > .ok_btn > button{width: 100%; background: #f5f5f5; text-align: center; font-weight: 600; font-size: 18px; color: #969696; padding: 15px 0; border-radius: 4px;}
 .choice_coupon_list_popup_wrap > .choice_coupon_list_popup > .ok_btn > button.on{background: #000; color: #fff;}
 
+.leave_first_popup_wrap{display: none; position: fixed; width: 100%; height: 100vh; box-sizing: border-box; background: rgba(0, 0, 0, 0.5); z-index: 999;}
+.leave_first_popup_wrap > .leave_first_popup{width: 440px; padding: 24px; box-sizing: border-box; background: #fff; border-radius: 8px; position: absolute; top: 15%; left: 50%; transform: translate(-50%,-50%); z-index: 5; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);}
+.leave_first_popup_wrap > .leave_first_popup > p{font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.leave_first_popup_wrap > .leave_first_popup > .btn_wrap{margin-top: 44px; display: flex; gap: 12px; justify-content: end;}
+.leave_first_popup_wrap > .leave_first_popup > .btn_wrap > .cancel{width: 80px; height: 36px; box-sizing: border-box; border: 1px solid #e2e2e2; border-radius: 4px; text-align: center; line-height: 36px; font-weight: 500; font-size: 14px; color: #222;}
+.leave_first_popup_wrap > .leave_first_popup > .btn_wrap > .confirm{width: 80px; height: 36px; box-sizing: border-box; background: #222; border-radius: 4px; text-align: center; line-height: 36px; font-weight: 500; font-size: 14px; color: #fff;}
+
+.leave_second_popup_wrap{display: none; position: fixed; width: 100%; height: 100vh; box-sizing: border-box; background: rgba(0, 0, 0, 0.5); z-index: 999;}
+.leave_second_popup_wrap > .leave_second_popup{width: 440px; padding: 24px; box-sizing: border-box; background: #fff; border-radius: 8px; position: absolute; top: 15%; left: 50%; transform: translate(-50%,-50%); z-index: 5; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);}
+.leave_second_popup_wrap > .leave_second_popup > p{font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.leave_second_popup_wrap > .leave_second_popup > .btn_wrap{margin-top: 44px; display: flex; gap: 12px; justify-content: end;}
+.leave_second_popup_wrap > .leave_second_popup > .btn_wrap > .close{width: 80px; height: 36px; box-sizing: border-box; background: #222; border-radius: 4px; text-align: center; line-height: 36px; font-weight: 500; font-size: 14px; color: #fff;}
+
 .mypage_flex_box{padding: 0 10.57%; width: 100%; padding-top: 60px; box-sizing: border-box;}
 .mypage_flex_box > .flex_layout{display: flex; gap: 16px; padding-bottom: 120px;}
 .mypage_flex_box > .flex_layout > .flex_layout_l{width: 19.15%;}

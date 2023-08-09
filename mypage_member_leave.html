@@ -170,6 +170,23 @@
                 </div>
             </div>
         </div>
+        <div class="leave_first_popup_wrap">
+            <div class="leave_first_popup">
+                <p>정말 탈퇴하시겠습니까?<br> 탈퇴할 경우 모든 혜택(포인트,쿠폰)이 소멸됩니다.</p>
+                <div class="btn_wrap">
+                    <button class="cancel">취소</button>
+                    <button class="confirm">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="leave_second_popup_wrap">
+            <div class="leave_second_popup">
+                <p>탈퇴처리가 완료되었습니다.</p>
+                <div class="btn_wrap">
+                    <a href="./index.html" class="close">확인</a>
+                </div>
+            </div>
+        </div>
         <!-- header -->
         <header id="header">
             <div class="header_wrp">
@@ -972,14 +989,24 @@
         </footer>
 </body>
 <script>
-    $('.toggle_switch > label').click(function(){
-        $('.sns_confirm_pop_wrap').css("display","block")
-        $('body').addClass('fix')
+    $('.ok').click(function(){
+        $('.leave_first_popup_wrap').css("display","block");
+        $("body").addClass("fix");
+    });
+
+    $('.leave_first_popup_wrap .cancel').click(function(){
+        $('.leave_first_popup_wrap').css("display","none");
+        $("body").removeClass("fix");
+    });
+
+    $('.leave_first_popup_wrap .confirm').click(function(){
+        $('.leave_first_popup_wrap').css("display","none");
+        $('.leave_second_popup_wrap').css("display","block");
     })
 
-    $('.sns_confirm_pop_wrap .ok').click(function(){
-        $('.sns_confirm_pop_wrap').css("display","none")
-        $('body').removeClass('fix')
+    $('.leave_second_popup_wrap .close').click(function(){
+        $('.leave_second_popup_wrap').css("display","none");
+        $("body").removeClass("fix");
     })
 </script>
 </html>
