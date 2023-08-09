@@ -169,6 +169,41 @@
                 </div>
             </div>
         </div>
+        <div class="pw_change_popup_wrap">
+            <div class="pw_change_popup">
+                <h2>비밀번호 변경</h2>
+                <div class="now_pw">
+                    <input type="password" placeholder="현재 비밀번호" class="now_pw_input"><!-- 현재 비밀번호가 맞지 않으면 addClass:error -->
+                    <p class="errorText">현재 비밀번호가 맞는지 다시 확인해주세요.</p>
+                </div>
+                <div class="new_pw">
+                    <input type="password" placeholder="새 비밀번호" class="new_pw_input">
+                    <div class="inputText">
+                        <div class="inputText_t">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>10자~16자 입력</p>
+                        </div>
+                        <div class="inputText_b">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>영어 대소문자/숫자/특수문자 중 2가지 이상 조합</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_pw_check">
+                    <input type="password" placeholder="새 비밀번호 확인" class="new_pw_check_input">
+                    <div class="inputText">
+                        <div class="inputText_t">
+                            <img src="./img/icon/ic-check-s-grey.png" alt="">
+                            <p>동일한 비밀번호를 입력해 주세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_btn_wrap">
+                    <button class="cancel">취소</button>
+                    <a href="./login.html" class="change">변경</a><!-- 변경버튼 클릭시 로그아웃 처리 후 로그인 화면으로 이동 -->
+                </div>
+            </div>
+        </div>
         <div class="confirm_pop_wrap">
             <div class="confirm_pop">
                 <p>개인정보 변경이 완료되었습니다.</p>
@@ -1068,4 +1103,81 @@
             </div>
         </footer>
 </body>
+<script>
+    $('.pw_change').click(function(){
+        $('.pw_change_popup_wrap').css("display","block")
+        $('body').addClass('fix')
+    })
+
+    $('.popup_btn_wrap > .cancel').click(function(){
+        $('.pw_change_popup_wrap').css("display","none")
+        $('body').removeClass('fix')
+    })/* 비밀번호 변경 팝업 취소 클릭 */
+
+    $('.now_pw_input').on('input', checkInput);
+    $('.new_pw_input').on('input', checkInput);
+    $('.new_pw_check_input').on('input', checkInput);
+
+    function checkInput() {
+    var nowPw = $('.now_pw_input').val(); 
+    var newPw = $('.new_pw_input').val();
+    var newPwCheck = $('.new_pw_check_input').val();
+    var changeBtn = $('.change');
+
+    if (nowPw === '' || newPw === '' || newPwCheck === '') {
+      // 기본 로그인 버튼 색상
+      changeBtn.removeClass('on');
+    } else {
+      // 모든 input 입력 시에 로그인 버튼 배경색 변경
+      changeBtn.addClass('on');
+    }
+    }
+
+    if($('.now_pw > input').hasClass('error')){
+       $('.errorText').css("display","block")
+    }else{
+        $('.errorText').css("display","none")
+    };//input에 error떠서 border-color가 빨간색이 되면 input하단 텍스트 생성
+
+    $('.new_pw > input').focus(function(){
+        $('.new_pw > .inputText').css("display","block")
+    })//새 비밀번호 input클릭하면 하단 글씨 뜨게
+
+    $('.new_pw > input').on('input', function () {
+        if ($('.new_pw > input').val().length >= 10 && $('.new_pw > input').val().length <= 16) {
+            $('.new_pw > .inputText > .inputText_t>p').css("color", "#34A854")
+            $('.new_pw > .inputText > .inputText_t>img').attr("src" , "./img/icon/ic-check-s-green.png")
+        } else {
+            $('.new_pw>.inputText>.inputText_t>p').css("color", "#969696")
+            $('.new_pw>.inputText>.inputText_t>img').attr("src" , "./img/icon/ic-check-s-grey.png")
+        }
+
+        if(/^.*(?=.{1,16})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$/.test($('.new_pw > input').val())){
+            $('.new_pw > .inputText > .inputText_b>p').css("color", "#34A854")
+            $('.new_pw > .inputText > .inputText_b>img').attr("src" , "./img/icon/ic-check-s-green.png")
+        } else{
+            $('.new_pw > .inputText > .inputText_b>p').css("color", "#969696")
+            $('.new_pw > .inputText > .inputText_b>img').attr("src" , "./img/icon/ic-check-s-grey.png")
+        }
+    });
+
+    $('.new_pw_check > input').focus(function(){
+        $('.new_pw_check>.inputText').css("display","block")
+    })//새 비밀번호 확인 input클릭하면 하단 글씨 뜨게
+
+    $('.new_pw_check > input').on('input', function () {
+        if ($('.new_pw_check > input').val() == $('.new_pw > input').val()) {
+            $('.new_pw_check>input').css("border","1px solid #34A854")
+            $('.new_pw_check>.inputText>.inputText_t>img').css("display","block")
+            $('.new_pw_check > .inputText > .inputText_t > img').attr("src" , "./img/icon/ic-check-s-green.png")
+            $('.new_pw_check > .inputText > .inputText_t > p').css("color", "#34A854")
+            $('.new_pw_check>.inputText>.inputText_t>p').text("동일한 비밀번호를 입력해 주세요.")
+        } else {
+            $('.new_pw_check>input').css("border","1px solid red")
+            $('.new_pw_check>.inputText>.inputText_t>img').css("display","none")
+            $('.new_pw_check>.inputText>.inputText_t>p').css("color", "red")
+            $('.new_pw_check>.inputText>.inputText_t>p').text("현재 비밀번호가 맞는지 다시 확인해주세요.")
+        }
+    });//새 비밀번호와 새 비밀번호 확인 텍스트 같으면 색깔 바뀌게
+</script>
 </html>
