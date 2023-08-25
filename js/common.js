@@ -1090,7 +1090,8 @@ $(document).ready(function() {
   $("#datepicker1, #datepicker2").datepicker({
       showOn:"button",
       buttonImage: "./img/icon/ic-date.png",
-      buttonImageOnly: true
+      buttonImageOnly: true,
+      stepMonths: 1
   });
   
 });
