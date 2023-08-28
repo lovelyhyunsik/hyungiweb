@@ -1086,6 +1086,21 @@ $('.choice_coupon_list_popup > h3 > button').click(function(){
   
 })
 
+$('.before_address').click(function(){
+  $('.before_address_popup_wrap').css("display","block")
+  $('body').addClass('fix')
+});
+
+$('.before_address_popup_wrap .cancel').click(function(){
+  $('.before_address_popup_wrap').css("display","none")
+  $('body').removeClass('fix')
+})
+
+$('.before_address_popup_wrap .apply').click(function(){
+  $('.before_address_popup_wrap').css("display","none")
+  $('body').removeClass('fix')
+})
+
 $(document).ready(function() {
   $("#datepicker1, #datepicker2").datepicker({
       showOn:"button",

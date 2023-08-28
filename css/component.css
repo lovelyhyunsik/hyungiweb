@@ -335,6 +335,7 @@
 	border-radius: 100%;
 	background: #fff;
   }
+  
 
   [type="radio"]:checked + .coupon_radio,
   [type="radio"]:not(:checked) + .coupon_radio
@@ -381,6 +382,36 @@
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     }/* 주문서 작성 팝업 라벨 따로 구분 */
+
+    [type="radio"]:checked + .address_radio:before,
+    [type="radio"]:not(:checked) + .address_radio:before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border:1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+    }/* 이전 배송지 팝업 라벨 따로 구분 */
+
+    [type="radio"]:checked + .address_radio:after,
+    [type="radio"]:not(:checked) + .address_radio:after {
+    content: '';
+    width:14px;
+    height:14px;
+    background: #222;
+    position: absolute;
+    top:50%;
+    left:7px;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    }/* 이전 배송지 팝업 라벨 따로 구분 */
+
 
   [type="radio"]:checked + span:before {
 	  border:1px solid #222;
