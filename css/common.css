@@ -534,7 +534,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_color > ul > li.active{position: relative;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_color > ul > li.active::after{content: ""; position: absolute; top: 0; left: 0; background-image: url(../img/icon/color_sold_out.png); background-size: cover; width: 28px; height: 28px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_color > ul > li.on{position: relative; box-sizing: border-box; outline: 1px solid #222; border-radius: 2px; width: 28px; height: 28px;}
-.item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_color > ul > li > label > span{display: block; width: 28px; height: 28px; border-radius: 2px; padding: 0;}
+.item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_color > ul > li > label > span{display: block; border-radius: 2px; padding: 0;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_size{display: flex; align-items: center; justify-content: space-between; margin-top: 28px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_size > span{font-weight: 600; font-size: 16px; line-height: 24px; color: #222;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_opt > .item_size > ul{display: flex; gap: 12px; flex-wrap: wrap; width: calc(100% - 100px);}

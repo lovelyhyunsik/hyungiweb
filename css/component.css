@@ -441,15 +441,14 @@
 	transform: scale(1);
   }
 
-  input.option_btn:not(:checked) + span:before{
+  input.option_btn:not(:checked) + span{
     width: 28px;
     height: 28px;
     border: none;
-    background: #222;
     border-radius: 2px;
   }
 
-  input.option_btn:not(:checked) + span.white:before{
+  input.option_btn:not(:checked) + span.white{
     width: 28px;
     height: 28px;
     border: none;
@@ -458,27 +457,40 @@
     border-radius: 2px;
   }
 
-  input.option_btn:checked + span:before{
+  input.option_btn:checked + span{
     width: 22px;
     height: 22px;
     border: none;
-    background: #222;
     border-radius: 2px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
 
-  input.option_btn:checked + span.white:before{
-    width: 22px;
-    height: 22px;
+  input.option_btn:checked + span.white{
+    width: 21px;
+    height: 21px;
     border: none;
     background: #fff;
-    border: 1px solid #e2e2e2;
+    outline: 1px solid #e2e2e2;
     border-radius: 2px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+  }
+
+  input.option_btn:not(:checked) + span::before{
+    width: 0;
+    height: 0;
+    border: none;
+    
+  }
+
+  input.option_btn:checked + span::before{
+    width: 0;
+    height: 0;
+    border: none;
+    
   }
 
   input.option_btn:not(:checked) + span::after{
