@@ -3966,7 +3966,7 @@ body { -webkit-font-smoothing: antialiased;}
 .mypage_flex_box > .flex_layout{display: flex; gap: 16px; padding-bottom: 120px;}
 .mypage_flex_box > .flex_layout > .flex_layout_l{width: 19.15%;}
 .mypage_flex_box > .flex_layout > .flex_layout_l > div:not(:first-child){margin-top: 28px;}
-.mypage_flex_box > .flex_layout > .flex_layout_l > h2{font-weight: 400; font-size: 28px; line-height: 36px; color: #222;}
+.mypage_flex_box > .flex_layout > .flex_layout_l > h2 > a{font-weight: 400; font-size: 28px; line-height: 36px; color: #222;}
 .mypage_flex_box > .flex_layout > .flex_layout_l > .order_list_check_wrap{margin-top: 24px;}
 .mypage_flex_box > .flex_layout > .flex_layout_l > div > p{font-weight: 600; font-size: 16px; line-height: 24px; color: #222;}
 .mypage_flex_box > .flex_layout > .flex_layout_l > div > a{margin-top: 12px; display: block; font-weight: 400; font-size: 14px; line-height: 20px; color: #696969;}
