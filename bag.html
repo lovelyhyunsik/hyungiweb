@@ -171,44 +171,251 @@
             <div class="option_popup">
                 <h3>옵션변경</h3>
                 <div class="option_popup_container">
-                    <div class="color_option">
-                        <span>색상</span>
-                        <ul>
-                            <li><button style="background: #6e5a51;"></button></li>
-                            <li class="sold_out"><button style="background: #e1d1b1;"></button></li>
-                            <li class="sold_out"><button style="background: #F3F0E4;"></button></li>
-                            <li class="sold_out"><button style="background: #8CB889;"></button></li>
-                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
-                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
-                            <li class="sold_out"><button style="background: #6F7F6B;"></button></li>
-                            <li class="white"><button></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                            <li><button style="background: #6F7F6B;"></button></li>
-                        </ul>
-                    </div>
-                    <div class="size_option">
-                        <span>사이즈</span>
-                        <ul>
-                            <li><button>67</button></li>
-                            <li class="sold_out"><button>70</button></li><!-- 품절: addClass="sold_out" -->
-                            <li><button>73</button></li>
-                            <li><button>76</button></li>
-                            <li><button>79</button></li>
-                            <li><button>82</button></li>
-                            <li><button>85</button></li>
-                            <li><button>88</button></li>
-                            <li><button>90</button></li>
-                            <li><button>95</button></li>
-                            <li><button>100</button></li>
-                            <li><button>105</button></li>
-                            <li><button>110</button></li>
-                            <li><button>FREE</button></li>
-                        </ul>
+                    <div class="option_container">
+                        <div class="color_option">
+                            <span>색상</span>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: red;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: blue;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: yellow;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: green;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: red;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: blue;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: yellow;"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span class="white" style="background: #fff;"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: green;"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: red;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: blue;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: yellow;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: green;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: red;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: blue;"></span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: yellow;"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span class="white" style="background: #fff;"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="option_btn" type="radio" name="color_btn">
+                                        <span style="background: green;"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="size_option">
+                            <span>사이즈</span>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>67</span>
+                                    </label>
+                                </li>
+                                <li class="sold_out active">
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>70</span>
+                                    </label>
+                                </li><!-- 품절: addClass="sold_out" -->
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>73</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>76</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>79</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>82</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>85</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>88</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>90</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>95</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>100</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>105</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>110</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>FREE</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>88</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>90</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>95</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>100</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>105</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>110</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="size_btn" type="radio" name="size_btn">
+                                        <span>FREE</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="btn_wrap">
@@ -966,6 +1173,176 @@
                                         </div>
                                         <div class="flex_layout_middle">
                                             <div class="middle_container">
+                                                <div class="brand_check_btn">
+                                                    <label>
+                                                        <input type="checkbox" id="check_btn">
+                                                        <span>샤트렌</span>
+                                                    </label>
+                                                </div>
+                                                <div class="middle_container_nav">
+                                                    <span>상품정보</span>
+                                                    <div class="middle_container_nav_r">
+                                                        <span>판매금액</span>
+                                                        <span>수량</span>
+                                                        <span>배송정보</span>
+                                                        <span>선택</span>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li class="item sold_out"><!-- 품절상품 addClass:"sold_out" -->
+                                                        <div class="item_left">
+                                                            <label>
+                                                                <input type="checkbox" id="check_btn" class="normal">
+                                                                <span></span>
+                                                            </label>
+                                                            <div class="item_container">
+                                                                <div class="item_img">
+                                                                    <img src="./img/item/item_img08.png" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="item_brand">BRAND NAME</p>
+                                                                    <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                                    <div class="item_option">
+                                                                        <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                                    </div>
+                                                                    <button class="option_change_btn">
+                                                                        <span>옵션변경</span>
+                                                                        <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item_right">
+                                                            <div class="item_price">
+                                                                <span class="item_price_gr">59,000 원</span>
+                                                                <span class="item_price_bk">19,100 원</span>
+                                                                <span class="item_price_percent">50%</span>
+                                                            </div>
+                                                            <div class="item_count">
+                                                                <button class="minus">-</button>
+                                                                <span>1</span>
+                                                                <button class="plus">+</button>
+                                                            </div>
+                                                            <div class="shipping_price">
+                                                                <span>무료</span>
+                                                            </div>
+                                                            <div class="select_btn">
+                                                                <button class="re_alarm">재입고알림</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item">
+                                                        <div class="item_left">
+                                                            <label>
+                                                                <input type="checkbox" id="check_btn" class="normal">
+                                                                <span></span>
+                                                            </label>
+                                                            <div class="item_container">
+                                                                <div class="item_img">
+                                                                    <img src="./img/item/item_img08.png" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="item_brand">BRAND NAME</p>
+                                                                    <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                                    <div class="item_option">
+                                                                        <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                                    </div>
+                                                                    <button class="option_change_btn">
+                                                                        <span>옵션변경</span>
+                                                                        <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item_right">
+                                                            <div class="item_price">
+                                                                <span class="item_price_gr">59,000 원</span>
+                                                                <span class="item_price_bk">19,100 원</span>
+                                                                <span class="item_price_percent">50%</span>
+                                                            </div>
+                                                            <div class="item_count">
+                                                                <button class="minus">-</button>
+                                                                <span>1</span>
+                                                                <button class="plus">+</button>
+                                                            </div>
+                                                            <div class="shipping_price">
+                                                                <span>무료</span>
+                                                            </div>
+                                                            <div class="select_btn">
+                                                                <button class="buy_now">바로 구매</button>
+                                                                <button class="like">찜</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item">
+                                                        <div class="item_left">
+                                                            <label>
+                                                                <input type="checkbox" id="check_btn" class="normal">
+                                                                <span></span>
+                                                            </label>
+                                                            <div class="item_container">
+                                                                <div class="item_img">
+                                                                    <img src="./img/item/item_img08.png" alt="">
+                                                                </div>
+                                                                <div class="item_info">
+                                                                    <p class="item_brand">BRAND NAME</p>
+                                                                    <p class="item_name">남녀공용 사이드 프린트 세미 오버핏 맨투맨</p>
+                                                                    <div class="item_option">
+                                                                        <span class="item_color">차콜</span>/<span class="item_size">95</span>
+                                                                    </div>
+                                                                    <button class="option_change_btn">
+                                                                        <span>옵션변경</span>
+                                                                        <img src="./img/arrow_icon/ic-arrow-right-20.png" alt="">
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item_right">
+                                                            <div class="item_price">
+                                                                <span class="item_price_gr">59,000 원</span>
+                                                                <span class="item_price_bk">19,100 원</span>
+                                                                <span class="item_price_percent">50%</span>
+                                                            </div>
+                                                            <div class="item_count">
+                                                                <button class="minus">-</button>
+                                                                <span>1</span>
+                                                                <button class="plus">+</button>
+                                                            </div>
+                                                            <div class="shipping_price">
+                                                                <span>무료</span>
+                                                            </div>
+                                                            <div class="select_btn">
+                                                                <button class="buy_now">바로 구매</button>
+                                                                <button class="like">찜</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="grey_price_box">
+                                                    <div class="grey_price_box_left">
+                                                        <span class="item_wrap_price">상품금액<span class="price_num">345,000원</span></span>
+                                                        <span class="plus">+</span>
+                                                        <span class="shipping_price">배송비<span class="price_num">0원</span></span>
+                                                        <span class="minus">-</span>
+                                                        <span class="discount_price">할인금액<span class="price_num">123,000원</span></span>
+                                                    </div>
+                                                    <div class="grey_price_box_right">
+                                                        <span class="total_price">
+                                                            <span>123,000</span>원
+                                                        </span>
+                                                        <span class="saving_point">
+                                                            적립예정<span>1,234</span>원
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="middle_container">
+                                                <div class="brand_check_btn">
+                                                    <label>
+                                                        <input type="checkbox" id="check_btn">
+                                                        <span>크로커다일레이디</span>
+                                                    </label>
+                                                </div>
                                                 <div class="middle_container_nav">
                                                     <span>상품정보</span>
                                                     <div class="middle_container_nav_r">
