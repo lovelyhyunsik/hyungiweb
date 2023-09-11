@@ -3874,6 +3874,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_coupon_popup_title > .popup_close{}
 .item_coupon_popup > .item_coupon_popup_title > .popup_close > img{width: 24px; height: 24px;}
 
+.item_coupon_popup > .item_list_wrap{padding: 10px 0;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav{box-sizing: border-box; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span{display: inline-block; font-weight: 500; font-size: 14px; color: #222; height: 50px; line-height: 50px; text-align: center;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(1){width: 315px;}
@@ -3882,9 +3883,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(4){width: 351px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container{height: 500px; overflow-y: scroll; margin-bottom: 96px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container::-webkit-scrollbar{width: 4px;}
-.item_coupon_popup > .item_list_wrap > .item_list_container::-webkit-scrollbar-track{}
 .item_coupon_popup > .item_list_wrap > .item_list_container::-webkit-scrollbar-thumb{background: #bdbdbd; border-radius: 40px;}
-.item_coupon_popup > .item_list_wrap > .item_list_container > ul{}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li{display: flex; align-items: center; padding: 28px 0;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .item_info{display: flex; gap: 16px; width: 315px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .item_info > .item_img{width: 48px; height: 48px;}
@@ -3901,10 +3900,10 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon{display: inline-block;width: 351px; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; color: #222; white-space: nowrap;  text-overflow: ellipsis;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box{position: relative;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap{width: 340px; margin: 0 auto;}
-.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type{}
-.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > .optionItem_wrap{}
+.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > button{padding: 0 6rem 0 1.6rem; overflow: hidden; text-overflow: ellipsis; display: block; text-align: left;}
+.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > button{padding: 0 6rem 0 1.6rem; overflow: hidden; text-overflow: ellipsis; display: block; text-align: left;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > .optionItem_wrap.on{overflow-x: hidden; overflow-y: scroll; display: block; width: 340px;}
-.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > .optionItem_wrap > li{text-align: left; width: 340px; box-sizing: border-box; overflow-x: hidden; text-overflow: ellipsis;}
+.item_coupon_popup > .item_list_wrap > .item_list_container > ul > li > .use_coupon > .drop_box > .select_box_wrap > .selectBox_type > .optionItem_wrap > li{text-align: left; width: 340px; box-sizing: border-box; overflow-x: hidden; text-overflow: ellipsis; padding: 1.4rem  6rem 1.4rem 1.6rem;}
 
 .item_coupon_popup > .bottom{position: fixed; bottom: 0; left: 0; width: 100%; padding: 2rem 3.8rem; box-sizing: border-box; background: #fff; border-radius: 4px;}
 .item_coupon_popup > .bottom > .grey_box{background: #f5f5f5; display: flex; align-content: center; justify-content: space-between; padding: 2rem;}
