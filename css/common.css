@@ -3881,7 +3881,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(2){width: 115px;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(3){width: 115px;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(4){width: 351px;}
-.item_coupon_popup > .item_list_wrap > .item_list_container{height: 500px; overflow-y: scroll; margin-bottom: 96px;}
+.item_coupon_popup > .item_list_wrap > .item_list_container{max-height: 500px; min-height: 104px; overflow-y: scroll; margin-bottom: 96px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container::-webkit-scrollbar{width: 4px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container::-webkit-scrollbar-thumb{background: #bdbdbd; border-radius: 40px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li{display: flex; align-items: center; padding: 28px 0;}
