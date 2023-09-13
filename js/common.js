@@ -604,7 +604,6 @@ $(function () {
 
   // 체크박스 개별 선택
   $(".agree_container label").on("click", ".normal", function () {
-    console.log("ddddddd")
     var is_checked = true;
 
     $(".agree_container label .normal").each(function () {
@@ -635,7 +634,6 @@ $(function () {
 
   // 체크박스 개별 선택
   $(".agree_container label").on("click", ".normal", function () {
-    console.log("ddddddd")
     var is_checked = true;
 
     $(".agree_container label .normal").each(function () {
@@ -693,45 +691,81 @@ $(function () {
     accountCheckOn();
   });//계좌인증 버튼 활성화
 
-  // 체크박스 전체 선택
-  $(".all_check_btn").on("click", "#check_btn", function () {
-    var checked = $(this).is(":checked");
-
-    if (checked) {
-      $(this).parents(".flex_layout_top").siblings('.flex_layout_middle').find('input').prop("checked", true);
-      $('.white_box > a').addClass('on')
-    } else {
-      $(this).parents(".flex_layout_top").siblings('.flex_layout_middle').find('input').prop("checked", false);
-      $('.white_box > a').removeClass('on')
-    }
+ // 장바구니 전체 체크박스 전체 선택
+$(".all_check_btn").on("click", "#check_btn", function () {
+  var checked = $(this).is(":checked");
+  
+  if (checked) {
+  $(this).parents(".flex_layout_top").siblings('.flex_layout_middle').find('input').prop("checked", true);
+  $('.white_box > a').addClass('on')
+  } else {
+  $(this).parents(".flex_layout_top").siblings('.flex_layout_middle').find('input').prop("checked", false);
+  $('.white_box > a').removeClass('on')
+  }
   });
-
+  
   $(".middle_container").on("click", ".normal", function () {
-    var checked = $(this).is(":checked");
-
-    if (!checked) {
-      $(".all_check_btn>label>#check_btn").prop("checked", false);
-    }
+  var checked = $(this).is(":checked");
+  
+  if (!checked) {
+  $(".all_check_btn>label>#check_btn").prop("checked", false);
+  }
   });
-
-  // 체크박스 개별 선택
+  
+  
+  // 장바구니 전체 체크박스 개별 선택
   $(".flex_layout_middle").on("click", ".normal", function () {
-    var is_checked = true;
-
-    $(".flex_layout_middle .normal").each(function () {
-      is_checked = is_checked && $(this).is(":checked");
-      $('.white_box > a').addClass('on');
-    });
-
-    var checked2 = $(".flex_layout_middle .normal").is(":checked");
-    if (checked2) {
-      $('.white_box > a').addClass('on')
-    } else {
-      $('.white_box > a').removeClass('on')
-    }
-
-    $(".all_check_btn>label>#check_btn").prop("checked", is_checked);
+  var is_checked = true;
+  
+  $(".flex_layout_middle .normal").each(function () {
+  is_checked = is_checked && $(this).is(":checked");
+  $('.white_box > a').addClass('on');
   });
+  
+  var checked2 = $(".flex_layout_middle .normal").is(":checked");
+  if (checked2) {
+  $('.white_box > a').addClass('on')
+  } else {
+  $('.white_box > a').removeClass('on')
+  }
+  
+  $(".all_check_btn>label>#check_btn").prop("checked", is_checked);
+  });
+  
+  // 장바구니 브랜드 체크박스 전체 선택
+  $(".brand_check_btn").on("click", "#check_btn", function () {
+  var checked = $(this).is(":checked");
+  
+  if (checked) {
+  $(this).parents('.brand_check_btn').siblings('ul').find('input').prop("checked",true)
+  $('.white_box > a').addClass('on')
+  } else {
+  $(this).parents('.brand_check_btn').siblings('ul').find('input').prop("checked",false)
+  $('.white_box > a').removeClass('on')
+  }
+  });
+  
+  $(".middle_container").on("click", ".normal", function () {
+  var checked = $(this).is(":checked");
+  
+  if (!checked) {
+  $(".brand_check_btn>label>#check_btn").prop("checked", false);
+  }
+  });
+  
+  
+  // 장바구니 브랜드 체크박스 개별 선택
+  $(".middle_container ul .normal").on("click", function () {
+  var is_checked = true;
+  
+  $(".middle_container ul .normal").each(function () {
+  is_checked = is_checked && $(this).is(":checked");
+  });
+  
+  $(this).closest('.middle_container').find('.brand_check_btn input').prop("checked", is_checked);
+  });
+  
+
 
   $('.pay_method_tabnav > button').click(function () {
     $('.pay_method_tabnav > button').removeClass('on')
@@ -1076,6 +1110,16 @@ $('.item_coupon_popup_wrap .popup_close').click(function(){
   $(".item_coupon_popup_wrap").css("display","none");
   $('body').removeClass('fix')
 })
+
+$('.item_coupon_popup_wrap .cancel').click(function(){
+  $(".item_coupon_popup_wrap").css("display","none");
+  $('body').removeClass('fix')
+})
+
+//$('.item_coupon_popup_wrap .choice').click(function(){
+//  $(".item_coupon_popup_wrap").css("display","none");
+//  $('body').removeClass('fix')
+//})
 
 $('.item_choice.on').click(function(){
   $('.choice_coupon_list_popup_wrap').css("display","block")
