@@ -545,8 +545,8 @@ $(function () {
     $('.selectBox_type>.label').removeClass('on')
     $('.selectBox_type_detail').css("display", "block")
     $('.optionList').removeClass('on');
-    $('.selectBox_type_detail > .label').text("상세 유형을 선택해주세요")
-    $('.selectBox_type_detail > .label').css("color","#bdbdbd")
+    $(this).parents('.select_box_wrap').siblings('.selectBox_type_detail').find('.label').text("상세 유형을 선택해주세요")
+    $(this).parents('.select_box_wrap').siblings('.selectBox_type_detail').find('.label').css("color","#bdbdbd")
 
     var optionType = e.target.dataset.id;
     $(`.optionList.${optionType}`).addClass('on').addClass('active');
@@ -560,6 +560,7 @@ $(function () {
     $('.selectBox_type>.optionItem_wrap>.optionItem').css("background","none")
     $(this).css("background","rgb(245,245,245)")
   })
+
 
   $('.itemList>ul>li').click(function () {
     $('.itemList>ul>li').find('button').removeClass('on')

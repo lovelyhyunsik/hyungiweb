@@ -1222,6 +1222,11 @@
         $('.selectBox_type_detail>.label').toggleClass('on')
     })
 
+    $('.selectBox_type_detail>.optionList>.optionItem').hover(function(){
+        $('.selectBox_type_detail>.optionList>.optionItem').css("background","none")
+        $(this).css("background","rgb(245,245,245)")
+    })
+
      $(document).ready(function(){
         $('.text_box').on('keyup',function(){
             $('.recount').html(""+$(this).val().length+"/100")
@@ -1286,7 +1291,7 @@
     })
 
     $('.request_item_choice_popup .choice').click(function(){
-        $('body').removeClass('fix')
+        $('body').removeClass('fix');
         $('.request_item_choice_popup_wrap').css("display","none");
         $('.request_item > button').css("display","none");
         $('.request_item > .request_item_box').css("display","block")
