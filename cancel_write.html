@@ -967,38 +967,6 @@
                 </div>
                 <div class="mypage_one_on_one_write_wrap mypage_flex_box">
                     <div class="flex_layout">
-                        <div class="flex_layout_l">
-                            <h2>
-                                <a href="./mypage_main.html">마이페이지</a>
-                            </h2>
-                            <div class="order_list_check_wrap">
-                                <p>주문 내역 조회</p>
-                                <a href="./mypage_order_check.html" class="order_check_btn">주문 배송 조회</a>
-                                <a href="./mypage_cancel_check.html" class="cancel_check_btn">취소/교환/반품 조회</a>
-                            </div>
-                            <div class="shopping_benefit_wrap">
-                                <p>쇼핑혜택</p>
-                                <a href="./mypage_class_info.html">회원등급 안내</a>
-                                <a href="./mypage_saving_point.html">적립금</a>
-                                <a href="./mypage_coupon.html">쿠폰</a>
-                            </div>
-                            <div class="my_active_wrap">
-                                <p>나의 활동</p>
-                                <a href="./mypage_one_on_one_list.html" class="on">1:1 문의 내역</a>
-                                <a href="./mypage_item_request_list.html">상품 문의 내역</a>
-                                <a href="./mypage_review_list.html">구매후기</a>
-                                <a href="./mypage_recent_item.html">최근 본 상품</a>
-                                <a href="./mypage_like_item.html">찜</a>
-                            </div>
-                            <div class="member_info_wrap">
-                                <p>회원정보</p>
-                                <a href="./mypage_info_change.html">회원정보 수정</a>
-                                <a href="./mypage_shipping_address.html">배송지 관리</a>
-                                <a href="./mypage_refund.html">환불정보 관리</a>
-                                <a href="./mypage_sns.html">SNS 계정 관리</a>
-                                <a href="./mypage_member_leave.html">회원 탈퇴</a>
-                            </div>
-                        </div>
                         <div class="flex_layout_r">
                             <h3>1:1 문의</h3>
                             <div class="request_type">
@@ -1286,7 +1254,7 @@
     })
 
     $('.request_item_choice_popup .choice').click(function(){
-        $('body').removeClass('fix')
+        $('body').removeClass('fix');
         $('.request_item_choice_popup_wrap').css("display","none");
         $('.request_item > button').css("display","none");
         $('.request_item > .request_item_box').css("display","block")
