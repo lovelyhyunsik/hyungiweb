@@ -395,8 +395,11 @@ body { -webkit-font-smoothing: antialiased;}
 .main_content > .item_list_wrap > .item_list_side > .filter > .color{}
 .main_content > .item_list_wrap > .item_list_side > .filter > .color > h3{padding: 6px 16px; font-weight: 500; font-size: 16px; line-height: 24px; color: #222;}
 .main_content > .item_list_wrap > .item_list_side > .filter > .color > ul{margin: 16px 16px 60px 16px; display: flex; gap: 16px; width: 204px; flex-wrap: wrap;}
-.main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li{width: 28px; height: 28px;}
+.main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li{width: 28px; height: 28px; position: relative;}
+.main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li.on{width: 28px; height: 28px; position: relative; outline: 1px solid #222; border-radius: 2px;}
+.main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li > label > input{display: none;}
 .main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li > label > span{display: block; padding: 0; border-radius: 2px;}
+.main_content > .item_list_wrap > .item_list_side > .filter > .color > ul >li > label > input:checked + span{display: block; padding: 0; border-radius: 2px; position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%);}
 
 
 .main_content > .item_list_wrap > .item_list_side > .filter > .price_range{}
@@ -471,8 +474,8 @@ body { -webkit-font-smoothing: antialiased;}
 .item_wrap{padding-top: 40px;}
 .item_wrap > .item_wrap_container{display: flex; gap: 16px; width: 1198px; margin: 0 auto; padding-bottom: 40px; position: relative;}
 .item_wrap > .item_wrap_container > .img_slide{}
-.item_wrap > .item_wrap_container > .img_slide > .main_img{ position: relative; height: 572px; cursor: url(../img/icon/ic_outline-zoom-in.png) , url(../img/icon/ic_outline-zoom-in.cur) , auto; overflow: hidden;}
-.item_wrap > .item_wrap_container > .img_slide > .main_img > img{width: 100%; position: absolute; top: 0; left: 0;}
+.item_wrap > .item_wrap_container > .img_slide > .main_img{ position: relative; height: 572px; cursor: url(../img/icon/ic_outline-zoom-in.png) , url(../img/icon/ic_outline-zoom-in.cur) , auto; overflow: hidden; aspect-ratio: 1/1;}
+.item_wrap > .item_wrap_container > .img_slide > .main_img > img{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%); aspect-ratio: 1/1;}
 .item_wrap > .item_wrap_container > .img_slide > .small_img_slide{display: flex; align-items: center; margin-top: 64px; margin-bottom: 95px; justify-content: space-between; gap: 8px;}
 .item_wrap > .item_wrap_container > .img_slide > .small_img_slide > button > img{display: block; width: 28px;}
 .item_wrap > .item_wrap_container > .img_slide > .small_img_slide> ul{position: relative; display: flex; justify-content: center; gap: 20px;}
@@ -3891,8 +3894,8 @@ body { -webkit-font-smoothing: antialiased;}
 .coupon_down_popup_wrap > .coupon_down_popup > .btn_wrap{border-top: 1px solid #e2e2e2; position: fixed; bottom: 0; left: 0; background: #fff; padding: 28px 20px; width: 100%; box-sizing: border-box; border-radius: 0 0 4px 4px;}
 .coupon_down_popup_wrap > .coupon_down_popup > .btn_wrap > .all_coupon_down{width: 100%; height: 48px; border-radius: 4px; background: #222; font-weight: 400; font-size: 18px; color: #fff; text-align: center; line-height: 40px;}
 
-.item_coupon_popup_wrap{display: none; position: fixed; width: 100%; height: 100vh; box-sizing: border-box; background: rgba(0, 0, 0, 0.5); z-index: 998;}
-.item_coupon_popup{width: 900px; /* height: 745px;  */ background: #fff; border-radius: 8px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 5; padding: 0 28px;}
+.item_coupon_popup_wrap{display: none; position: fixed; width: 100%; height: 100%; box-sizing: border-box; background: rgba(0, 0, 0, 0.5); z-index: 998; overflow-y: scroll; padding: 5% 0; }
+.item_coupon_popup{width: 900px; background: #fff; border-radius: 8px; padding: 0 28px; margin: 0 auto;}
 .item_coupon_popup > .item_coupon_popup_title{display: flex; justify-content: space-between; }
 .item_coupon_popup > .item_coupon_popup_title > .title_text{display: flex; align-items: center; padding: 28px 0 24px 0; gap: 10px;}
 .item_coupon_popup > .item_coupon_popup_title > .title_text > p{font-weight: 600; font-size: 18px; color: #222; display: flex; justify-content: space-between; align-items: center; }
@@ -3907,7 +3910,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(2){width: 115px;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(3){width: 115px;}
 .item_coupon_popup > .item_list_wrap > .item_list_nav > span:nth-child(4){width: 351px;}
-.item_coupon_popup > .item_list_wrap > .item_list_container > ul{height: 416px; overflow-y: scroll; margin-bottom: 151px;}
+.item_coupon_popup > .item_list_wrap > .item_list_container > ul{}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul::-webkit-scrollbar{width: 4px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul::-webkit-scrollbar-thumb{background: #bdbdbd; border-radius: 40px;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li{display: flex; align-items: center; padding: 28px 0;}
@@ -3935,7 +3938,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li.all_coupon > .item_info > .item_text > .item_name{font-weight: 500;}
 .item_coupon_popup > .item_list_wrap > .item_list_container > ul > li.all_coupon > .item_info > .item_text > .item_name > span{margin-left: 20px; color: #969696;}
 
-.item_coupon_popup > .bottom{position: fixed; bottom: 0; left: 0; width: 100%; padding: 2rem 3.8rem; box-sizing: border-box; background: #fff; border-radius: 4px;}
+.item_coupon_popup > .bottom{width: 100%; padding: 2rem 3.8rem; box-sizing: border-box; background: #fff; border-radius: 4px;}
 .item_coupon_popup > .bottom > .grey_box{background: #f5f5f5; display: flex; align-content: center; justify-content: space-between; padding: 2rem;}
 .item_coupon_popup > .bottom > .grey_box > .text{font-size: 1.4rem;}
 .item_coupon_popup > .bottom > .grey_box > .discount_price{font-size: 1.4rem; color: #e31616;}

@@ -921,55 +921,55 @@
                                     <ul class="check_color">
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: red;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: blue;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: yellow;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: green;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: red;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: blue;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: yellow;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span class="white" style="background: #fff;"></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label>
-                                                <input class="option_btn" type="radio" name="color_btn">
+                                                <input class="option_btn" type="checkbox" name="color_btn">
                                                 <span style="background: green;"></span>
                                             </label>
                                         </li>
@@ -2689,4 +2689,13 @@
             </div>
         </footer>
 </body>
+<script>
+    $('.check_color > li').click(function(){
+        if($(this).find('input').is(":checked")){
+            $(this).addClass('on')
+        }else{
+            $(this).removeClass('on')
+        }
+    })
+</script>
 </html>
