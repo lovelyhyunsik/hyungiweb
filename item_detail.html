@@ -1171,7 +1171,7 @@
                     <div class="item_wrap_container">
                         <div class="item_img_container">
                             <div class="main_img">
-                                <img src="./img/item/item_img04.png" alt="" class="zoom">
+                                <img src="./img/test/1.jpg" alt="" class="zoom">
                             </div>
                             <div class="thumbnail">
                                 <button class="slide_prev">
@@ -1179,40 +1179,40 @@
                                 </button>
                                 <ul>
                                     <li class="on">
-                                        <img src="./img/item/item_img04.png" alt="">
+                                        <img src="./img/test/1.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img05.png" alt="">
+                                        <img src="./img/test/2.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img06.png" alt="">
+                                        <img src="./img/test/3.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img07.png" alt="">
+                                        <img src="./img/test/4.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img08.png" alt="">
+                                        <img src="./img/test/5.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img04.png" alt="">
+                                        <img src="./img/test/6.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img05.png" alt="">
+                                        <img src="./img/test/7.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img06.png" alt="">
+                                        <img src="./img/test/8.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img07.png" alt="">
+                                        <img src="./img/test/9.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img08.png" alt="">
+                                        <img src="./img/test/10.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img04.png" alt="">
+                                        <img src="./img/test/11.jpg" alt="">
                                     </li>
                                     <li>
-                                        <img src="./img/item/item_img05.png" alt="">
+                                        <img src="./img/test/12.jpg" alt="">
                                     </li>
                                 </ul>
                                 <button class="slide_next">
@@ -2653,27 +2653,93 @@
 
 $('.zoom').ezPlus();
 
-let currentSlideIndex = 0;
+  const prevButton = $('.slide_prev');
+  const nextButton = $('.slide_next');
+  const thumbnailList = $('.thumbnail > ul > li');
 
-    // 이전 슬라이드로 이동
-    $('.slide_prev').click(function() {
-        if (currentSlideIndex > 0) {
-            $('.thumbnail ul li').eq(currentSlideIndex).removeClass('on');
-            currentSlideIndex--;
-            $('.thumbnail ul li').eq(currentSlideIndex).addClass('on');
+  thumbnailList.on('click', function() {
+    // 현재 활성화된 슬라이드의 'on' 클래스를 제거합니다.
+    thumbnailList.eq(currentIndex).removeClass('on');
+  
+    // 클릭한 썸네일(li)의 인덱스를 가져옵니다.
+    currentIndex = thumbnailList.index($(this));
+  
+    // 클릭한 썸네일(li)를 활성화합니다.
+    thumbnailList.eq(currentIndex).addClass('on');
+  
+    // 메인 이미지를 업데이트합니다.
+    updateMainImage();
+  
+    // 이미지 확대/축소 플러그인을 다시 적용합니다.
+    $('.zoom').ezPlus();
+  });
+
+  // 현재 활성화된 슬라이드의 인덱스를 추적합니다.
+  let currentIndex = 0;
+  let prevIndex =  currentIndex - 1;
+
+  // 이전 버튼 클릭 이벤트 핸들러
+  prevButton.on('click', function() {
+    // 현재 슬라이드가 첫 번째 슬라이드이면 이벤트를 무시합니다.
+    if (currentIndex === 0) return;
+    
+    // 현재 활성화된 슬라이드의 'on' 클래스를 제거합니다.
+    thumbnailList.eq(currentIndex).removeClass('on');
+    
+    // 이전 슬라이드를 활성화합니다.
+    currentIndex--;
+    thumbnailList.eq(currentIndex).addClass('on');
+
+    // 이전 슬라이드의 display 속성을 가져와서 확인합니다.
+    const prevSlideDisplay = thumbnailList.eq(currentIndex - 1).css('display');
+
+    if (prevSlideDisplay === 'none' && thumbnailList.length !== 6) {
+      thumbnailList.eq(currentIndex).css('display', 'block');
+      thumbnailList.eq(currentIndex + 5).css('display', 'none');
+
+    }else if(thumbnailList.length === 6){
+        if(thumbnailList.eq(0).hasClass('on')){
+            $(thumbnailList).eq(5).css("display","none")
+            $(thumbnailList).eq(0).css("display","block")
         }
-    });
+    }
+    
+    updateMainImage();
+    $('.zoom').ezPlus();
 
-    // 다음 슬라이드로 이동
-    $('.slide_next').click(function() {
-        const totalSlides = $('.thumbnail ul li').length;
-        if (currentSlideIndex < totalSlides - 1) {
-            $('.thumbnail ul li').eq(currentSlideIndex).removeClass('on');
-            currentSlideIndex++;
-            $('.thumbnail ul li').eq(currentSlideIndex).addClass('on');
-        }
-    });
+  });//6번째일때 지금 문제가 생김 
 
+  // 다음 버튼 클릭 이벤트 핸들러
+  nextButton.on('click', function() {
+    // 현재 슬라이드가 마지막 슬라이드이면 이벤트를 무시합니다.
+    if (currentIndex === thumbnailList.length - 1) return;
+    
+    // 현재 활성화된 슬라이드의 'on' 클래스를 제거합니다.
+    thumbnailList.eq(currentIndex).removeClass('on');
+    
+    // 다음 슬라이드를 활성화합니다.
+    currentIndex++;
+    thumbnailList.eq(currentIndex).addClass('on');
+    
+    // 만약 다음 슬라이드가 5번째 이상의 슬라이드라면, 슬라이드를 밀어내는 효과를 구현합니다.
+    if (currentIndex >= 5) {
+      thumbnailList.eq(currentIndex - 5).css('display', 'none'); // 가장 첫 번째 슬라이드를 숨깁니다.
+      thumbnailList.eq(currentIndex).css('display', 'block'); // 다음 슬라이드를 표시합니다.
+    }
+
+    updateMainImage();
+    $('.zoom').ezPlus();
+  });
+ 
+
+  function updateMainImage() {
+    const thumbnailList = $('.thumbnail > ul > li');
+    const mainImage = $('.main_img > img');
+    const currentIndex = thumbnailList.index(thumbnailList.filter('.on'));
+  
+    // 이미지 경로를 변경합니다. 이 예제에서는 이미지의 src 속성을 사용합니다.
+    mainImage.attr('src', thumbnailList.eq(currentIndex).find('img').attr('src'));
+  }
 </script>
 
 </html>
