@@ -1169,78 +1169,55 @@
                 </div>
                 <div class="item_wrap">
                     <div class="item_wrap_container">
-                        <div class="thumbSlide">
-                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper main_img_slide">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img05.png" class="zoom"/>
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img06.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img07.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img04.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img05.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img06.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img07.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img08.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img05.png" class="zoom">
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="./img/item/item_img06.png" class="zoom">
-                                  </div>
-                                </div>
+                        <div class="item_img_container">
+                            <div class="main_img">
+                                <img src="./img/item/item_img04.png" alt="" class="zoom">
                             </div>
-                            <div class="thumb_img_slide_wrap">
-                                <div thumbsSlider="" class="swiper thumb_img_slide">
-                                    <div class="swiper-wrapper">
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img05.png"/>
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img06.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img07.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img04.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img05.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img06.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img07.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img08.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img05.png" alt="">
-                                          </div>
-                                          <div class="swiper-slide">
-                                            <img src="./img/item/item_img06.png" alt="">
-                                          </div>
-                                    </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
+                            <div class="thumbnail">
+                                <button class="slide_prev">
+                                    <img src="./img/arrow_icon/ic-arrow-gr-28-prev.png" alt="">
+                                </button>
+                                <ul>
+                                    <li class="on">
+                                        <img src="./img/item/item_img04.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img05.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img06.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img07.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img08.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img04.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img05.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img06.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img07.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img08.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img04.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="./img/item/item_img05.png" alt="">
+                                    </li>
+                                </ul>
+                                <button class="slide_next">
+                                    <img src="./img/arrow_icon/ic-arrow-gr-28.png" alt="">
+                                </button>
                             </div>
                         </div>
                         <div class="item_info_wrap">
@@ -2674,7 +2651,29 @@
         })
     })//textarea 글자수 세기
 
-    $('.zoom').ezPlus();
+$('.zoom').ezPlus();
+
+let currentSlideIndex = 0;
+
+    // 이전 슬라이드로 이동
+    $('.slide_prev').click(function() {
+        if (currentSlideIndex > 0) {
+            $('.thumbnail ul li').eq(currentSlideIndex).removeClass('on');
+            currentSlideIndex--;
+            $('.thumbnail ul li').eq(currentSlideIndex).addClass('on');
+        }
+    });
+
+    // 다음 슬라이드로 이동
+    $('.slide_next').click(function() {
+        const totalSlides = $('.thumbnail ul li').length;
+        if (currentSlideIndex < totalSlides - 1) {
+            $('.thumbnail ul li').eq(currentSlideIndex).removeClass('on');
+            currentSlideIndex++;
+            $('.thumbnail ul li').eq(currentSlideIndex).addClass('on');
+        }
+    });
+
 </script>
 
 </html>

@@ -87,26 +87,6 @@ $(function () {
       type: "fraction",
     },
   });
-
-  var thumbImgSlide = new Swiper(".thumb_img_slide", {
-    loop: true,
-    spaceBetween: 20,
-    slidesPerView: 5,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var mainImgSlide = new Swiper(".main_img_slide", {
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    spaceBetween: 10,
-    thumbs: {
-      swiper: thumbImgSlide,
-    },
-  });
-
 })
 
 

@@ -182,6 +182,10 @@ body { -webkit-font-smoothing: antialiased;}
 .visual > .swiper > .swiper-wrapper > .swiper-slide > a > .slide_text_box > .slide_fz_44{margin-top: 24px; font-weight: 600; font-size: 36px; line-height: 44px; color: #fff;}
 .visual > .swiper > .swiper-wrapper > .swiper-slide > a > .slide_text_box > .slide_fz_24{margin-top: 20px; font-weight: 500; font-size: 20px; line-height: 28px; color: #fff;}
 .brand_visual > .swiper > .swiper-wrapper > .swiper-slide > a > .slide_text_box > .slide_tag{display: inline-block; padding: 7px 0; border: none;  font-weight: 400; font-size: 18px; line-height: 24px; color: #fff;}
+.brand_visual > .swiper > .swiper-wrapper > .swiper-slide > a > .brand_like_btn{position: absolute; top: 70%; left: 9.5%; transform: translateY(-50%); display: flex; gap: 8px; align-items: center;}
+.brand_visual > .swiper > .swiper-wrapper > .swiper-slide > a > .brand_like_btn > button{}
+.brand_visual > .swiper > .swiper-wrapper > .swiper-slide > a > .brand_like_btn > button > img{width: 24px; height: 24px;}
+.brand_visual > .swiper > .swiper-wrapper > .swiper-slide > a > .brand_like_btn > .like_count{font-size: 14px; line-height: 20px; color: #f5f5f5;}
 
 
 /* ex_slide */
@@ -473,22 +477,16 @@ body { -webkit-font-smoothing: antialiased;}
 
 .item_wrap{padding-top: 40px;}
 .item_wrap > .item_wrap_container{display: flex; gap: 16px; width: 1198px; margin: 0 auto; padding-bottom: 40px; position: relative;}
-.item_wrap > .item_wrap_container > .thumbSlide{width: 596px;}
-.item_wrap > .item_wrap_container > .thumbSlide > .swiper{height: auto;}
-.item_wrap > .item_wrap_container > .thumbSlide > .main_img_slide > .swiper-wrapper > .swiper-slide{ position: relative; cursor: url(../img/icon/ic_outline-zoom-in.png) , url(../img/icon/ic_outline-zoom-in.cur) , auto; overflow: hidden; aspect-ratio: 1/1;}
-.item_wrap > .item_wrap_container > .thumbSlide > .main_img_slide > .swiper-wrapper > .swiper-slide > img{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%); aspect-ratio: 1/1; object-fit: contain;}
-.item_wrap > .item_wrap_container > .thumbSlide{}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap{padding: 0 28px; box-sizing: border-box; overflow: hidden;}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide{margin-top: 64px; overflow: visible;}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-wrapper > .swiper-slide{position: relative; aspect-ratio: 1/1;}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-wrapper > .swiper-slide > img{position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%); aspect-ratio: 1/1; object-fit: contain;}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-wrapper > .swiper-slide-thumb-active > img{border: 1px solid #222; box-sizing: border-box;}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-button-next{background: url(../img/arrow_icon/ic-arrow-gr-28.png) no-repeat; background-size: 28px; background-position: center; width: 28px; right: var(--swiper-navigation-sides-offset,-36px);}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-button-prev{background: url(../img/arrow_icon/ic-arrow-gr-28-prev.png) no-repeat; background-size: 28px; background-position: center; width: 28px; left: var(--swiper-navigation-sides-offset,-36px);}
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-button-next::after,
-.item_wrap > .item_wrap_container > .thumbSlide > .thumb_img_slide_wrap > .thumb_img_slide > .swiper-button-prev::after{
-	display: none;
-}
+.item_wrap > .item_wrap_container > .item_img_container{width: 596px;}
+.item_wrap > .item_wrap_container > .item_img_container > .main_img{}
+.item_wrap > .item_wrap_container > .item_img_container > .main_img > img{width: 100%; aspect-ratio: 1/1; object-fit: contain;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail{display: flex; gap: 8px; align-items: center; margin-top: 64px;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail > button > img{width: 24px;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail > ul{display: flex; gap: 20px; width: 530px; overflow: hidden;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail > ul > li{border: 1px solid #f5f5f5; cursor: pointer; background: #fff; box-sizing: border-box;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail > ul > li.on{border: 1px solid #222; background: #f5f5f5;}
+.item_wrap > .item_wrap_container > .item_img_container > .thumbnail > ul > li > img{width: 88px; aspect-ratio: 1/1; object-fit: contain;}
+
 
 .item_wrap > .item_wrap_container > .item_info_wrap{width: 591px; padding: 0 40px 28px 40px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_brand{display: inline-block; margin-top: 6px;}
@@ -499,7 +497,7 @@ body { -webkit-font-smoothing: antialiased;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .right_icon > button > img{width: 24px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_info{padding-bottom: 28px; border-bottom: 1px solid #f5f5f5;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .item_name{margin-top: 28px; font-weight: 500; font-size: 18px; line-height: 24px; color: #222;}
-.item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .review_wrap{margin-top: 12px; height: 24px; display: flex; align-items: center ;}
+.item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .review_wrap{margin-top: 12px; height: 24px; display: flex; align-items: center;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .review_wrap > .star_review{display: flex; gap: 2px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .review_wrap > .star_review > img{width: 20px;}
 .item_wrap > .item_wrap_container > .item_info_wrap > .item_info > .review_wrap > .num_review{position: relative; margin-left: 8px; font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;}
