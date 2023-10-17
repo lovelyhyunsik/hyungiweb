@@ -2,7 +2,8 @@ $(function () {
   var swiper1 = new Swiper(".visualSwiper", {
     loop: true,
     autoplay: {
-      delay: 5000
+      delay: 5000,
+      disableOnInteraction: false
     },
     pagination: {
       el: ".swiper-pagination",
