@@ -124,8 +124,8 @@ $(function () {
     $('body').removeClass('fix')
   })//검색close 아이콘 클릭
 
-  $('.three_depth_btn>button').click(function () {
-    $('.three_depth_btn>button').removeClass('on')
+  $('.three_depth_btn>button>a').click(function () {
+    $('.three_depth_btn>button>a').removeClass('on')
     $(this).addClass('on')
   })//상품리스트 소분류 뎁스 선택 기능
 
