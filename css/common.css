@@ -3511,10 +3511,10 @@ body { -webkit-font-smoothing: antialiased;}
 .service_terms_wrap > .service_terms_top > .step > .second{display: flex; gap: 8px; align-items: center;}
 .service_terms_wrap > .service_terms_top > .step > .second > span{font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
 .service_terms_wrap > .service_terms_top > .step > img{width: 20px;}
-.service_terms_wrap > .service_terms_content{padding: 50px 0;}
-.service_terms_wrap > .service_terms_content > div:not(:first-child){margin-top: 50px;}
-.service_terms_wrap > .service_terms_content > div > h4{font-size: 16px; color: #222; font-weight: 500; margin-bottom: 20px;}
-.service_terms_wrap > .service_terms_content > div > p{font-size: 14px; color: #222; font-weight: 500;}
+.service_terms_wrap > .terms_wrap{padding: 50px 0;}
+.service_terms_wrap > .terms_wrap > div:not(:first-child){margin-top: 50px;}
+.service_terms_wrap > .terms_wrap > div > h3{font-size: 16px; color: #222; font-weight: 500; margin-bottom: 20px;}
+.service_terms_wrap > .terms_wrap > div > p{font-size: 14px; color: #222; font-weight: 500;}
 
 .drop_box_wrap{margin-top: 20px; display: flex; gap:10px; padding-bottom: 10px; border-bottom: 1px solid #222;}
 
