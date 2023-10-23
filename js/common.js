@@ -978,7 +978,7 @@ $('.address_delete').click(function(){
   $(this).parents('li').remove();
 })//배송지 삭제 버튼
 
-$('.mypage_refund_wrap .refund_plus').click(function(){
+$('.account_change').click(function(){
   $('.refund_address_pop_wrap').css("display","block")
   $('body').addClass('fix')
 })//환불계좌 등록 버튼
@@ -989,6 +989,11 @@ $('.refund_address_pop_wrap .pop_close').click(function(){
 })//환불계좌 등록 버튼
 
 $('.refund_address_pop_wrap .cancel').click(function(){
+  $('.refund_address_pop_wrap').css("display","none")
+  $('body').removeClass('fix')
+})//환불계좌 등록 버튼
+
+$('.refund_address_pop_wrap .save').click(function(){
   $('.refund_address_pop_wrap').css("display","none")
   $('body').removeClass('fix')
 })//환불계좌 등록 버튼
