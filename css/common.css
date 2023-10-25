@@ -4013,3 +4013,17 @@ body { -webkit-font-smoothing: antialiased;}
 .cancel_write .request_type .selectBox_type_detail{display: block;}
 .cancel_write .request_type .selectBox_type_detail > button{display: flex; align-items: center; width: 100%; font-family: 'Pretendard'; font-size: 1.4rem; line-height: 2.4rem; color: #bdbdbd; padding: 0 1.6rem; height: 44px; border-radius: 4px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 98% center /24px;}
 .cancel_write .request_type .selectBox_type_detail > button.on{background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 98% center /24px;}
+
+
+/* 팝업 */
+.layers{width: 400px; height: auto; background: #fff; border-radius: 8px; position: relative; left: 50px; box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.10);}
+.layers > .layer-contents{font-size: 16px;}
+.layers > .layer-contents > img{width: 100%; height: auto; border-radius: 8px 8px 0 0;}
+.layers > .layer-today-close{box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; width: 100%; background: #fff; padding: 8px 16px;  border-radius: 0 0 8px 8px;}
+.layers > .layer-today-close > .option-box{display: flex; align-items: center; gap: 7px;}
+.layers > .layer-today-close > .option-box > input{cursor: pointer; appearance: none; width: 18px; height: 18px; border: 1px solid #e2e2e2; border-radius: 2px; background: #fff;}
+.layers > .layer-today-close > .option-box > input::before{display: none;}
+.layers > .layer-today-close > .option-box > input:checked{appearance: none; width: 18px; height: 18px; background: url(./img/icon/check_btn.png) no-repeat; background-position: 50%; border-color: #222; border-radius: 2px;}
+.layers > .layer-today-close > .option-box > label{pointer-events : none; color: #bdbdbd; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
+.layers > .layer-today-close > button{display: inline-block; background: #fff; padding: 6px 8px;}
+.layers > .layer-today-close > button > span{color: #222; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
