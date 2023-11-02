@@ -23,8 +23,10 @@
         </div>
         <div class="layer-today-close">
             <span class="option-box dir-flow">
-                <input type="checkbox">
-                <label for="">오늘 하루 열지 않음</label>
+                <label>
+                    <input type="checkbox">
+                    <span>오늘 하루 열지 않음</span>
+                </label>
             </span>
             <button>
                 <span>닫기</span>
@@ -32,4 +34,13 @@
         </div>
     </div>
 </body>
+<script>
+    $('.option-box > label').click(function(){
+        if($(this).children("input").prop("checked")){
+            $(this).children("span").css("color","#222")
+        }else{
+            $(this).children("span").css("color","#bdbdbd")
+        }
+    })
+</script>
 </html>
