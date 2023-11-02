@@ -1781,7 +1781,9 @@ body { -webkit-font-smoothing: antialiased;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > label > span{font-weight: 500; font-size: 14px; line-height: 20px; color: #222; cursor: pointer;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > label > span::before{margin-right: 7px !important;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > p{margin-left: 24px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > p:nth-of-type(2){margin-left: 10px;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > p > .total_point{color: #e31616; margin: 0 2px;}
+.order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .member_box > p > .useable_point{color: #e31616; margin: 0 2px;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .nonmember_box{}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .saving_point_use > .nonmember_box > p{font-weight: 400; font-size: 14px; line-height: 20px; color: #696969;}
 .order_sheet_write_wrap > .order_sheet_write_content > .flex_layout > .flex_layout_left > .sale_benefit > .shipping_price{}
