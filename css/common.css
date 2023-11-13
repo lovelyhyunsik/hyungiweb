@@ -4030,7 +4030,7 @@ body { -webkit-font-smoothing: antialiased;}
 .layers > .layer-today-close > .option-box > label > input{cursor: pointer; appearance: none; width: 18px; height: 18px; border: 1px solid #e2e2e2; border-radius: 2px; background: #fff;}
 .layers > .layer-today-close > .option-box > label > input::before{display: none;}
 .layers > .layer-today-close > .option-box > label > input:checked{appearance: none; width: 18px; height: 18px; background: url(../img/icon/check_btn.png) no-repeat; background-position: 50%; border-color: #222; border-radius: 2px;}
-.layers > .layer-today-close > .option-box > label > input:checked + label{color: #222;}
+.layers > .layer-today-close > .option-box > label > input:checked + span{color: #222;}
 .layers > .layer-today-close > .option-box > label{ color: #bdbdbd; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
 .layers > .layer-today-close > button{display: inline-block; background: #fff; padding: 6px 8px;}
 .layers > .layer-today-close > button > span{color: #222; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
