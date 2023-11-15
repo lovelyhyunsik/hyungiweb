@@ -174,7 +174,7 @@ body { -webkit-font-smoothing: antialiased;}
 .pw_change_popup > .popup_btn_wrap > .change.on{width: 50%; height: 44px; line-height: 44px; background: #222; border-radius: 4px; text-align: center; font-size: 14px; color: #fff;}
 
 /* main slide */
-.visual{}
+.visual{max-width: 1920px; margin: 0 auto;}
 .brand_visual{padding-bottom: 0;}
 .visual > .swiper > .swiper-wrapper > .swiper-slide > a{position: relative; display: block; width: 100%; height: 100%;}
 .visual > .swiper > .swiper-wrapper > .swiper-slide > a > img{aspect-ratio: 9/4;}
@@ -190,7 +190,7 @@ body { -webkit-font-smoothing: antialiased;}
 
 
 /* ex_slide */
-.ex_slide_wrap{width: 100%; padding-top: 160px;}
+.ex_slide_wrap{max-width: 1920px; padding-top: 160px; margin: 0 auto;}
 .ex_slide_wrap > h1{font-weight: 500; font-size: 24px; line-height: 32px; color: #222; margin-bottom: 40px; padding: 0 50px;}
 .ex_slide{margin: 0 50px;}
 .ex_slide a {margin-bottom: 64px;}
@@ -202,7 +202,7 @@ body { -webkit-font-smoothing: antialiased;}
 .brand_name_box > .brand_name{font-size: 14px; line-height: 20px;}
 
 /* brand_slide */
-.brand_slide_wrap{width: 100%; padding:160px 50px 0 50px; box-sizing: border-box;}
+.brand_slide_wrap{max-width: 1920px; margin: 0 auto; padding:160px 50px 0 50px; box-sizing: border-box;}
 .brand_slide_wrap > h1{font-weight: 500; font-size: 24px; line-height: 32px; color: #222; margin-bottom: 45px;}
 
 .brand_slide_gnb{margin-bottom: 32px;}
@@ -240,7 +240,7 @@ body { -webkit-font-smoothing: antialiased;}
 .brand_second_slide a > p{position: absolute; top: 10.18%; left: 6.78%; font-weight: 600; font-size: 18px; line-height: 24px; color: #222;}
 
 /* 라떼센스 */
-.la_slide_wrap{padding: 160px 50px 160px 50px;}
+.la_slide_wrap{max-width: 1920px; margin: 0 auto; padding: 160px 50px 160px 50px;}
 .la_slide_wrap  a{display: block; margin-bottom: 72px; width: 100%;}
 .la_slide_wrap > h1 {font-weight: 500; font-size: 24px; line-height: 32px; color: #222; margin-bottom: 48px;}
 .la_slide_wrap  .img_box {position: relative; aspect-ratio: 1/1;}
