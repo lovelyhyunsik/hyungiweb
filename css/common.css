@@ -4035,3 +4035,63 @@ body { -webkit-font-smoothing: antialiased;}
 .layers > .layer-today-close > .option-box > label{ color: #bdbdbd; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
 .layers > .layer-today-close > button{display: inline-block; background: #fff; padding: 6px 8px;}
 .layers > .layer-today-close > button > span{color: #222; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
+
+/* 주문 취소 페이지 */
+.cancel_write .order_item_nav{padding: 14px 105px 13px 64px !important;}
+.cancel_write > .order_detail_content > .flex_layout > .flex_layout_l > .pay_method_wrap > p {padding: 22px 16px !important;}
+.cancel_write .cancel_btn_wrap{display: flex; justify-content: center; gap: 16px; margin: 30px 0;}
+.cancel_write .cancel_btn_wrap > .cancel{width: 200px; box-sizing: border-box; padding: 14px 0; border: 1px solid #e2e2e2; text-align: center; font-size: 16px; font-weight: 500; line-height: 24px; color: #222; border-radius: 4px;}
+.cancel_write .cancel_btn_wrap > .order_cancel{width: 200px; box-sizing: border-box; padding: 14px 0; background: #222; text-align: center; font-size: 16px; font-weight: 500; line-height: 24px; color: #fff; border-radius: 4px;}
+.cancel_write .cancel_reason{display: flex; gap: 16px; align-items: center; width: 100%; box-sizing: border-box; margin-top: 60px; border-top: 1px solid #222; border-bottom: 1px solid #e2e2e2;}
+.cancel_write .cancel_reason > h3{display: inline-block; font-size: 14px; white-space: nowrap; background: #f5f5f5; height: 44px; line-height: 44px; padding: 12px 50px 12px 16px;}
+.cancel_write .cancel_reason .drop_box{width: 100%;}
+.cancel_write .cancel_reason .selectBox_type_detail{position: relative; box-sizing: border-box;width: 50%; margin-top: 0;}
+.cancel_write .cancel_reason .selectBox_type_detail{display: block;}
+.cancel_write .cancel_reason .selectBox_type_detail > button{display: flex; align-items: center; width: 100%; font-family: 'Pretendard'; font-size: 1.4rem; line-height: 2.4rem; color: #bdbdbd; padding: 0 1.6rem; height: 44px; border-radius: 4px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 98% center /24px;}
+.cancel_write .cancel_reason .selectBox_type_detail > button.on{background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 98% center /24px;}
+.cancel_write .cancel_reason .selectBox_type_detail > ul{position: absolute;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account{padding: 32px 16px 0 16px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .deposit_price > .gr_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696; white-space: nowrap; margin-right: 88px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .deposit_price > .bk_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .deposit_date{margin-top: 12px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .deposit_date > .gr_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;  white-space: nowrap; margin-right: 88px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .deposit_date > .bk_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap{display: flex; align-items: center; margin-top: 12px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .gr_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;  white-space: nowrap; margin-right: 88px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .no_account{display: flex; gap: 15px; align-items: center;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .no_account > p{display: inline-block; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .no_account > button{/* width: 135px;  */height: 36px; padding: 0 16px; outline: 1px solid #e2e2e2; font-weight: 500; font-size: 14px; line-height: 20px; color: #222; border-radius: 4px;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .yes_account{display: flex; gap: 15px; align-items: center;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .yes_account > .account_info{display: flex; flex-direction: column; font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout .pay_method_wrap > .virtual_account > .refund_account_wrap > .yes_account > button{height: 36px; padding: 0 16px; outline: 1px solid #e2e2e2; font-weight: 500; font-size: 14px; line-height: 20px; color: #222; border-radius: 4px;}
+.cancel_write .flex_layout .pay_method_wrap > .card{padding: 32px 16px 0 16px;}
+.cancel_write .flex_layout .pay_method_wrap > .card > .card_name{}
+.cancel_write .flex_layout .pay_method_wrap > .card > .card_name > .gr_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;  white-space: nowrap; margin-right: 101px;}
+.cancel_write .flex_layout .pay_method_wrap > .card > .card_name > .bk_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout .pay_method_wrap > .card > .deposit_date{margin-top: 12px;}
+.cancel_write .flex_layout .pay_method_wrap > .card > .deposit_date > .gr_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #969696;  white-space: nowrap; margin-right: 88px;}
+.cancel_write .flex_layout .pay_method_wrap > .card > .deposit_date > .bk_text{font-weight: 400; font-size: 14px; line-height: 20px; color: #222; white-space: nowrap;}
+.cancel_write .flex_layout_l{border-bottom: 1px solid #e2e2e2;}
+
+/* 환불계좌 팝업 */
+.refund_account_modal_wrap{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.5); z-index: 999;}
+.refund_account_modal_wrap > .refund_account_modal{background: #fff; width: 500px; box-sizing: border-box; border-radius: 8px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 30px 60px;}
+.refund_account_modal_wrap > .refund_account_modal > h3{font-size: 20px; text-align: center;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info{margin-top: 30px;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank{}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank > span{font-size: 14px; font-weight: 500; line-height: 20px; color: #696969;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .drop_box{width: 100%;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .selectBox_type_detail{position: relative; box-sizing: border-box;width: 100%; margin-top: 0;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .selectBox_type_detail{display: block;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .selectBox_type_detail > button{display: flex; align-items: center; width: 100%; font-family: 'Pretendard'; font-size: 1.4rem; line-height: 2.4rem; color: #bdbdbd; padding: 0 1.6rem; height: 44px; border-radius: 4px; border: 1px solid #e2e2e2; background: url(../img/arrow_icon/ic-arrow-down-20.png) no-repeat 98% center /24px;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .selectBox_type_detail > button.on{background: url(../img/arrow_icon/ic-arrow-up-20.png) no-repeat 98% center /24px;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_bank .selectBox_type_detail > ul{position: absolute;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_user{margin-top: 20px;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_user > span{font-size: 14px; font-weight: 500; line-height: 20px; color: #696969;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_user > input{width: 100%; height: 44px; border: 1px solid #e2e2e2; border-radius: 4px; box-sizing: border-box; padding: 12px 0 12px 16px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_num{margin-top: 20px;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_num > span{font-size: 14px; font-weight: 500; line-height: 20px; color: #696969;}
+.refund_account_modal_wrap > .refund_account_modal > .account_info > .account_num > input{width: 100%; height: 44px; border: 1px solid #e2e2e2; border-radius: 4px; box-sizing: border-box; padding: 12px 0 12px 16px; font-weight: 400; font-size: 14px; line-height: 20px; color: #222;}
+.refund_account_modal_wrap > .refund_account_modal > .btn_wrap{display: flex; justify-content: center; gap: 12px; margin-top: 60px;}
+.refund_account_modal_wrap > .refund_account_modal > .btn_wrap > .cancel{width: 200px; box-sizing: border-box; padding: 14px 0; border: 1px solid #e2e2e2; text-align: center; font-size: 16px; font-weight: 500; line-height: 24px; color: #222; border-radius: 4px;}
+.refund_account_modal_wrap > .refund_account_modal > .btn_wrap > .ok{width: 200px; box-sizing: border-box; padding: 14px 0; background: #222; text-align: center; font-size: 16px; font-weight: 500; line-height: 24px; color: #fff; border-radius: 4px;}
