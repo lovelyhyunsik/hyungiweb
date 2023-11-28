@@ -171,6 +171,39 @@
                 </div>
             </div>
         </div>
+        <div class="refund_account_popup_wrap">
+            <div class="refund_account_popup">
+                <h3>환불계좌 등록</h3>
+                <div class="account_info">
+                    <div class="account_bank">
+                        <span>은행명</span>
+                        <div class="drop_box">
+                            <div class="selectBox_type_detail">
+                                <button class="label">선택해주세요.</button>
+                                <ul class="optionList">
+                                    <li class="optionItem">국민은행</li>
+                                    <li class="optionItem">기업은행</li>
+                                    <li class="optionItem">신한은행</li>
+                                    <li class="optionItem">농협</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account_user">
+                        <span>예금주</span>
+                        <input type="text">
+                    </div>
+                    <div class="account_num">
+                        <span>계좌번호</span>
+                        <input type="num">
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <button class="cancel">취소</button>
+                    <button class="ok">등록</button>
+                </div>
+            </div>
+        </div>
         <div class="option_popup_wrap">
             <div class="option_popup">
                 <h3>옵션변경</h3>
@@ -425,6 +458,24 @@
                 <div class="btn_wrap">
                     <button class="cancel">취소</button>
                     <button class="change">변경</button>
+                </div>
+            </div>
+        </div>
+        <div class="shipping_method_popup_wrap">
+            <div class="shipping_method_popup">
+                <h3>결제 수단</h3>
+                <button class="close_btn">
+                    <img src="./img/icon/ic-close-small.png" alt="">
+                </button>
+                <div class="btn_wrap">
+                    <button class="virtual">
+                        <img src="./img/icon/무통장입금.png" alt="">
+                        <p>무통장 입금</p>
+                    </button>
+                    <button class="card">
+                        <img src="./img/icon/신용카드.png" alt="">
+                        <p>신용카드</p>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1255,7 +1306,6 @@
                                                 <div class="account_info">
                                                     국민은행 / 홍길동<span class="account_num">123456-00-123456</span>
                                                 </div>
-                                                <button>환불계좌 변경</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1273,8 +1323,7 @@
                             </div>
                             <div class="flex_layout_r">
                                 <div class="shipping_spot_info">
-                                    <h3>배송지 정보</h3>
-                                    <button>회수지 변경</button>
+                                    <h3>배송지 정보<button>회수지 변경</button></h3>
                                     <div class="receiver">
                                         <span class="gr_text">받는 사람</span>
                                         <span class="bk_text">홍길동</span>
@@ -1296,32 +1345,16 @@
                                     <h3>취소정보</h3>
                                     <div class="pay_info_top">
                                         <div class="total_price">
-                                            <span>총 취소 금액</span>
-                                            <span class="price_num">123,000 <span>원</span></span>
+                                            <span>추가 배송비</span>
+                                            <span class="price_num">3,000 <span>원</span></span>
                                         </div>
-                                    </div>
-                                    <div class="item_wrap_price">
-                                        <span class="gr_text">총 상품 금액</span>
-                                        <span class="bk_text">120,000 원</span>
-                                    </div>
-                                    <div class="pro_discount">
-                                        <span class="gr_text">프로모션 할인</span>
-                                        <span class="bk_text">0 원</span>
-                                    </div>
-                                    <div class="coupon_discount">
-                                        <span class="gr_text">쿠폰 할인</span>
-                                        <span class="bk_text">0 원</span>
-                                    </div>
-                                    <div class="saving_point_use">
-                                        <span class="gr_text">적립금 할인</span>
-                                        <span class="bk_text">0 원</span>
-                                    </div>
-                                    <div class="shipping_price">
-                                        <span class="gr_text">배송비</span>
-                                        <span class="bk_text">3,000 원</span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="cancel_btn_wrap">
+                            <button class="cancel">취소</button>
+                            <button class="shipping_pay">배송비 결제</button>
                         </div>
                     </div>
                     <div class="order_detail_content return">
@@ -1469,7 +1502,7 @@
                             </div>
                             <div class="flex_layout_r">
                                 <div class="shipping_spot_info">
-                                    <h3>배송지 정보</h3>
+                                    <h3>배송지 정보<button>회수지 변경</button></h3>
                                     <div class="receiver">
                                         <span class="gr_text">받는 사람</span>
                                         <span class="bk_text">홍길동</span>
@@ -1491,7 +1524,7 @@
                                     <h3>취소정보</h3>
                                     <div class="pay_info_top">
                                         <div class="total_price">
-                                            <span>총 취소 금액</span>
+                                            <span>총 환불 금액</span>
                                             <span class="price_num">123,000 <span>원</span></span>
                                         </div>
                                     </div>
@@ -1518,10 +1551,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="cancel_btn_wrap">
-                        <button class="cancel">취소</button>
-                        <button class="order_cancel">배송비 결제</button>
+                        <div class="cancel_btn_wrap">
+                            <button class="cancel">취소</button>
+                            <button class="return_application">반품 신청</button>
+                        </div>
                     </div>
                     <div class="notice_wrap">
                         <h3><img src="./img/icon/ic-notice.png" alt="">꼭 알아두세요!</h3>
@@ -1727,6 +1760,26 @@
         $('body').removeClass('fix');
         $('.color_option ul li').removeClass('on');
         $('.size_option ul li').removeClass('on');
+    })
+
+    $('.return .pay_method_wrap button').click(function(){
+        $('.refund_account_popup_wrap').css("display","block");
+        $('body').addClass('fix');
+    });
+
+    $('.refund_account_popup .cancel').click(function(){
+        $('.refund_account_popup_wrap').css("display","none");
+        $('body').removeClass('fix');
+    });
+
+    $('.shipping_pay').click(function(){
+        $('.shipping_method_popup_wrap').css("display","block");
+        $('body').addClass('fix');
+    })
+
+    $('.shipping_method_popup > button').click(function(){
+       $('.shipping_method_popup_wrap').css("display","none");
+       $('body').removeClass('fix');; 
     })
 
 </script>
