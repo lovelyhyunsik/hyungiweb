@@ -4039,7 +4039,9 @@ body { -webkit-font-smoothing: antialiased;}
 .layers > .layer-today-close > button > span{color: #222; font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.15px;}
 
 /* 주문 취소 페이지 */
-.cancel_write .order_item_nav{padding: 14px 105px 13px 64px !important;}
+.cancel_write .order_item_nav{padding: 14px 70px 13px 64px !important;}
+.cancel_write .item_price{width: 125px !important;}
+.cancel_write .order_state{margin-right: 0 !important;}
 .cancel_write > .order_detail_content > .flex_layout > .flex_layout_l > .pay_method_wrap > p {padding: 22px 16px !important;}
 .cancel_write .cancel_btn_wrap{display: flex; justify-content: center; gap: 16px; margin: 30px 0;}
 .cancel_write .cancel_btn_wrap > .cancel{width: 200px; box-sizing: border-box; padding: 14px 0; border: 1px solid #e2e2e2; text-align: center; font-size: 16px; font-weight: 500; line-height: 24px; color: #222; border-radius: 4px;}
